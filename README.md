@@ -1,5 +1,10 @@
 # 2016-IP-tv-denoising
-Matlab code to reproduce the results of the paper "Geometric properties of solutions to the total variation denoising problem".
+Matlab code to reproduce the results of the paper
+
+A. Chambolle, V. Duval, G. Peyré, C. Poon. [Geometric properties of solutions to the total variation denoising problem](http://arxiv.org/abs/1602.00087). Preprint Arxiv:1602.00087, 2016.
+
+![TV denoising results](logo/logo.png)
+
 
 It solve the TV denoising problem using a 4-fold finite differences discretization (this improves the isotropy with respect to a more classical foward difference scheme).
 
