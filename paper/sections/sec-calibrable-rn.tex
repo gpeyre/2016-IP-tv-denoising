@@ -1,0 +1,98 @@
+% !TEX root = ../TV-Denoising.tex
+
+% THIS FILE IS DEPRECATED: IT IS INCORPORATED IN PRELIMINARIES
+
+\subsection{Calibrable sets in $\RR^N$}
+\todo{Put this section inside the preliminaries}
+
+\subsubsection{Sets that evolve at constant speed}
+In \cite{beltvflow02}, the authors study on the total variation flow $\frac{\partial u}{\partial t}\in -\partial J(u)$, namely:
+\begin{align}
+  \frac{\partial u}{\partial t}= \divx \left(\frac{Du}{|Du|} \right).
+  \label{eq-tvflow}
+\end{align}
+The prove existence and uniqueness of a ``strong solution" (see \cite{beltvflow02}) for all initial data $u_0\in \LDN$, and existence and uniqueness of an ``entropy solution" for $u_0\in L^1_{loc}(\RR^N)$.
+In the second part of the paper, they characterize the bounded sets of finite perimeter $\Omega$ such that $u=\bun{\Omega}$ satisfies
+\begin{align}
+  -\divx \left(\frac{Du}{|Du|}\right)= \lambda_\Omega u, \quad \mbox{ where } \la_\Omega\eqdef \frac{P(\Omega)}{|\Omega|}.
+\end{align}
+
+Let us show (at least informally) that such sets are exactly the sets which evolve with constant boundary, i.e. such that $u(x,t)=\la(t)\bun{\Omega}(x)$, with $\la \geq 0$.
+On the one hand $\frac{\partial u}{\partial t}= \la'(t)\bun{\Omega}$, and on the other one, $\divx \left(\frac{Du}{|Du|}\right)=\divx\left(\frac{D\bun{\Omega}}{|D\bun{\Omega}|} \right) $ for $\la(t)>0$, so that \eqref{eq-tvflow} is equivalent to
+\begin{align*}
+  -\la'(t)\bun{\Omega}= \divx \left(\frac{D\bun{\Omega}}{|D\bun{\Omega}|}\right),
+\end{align*}
+hence, integrating over $\Omega$, we get 
+\begin{align*}
+  -\la'(t) |\Omega|=\int_\Omega \divx\left(\frac{D\bun{\Omega}}{|D\bun{\Omega}|} \right)=\int_{\partial^* \Omega} \frac{D\bun{\Omega}}{|D\bun{\Omega}|}\cdot \nu_{\Omega}d\Hh^1=P(\Omega).
+\end{align*}
+As a consequence $\la(t)=(1-\la_\Omega t)_+$.
+
+
+Such sets are called calibrable. They are characterized by the fact that $\la_\Omega\bun{\Omega}\in \partial J(\bun{\Omega})$:
+
+\begin{defn}[Calibrable sets]
+  A set of finite perimeter $\Omega\subset \RR^N$ is said to be calibrable if, writing $v=\bun{\Omega}$, there exists a vector field $\xi\in L^{\infty}(\RR^N,\RR^N)$ such that $\|\xi\|_\infty \leq 1$
+  and 
+  \begin{align}
+    \int_{\RR^N} (\xi, Dv)=\int_{\RR^2} |Dv|,\\
+    -\divx \xi =\la_\Omega v.
+  \end{align}
+  In that case, we say that $\xi$ is a calibration for $\Omega$.
+\end{defn}
+
+\begin{rem} If $\la \bun{\Omega}\in \partial J(\bun{\Omega})$ for some $\la\in \RR$, then necessarily $\la=\la_\Omega$.
+\end{rem}
+
+
+\subsubsection{Inner and outer calibrations}
+\vd{The notion of inner and outer calibrations is used in~\cite{beltvflow02} to construct calibrations "inside" and "outside" the studied sets. It is defined in $\RR^2$ but I guess everything works in $\RR^N$..}
+
+\begin{defn}
+Let $\Omega \subseteq \RR^2$ be a set of finite perimeter. We say that $\Omega$ is $-$calibrable if there exists a vector field $\xi^-_\Omega: \RR^2\rightarrow \RR^2$ 
+such that 
+\begin{enumerate}
+  \item $\xi^-_\Omega\in L^2_{loc}(\RR^2,\RR^2)$ and $\divx \xi^-_\Omega \in L^2_{loc}(\RR^2)$;
+  \item $|\xi^-_{\Omega}| \leq 1$ almost everywhere in $\Omega$;
+  \item $\divx \xi^-_\Omega$ is constant on $\Omega$;
+  \item $\theta(\xi^-,-D\bun{\Omega})(x)=-1$ for $\Hh^1$-almost every $x\in \partial \Omega^*$.
+\end{enumerate}
+Similarly $\Omega$ is $+$calibrable if $1),2),3)$ hold and $\theta(\xi^+,-D\bun{\Omega})(x)=+1$ in $4)$.
+\end{defn}
+The following lemma tells that one may "glue" calibrations:
+\begin{lem}[\protect{\cite{beltvflow02}}]
+  Let  $\Omega$ be a bounded set of finite perimeter. Then $v=\bun{\Omega}$ is calibrable if and only if $\Omega$ is $-$calibrable with $-\divx \xi^-_{\Omega}=\la_\Omega$ in $\Omega$, and $\RR^2\setminus \Omega$ is $+$calibrable with $\divx \xi^+_{\RR^2}=0$ in $\RR^2\setminus \Omega$,
+  defining
+  \begin{align*}
+    \xi:= \left\{ \begin{array}{cc}
+        \xi^-_\Omega & \mbox{on }  \Omega,\\
+        \xi^+_\Omega & \mbox{on } \RR^2\setminus \Omega.
+    \end{array}\right.
+  \end{align*}
+\end{lem}
+
+
+
+\subsubsection{Characterization in $\RR^2$}
+
+\begin{prop}[\protect{\cite{beltvflow02}}]
+Let $C\subset \RR^2$ be a bounded set of finite perimeter, and assume that $C$ is connected. $C$ is calibrable if and only if the following three conditions hold:
+\begin{enumerate}
+  \item $C$ is convex;
+  \item $\partial C$ is of class $C^{1,1}$;
+  \item the following inequality holds:
+    \begin{align}
+      \ess \sup_{p\in \partial C} \kappa_{\partial C} (p)\leq \frac{P(C)}{|C|}.
+    \end{align}
+\end{enumerate}
+\end{prop}
+\begin{prop}[\protect{\cite{beltvflow02}}]
+Let $\Omega \subset \RR^2$ be a bounded set of finite perimeter which is calibrable. Then,
+\begin{enumerate}
+  \item The following relation holds:
+    \begin{align}
+      \frac{P(\Omega)}{|\Omega|} \leq \frac{P(D)}{|D\cap \Omega|}, \quad \forall D\subseteq \RR^2, D \mbox{ of finite perimeter;}
+    \end{align}
+  \item each connected component of $\Omega$ is convex.
+\end{enumerate}
+\end{prop}

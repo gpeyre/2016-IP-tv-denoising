@@ -1,0 +1,180 @@
+% !TEX root = ../TV-Denoising.tex
+
+
+
+\section{Support stability outside the extended support}\label{sec:stab_extended_spt}
+
+%Let $f\in \LDD$ with $J(f)<+\infty$, such that \eqref{eq-constr-dual} has a solution (source condition), and let $\voo$ be the corresponding minimal norm certificate.
+
+
+In this section, we  prove the main result of this paper, Theorem \ref{thm:spt_stability}, which shows that, under the source condition $\partial J(f)\neq \emptyset$, as $\la\to 0^+$ and $\normLdeux{w}/\la$ is small enough, almost all topological boundaries of the level sets of the solutions to ($\Pp_\la(f+w)$) converge towards the topological boundaries of the corresponding  level sets of $f$ in the sense of Hausdorff convergence. If,  moreover, $\normLdeux{w}/\la\to 0$, the support of $D\ulaw$ is contained in arbitrarily small tubular neighborhoods of the extended support $\ext(Df)$. 
+In Section \ref{sec:stab_grad}, we show that the width of this tube can be further characterized through the knowledge of a vector field $z_0$ associated with $\voo$. An interesting consequence of our main result is that the minimal norm certificate $\voo$ is constant on each connected component of the extended support (See Corollary \ref{cor:extspt}.
+
+Throughout this section, we denote by $\vlaw$ the solution of $(\Dd_\la(f+w))$ and let $E_{\la,w}$ be any set of finite perimeter such that $\abs{\int_{E_{\la,w}} v_{\la,w} } = P(E_{\la,w})$. We also denote by $u_{\la,w}$ the solution of $\Pp_\la(f+w)$. Finally, let the level sets of $f$ be denoted by $F^{(t)}$ (refer to \eqref{eq:lev_sets} for the definition of level sets).
+
+We begin by recalling an elementary result, which holds under very weak assumptions.
+
+
+\begin{prop}\label{prop:l2cv}
+  Let $f\in \LDD$ such that $J(f)<+\infty$. Let $\{w_n\}_{n\in\NN}$, $\{\la_n\}_{n\in\NN}$ be sequences such that $w_n\in \LDD$, $\normLdeux{w_n}\to 0$, and $\la_n\to 0^+$.
+  Then $\lim_{n\to+\infty}\normLdeux{\un-f}=0$ and $\supp(Df)\subseteq \liminf_{n\to +\infty} \supp(D\un)$. 
+\end{prop}
+
+\begin{proof}
+ For the sake of simplicity, we shall denote $\un$ by $\uno$. 
+From the optimality of $\uno$, 
+  \begin{equation*}
+    \la_n J(\uno)+\frac{1}{2}\int_{\RR^2}(f+w_n-\uno)^2 \leq \la_n J(f),
+  \end{equation*}
+  we see that $\normLdeux{f-\uno}\to 0$ as $n\to+\infty$. Together with the fact that $J(\uno)\leq J(f)<+\infty$, that implies that $D\uno$ converges towards $Df$ in the weak-* topology of Radon measures. 
+If $\supp(Df)=\emptyset$, there is nothing to prove. Otherwise, let $x\in \supp(Df)$. By weak-* convergence, for all $r>0$,
+\begin{equation*}
+0<\abs{Df}(B(x,r))\leq \liminf_{n\to+\infty} \abs{D\uno}(B(x,r)).
+\end{equation*}
+Hence,  $\limsup_{n\to +\infty}\dist(x,\supp(D\uno))\leq r$, and since this is true for all $r>0$, we obtain $x\in \liminf_{n\to+\infty} \supp(D\uno)$. This yields $\supp(Df)\subseteq \liminf_{n\to +\infty} \supp(D\uno)$.
+\end{proof}
+
+With the additional assumption that $\partial J(f)\neq \emptyset$, it is possible to describe the behavior of the level lines more precisely. In the following, we denote by $\Un{t}$ the $t$-level set of $u_{\la_n,w_n}$.
+
+\begin{thm}\label{thm:spt_stability}
+  Let $f\in \LDD$ such that $J(f)<+\infty$ and $\partial J(f)\neq \emptyset$.
+  Let $\{w_n\}_{n\in\NN}$, $\{\la_n\}_{n\in\NN}$ be sequences such that $w_n\in \LDD$, $\la_n\to 0^+$, and ${\normLdeux{w_n}}/{\la_n}\leq \sqrt{\cD}/4$. .
+  Then, up to a subsequence, for a.e.\ $t\in \RR$,
+  \begin{align}\label{eq:limt}
+ \lim_{n\to+\infty} \abs{\Un{t}\Delta \F{t}} =0,\qandq \lim_{n\to+\infty} \partial \Un{t}=\partial \F{t},
+\end{align}
+where the last limit holds in the sense of Hausdorff convergence.
+
+If additionally, ${\normLdeux{w_n}}/{\la_n}\to 0$ as $n\to +\infty$, the full sequence satisfies
+\begin{equation}\label{eq:suppliminfsup}
+  \limsup_{n\to+\infty} \supp(D\un)\subseteq \ext(Df).
+\end{equation}
+\end{thm}
+
+\begin{rem}
+  It is possible to reformulate~\eqref{eq:suppliminfsup} in the following way. By Lemma~\ref{lem:largeball}, there exists $R>0$ such that for all $n$, $\supp(D\un)\subseteq B(0,R)$ and $\ext(Df))\subseteq B(0,R)$ so that by~\cite[Thm. 4.10]{rockafellarwets}), \eqref{eq:suppliminfsup} is equivalent to
+ \begin{itemize}
+   \item \textit{(outer limit inclusion)} for all $r>0$, there exists $n_0\in \NN$ such that,
+     \begin{equation*}
+  \forall n\geq n_0,\quad     \supp(D\un) \subseteq T_r \eqdef  \enscond{x\in \RR^2}{\mathrm{dist}(x,\ext(Df))\leq r }.
+     \end{equation*}
+   \item \textit{(inner limit inclusion)} for all $r>0$, there exists $n_1\in \NN$ such that,
+     \begin{equation*}
+  \forall n\geq n_1,\quad    \supp(Df) \subseteq  \enscond{x\in \RR^2}{\mathrm{dist}(x,\supp(D\un))\leq r }.
+     \end{equation*}
+ \end{itemize}
+The second equation of~\eqref{eq:limt} has a similar reformulation.
+\end{rem}
+
+\begin{rem}
+Note that while \cite{duvalpeyre13} considered low noise regimes  in which $\lambda_n \to 0^+$ and $\norm{w_n}_{L^2}\la_n\leq C$ for some well chosen constant $C$ (for the problem of sparse spikes deconvolution), to obtain the strongest result for the problem of TV denoising, we require that ${\normLdeux{w_n}}/{\la_n}\to 0$ as $n\to +\infty$.
+\end{rem}
+
+%\begin{thm}\label{thm:spt_stability}
+%For all $r>0$, there exists $\la_r, \al_r>0$ such that   any level set $F_{\la,w}$ of  $u_{\la,w}$, satisfies
+%$$
+%\partial F_{\la,w} \subseteq T_r,
+%$$
+%whenever $(\la,w)\in D_{\la_r, \al_r}$.
+%\end{thm}
+
+\begin{proof}
+
+By~Lemma~\ref{lem:largeball}, there exists some radius $R>0$ such that for any $t\neq 0$, any $n\in \NN$, the level set $\Un{t}$ of $\uno$ is included in $B(0,R)$ (since $(\la_n,w_n)\in D_{1,\sqrt{\cD}/4}$). The same also holds for the level sets $\F{t}$ of $f$.
+As a result, $\supp(\uno)\cup \supp(f)\subseteq \overline{B(0,R)}$ and the $L^2$ convergence of $\uno$ towards $f$ also implies its $L^1$ convergence. But by Fubini's theorem,
+\begin{equation*}
+  0=\lim_{n\to+\infty}  \int_{\RR^2}\abs{\uno-f}=\lim_{n\to+\infty} \int_{\RR} \abs{\Un{t}\triangle\F{t}}\d t, 
+\end{equation*}
+so that, up to the extraction of a subsequence $(\unp)_{n'\in\NN}$, for a.e. $t\in \RR$, $\lim_{n\to+\infty}\abs{\Unp{t}\triangle\F{t}}=0$.
+
+Now let us fix such $t\in \RR$, and such a subsequence $(\unp)_{n'\in\NN}$. By $L^1$ convergence of $\bun{\Unp{t}}$ towards $\bun{\F{t}}$, and the fact that $\abs{D\bun{\Unp{t}}}(\RR^2)=P(\Unp{t})$ is uniformly bounded (by Lemma~\eqref{lem:unif_bd_lev_sets}), the gradient $D\bun{\Unp{t}}$ converges towards $D\bun{\F{t}}$ in the weak-* topology. Repeating the same argument as in Proposition~\ref{prop:l2cv} above, we obtain that 
+\begin{equation*}
+  \partial \F{t}=\supp(D\bun{\F{t}}) \subseteq \liminf_{n'\to+\infty}\supp(D\bun{\Unp{t}}) =\liminf_{n'\to+\infty} \partial\Unp{t}.
+\end{equation*}
+
+
+%By Proposition~\ref{prop:weak_reg}, for all $0<r' \leq r_0$,
+%\begin{equation*}
+%  \abs{B(x,r')\cap \F{t}}\geq \frac{1}{16}\abs{B(x,r')},\qandq \abs{B(x,r')\setminus \F{t}} \geq \frac{1}{16}\abs{B(x,r')}.
+%\end{equation*}
+%By $L^1$ convergence of $\bun{\Unp{t}}$ towards $\F{t}$, we see that for each $r'\in (0,r_0]$, for all $n'$ large enough,  $\abs{B(x,r')\cap \Unp{t}}>0$ and $\abs{B(x,r')\setminus \Unp{t}}>0$. This implies that $\limsup_{n\to +\infty}\dist(x,\partial \Unp{t})\leq r'$, and since this is true for all $r'\in(0,r_0]$, we obtain $x\in \liminf_{n\to+\infty} \partial\Unp{t}$. Hence $\partial \F{t}\subseteq \liminf_{n'\to+\infty} \partial\Unp{t}$.
+
+Let us prove that $\limsup_{n'\to+\infty} \partial\Unp{t}\subseteq \partial\F{t}$. If $\partial\Unp{t}=\emptyset$ for all $n'$ large enough, then $\limsup_{n'\to+\infty} \partial\Unp{t}=\emptyset$ and there is nothing to prove. Otherwise, let $(x_{n'})_{n\in\NN}$ such that $x_{n'}\in  \partial\Unp{t}$ and (up to the additional extraction of a subsequence - that we do not relabel) $\lim_{n'\to+\infty}x_{n'}=x\in \RR^2$. By Proposition~\ref{prop:weak_reg}, for all $r \leq r_0$,
+\begin{equation*}
+  \abs{B(x_{n'},r)\cap \Unp{t}}\geq \frac{1}{16}\abs{B(x_{n'},r)},\qandq \abs{B(x_{n'},r)\setminus \Unp{t}} \geq \frac{1}{16}\abs{B(x_{n'},r)}.
+\end{equation*}
+By the dominated convergence theorem, we obtain for $n\to+\infty$,
+\begin{equation*}
+  \abs{B(x,r)\cap \F{t}}\geq \frac{1}{16}\abs{B(x,r)},\qandq \abs{B(x,r)\setminus \F{t}} \geq \frac{1}{16}\abs{B(x,r)}.
+\end{equation*}
+Since this holds for all $r\in (0,r_0]$, we see that $x\in \partial\F{t}$, hence $\limsup_{n'\to+\infty} \partial\Unp{t}\subseteq \partial\F{t}$.
+
+
+
+To prove $\limsup_{n\to+\infty} \supp(D\uno)\subseteq \ext(Df)$, we consider the full sequence again and we now assume that ${\normLdeux{w_n}}/{\la_n}\to 0$ as $n\to +\infty$. We denote by $\vno$ the dual certificate $v_{\la_n,w_n}$. If $\supp(D\uno)=\emptyset$ for all $n'$ large enough, there is nothing to prove. Otherwise, let $(x_n)_{n\in\NN}$ such that $x_n\in\supp(D\uno)$ and (up to the extraction of a subsequence) $\lim_{n\to+\infty}x_n=x$ for some $x\in \RR^2$. By Proposition~\ref{prop:prelim-suppdf}, it is not restrictive to assume that $x_n\in \partial E_n$ for some $E_n\in \FFn$ (otherwise we may replace $x_n$ with $y_n\in \partial E_n$ such that $\abs{x_n-y_n}\leq 1/n$).
+
+  By Lemma~\ref{lem:unif_bd_lev_sets} and~\ref{lem:largeball}, the family $\{E_n\}_{n\in\NN}$ is relatively compact in the $L^1$ topology (see \cite[Thm. 12.26]{maggi2012sets}), that is, there exists $E\subseteq \RR^2$ with finite measure such that, up to the extraction of a subsequence, $\lim_{n\to +\infty} \abs{E\triangle E_n}=0$ (we do not relabel the subsequence). Moreover, up to the additional extraction of a subsequence, we may assume that either for all $n$, $\int_{E_n}\vno =P(E_n)$, or for all $n$,
+$\int_{E_n}\vno =-P(E_n)$. We deal with the first case, the other being similar.
+
+Passing to the limit in the optimality equation for $E_n$, we get
+\begin{equation}\label{lsc_perim}
+  P(E)\leq \liminf_{n\to +\infty}P(E_n)=\lim_{n\to+\infty}\int_{E_n}\vno =\int_{E}\voo,
+\end{equation}
+by the lower semi-continuity of the perimeter, and since $\bun{E_n}$ (resp. $v_{\la_n,w_n}$) converges strongly in $\LDD$ towards $\bun{E}$ (resp. $\voo$). Since $\voo\in \partial J(f)\subseteq \partial J(0)$, the converse inequality also holds, so that $P(E)=\int_E\voo$,  and $E\in \FFoo$. By definition of the extended support, this means that $\partial^*E\subseteq \ext(Df)$, hence $\partial E\subseteq \ext(Df)$.
+
+Simarly as above, we conclude that $x\in\partial E$ in the following way. By Proposition~\ref{prop:weak_reg}, for all $r \leq r_0$,
+\begin{equation}\label{eq:reg_conseq}
+  \abs{B(x_n,r)\cap E_{n}}\geq \frac{1}{16}\abs{B(x_n,r)},\qandq \abs{B(x_n,r)\setminus E_{n}} \geq \frac{1}{16}\abs{B(x_n,r)}.
+\end{equation}
+By the dominated convergence theorem, we obtain for $n\to+\infty$,
+\begin{equation*}
+  \abs{B(x,r)\cap E}\geq \frac{1}{16}\abs{B(x,r)},\qandq \abs{B(x,r)\setminus E} \geq \frac{1}{16}\abs{B(x,r)}.
+\end{equation*}
+Since this holds for all $r\in (0,r_0]$, we see that $x\in \partial E\subseteq \ext(Df)$. Hence $\limsup_{n\to+\infty} \supp(D\uno)\subseteq \ext(Df)$.
+\end{proof}
+
+
+
+%
+%
+%
+%
+%
+%
+%
+%
+%\subsection{Bounding the perimeter outside the tube}
+%
+%\begin{prop}\label{prop:small_perim_outside}
+%Let $r>0$. The following limit holds.
+%  \begin{equation*}
+%    \lim_{(\la_0,\alpha_0)\to (0,0)} \sup \enscond{\HDU{\partial^*\Elaws\setminus T_r}}{\Elaws \in \FFlaw,\ (\la,\alpha)\in \lnr{\alpha_0}{\la_0}}=0.
+%  \end{equation*}
+%\end{prop}
+
+
+
+\begin{rem}[On dimensions $N\geq 3$]
+The are two key elements to the proof of Theorem \ref{thm:spt_stability}: \begin{enumerate}
+\item  \textbf{Compactness.} Lemma~\ref{lem:unif_bd_lev_sets} and~\ref{lem:largeball}  give the fact that there exists $R,L>0$ such that $P(E_n)<L$ and the fact that there exists $R$ such that $E_n\subset B(0,R)$. This  allows the required compactness result to be applied.
+\item \textbf{Weak Regularity.} Proposition \ref{prop:weak_reg} which ensures that the boundaries of all level sets are uniformly weakly  regular.
+\end{enumerate}
+The difficulty with extending Theorem \ref{thm:spt_stability} to higher dimensions is that the second property of weak regularity is no longer true: In dimension $N$, for weak regularity, we would require that $$\lim_{\la,\normLdeux{w}/\la\to 0}\norm{v_{\la,w}-\voo}_{L^N}=0.$$ However, the natural topology for $\{\vlaw\}_{\la,w}$ is $L^2(\RR^N)$ and when $N\geq 3$, there is no guarantee that the boundaries of the level sets of $\ulaw$ do not have arbitrarily many singular points such as cusps, and it may be the case that there are level sets of $\ulaw$ arbitrarily far out with arbitrarily small measure and perimeter.
+
+When $N\geq 3$, it is still true that there exists $L$ such that $P(E)\leq L$ for all $E\in\FFlaw$ with $(\la,w)\in D_{1,\sqrt{c_2}/4}$ and it is  possible to adapt the argument in the proof of Theorem \ref{thm:spt_stability} to conclude that for each $r>0$,
+$$\lim_{(\la_0,\alpha_0)\to (0,0)} \sup \enscond{\HDU{\partial^*\Elaws\setminus T_r}}{\Elaws \in \FFlaw,\ (\la,\alpha)\in \lnr{\alpha_0}{\la_0}}=0.$$
+However, we have no guarantee that there exists $\la_0,\al_0>0$ such that $\Hh^{N-1}(\partial^* E\setminus T_r) = 0$ for all $E\in \Ff_{\la,w}$ with $(\la,w)\in D_{\la_0,\al_0}$.
+\end{rem}
+
+
+
+
+As consequence of the support stability theorem, we obtain the following result on the minimal norm certificate.
+\begin{cor}\label{cor:extspt}
+Let $\Omega$ be any connected component of $\RR^2\setminus \mathrm{Ext}(f)$. Then $\voo$ is constant on $\Omega$. 
+\end{cor} 
+\begin{proof}
+For $\delta>0$, let $\Omega_\delta = \{x\in\Omega : \mathrm{dist}(\partial \Omega, x)>\delta\}$.
+From Theorem  \ref{thm:spt_stability}, we know that for all $\delta$, there exists $\la_\delta>0$ such that for all $\la\in D_{\la_\delta, 0}$, $u_{\la,0}$ is constant on $\Omega_\delta$. Since $v_{\la,0} = (f-u_{\la,0})/\la$, it follows that $v_{\la,0}$ is also constant on $\Omega_\delta$. So, since $\voo$ is the $L^2$ limit of $v_{\la,0}$, $\voo$ must be constant on $\Omega_\delta$ for all $\delta>0$. Therefore, $\voo$ is constant on $\Omega$.
+\end{proof}
+

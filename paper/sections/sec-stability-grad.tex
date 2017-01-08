@@ -1,0 +1,90 @@
+% !TEX root = ../TV-Denoising.tex
+
+\section{Stability of the support of the gradient}\label{sec:stab_grad}
+\todo{The previous section shows that one has support stabiliy ouside the extended support. This section shows that if we knew the behaviour of $z_0$, then we can have more precise bounds on the support stability regions. }
+
+
+Let $f\in \LDD \cap \BVD$ such that \eqref{eq-constr-dual} has a solution (source condition). 
+Let $v_0$ be the corresponding minimal norm certificate.
+
+We define a tube around the extended support
+\begin{equation}
+  T_r\eqdef \enscond{x\in \RR^2}{\mathrm{dist}(x,\ext(Df))\leq r }
+\end{equation}
+
+We assume that (see for instance Section~\ref{sec:calibrable} for examples),
+
+\begin{equation*}
+  \deltar\eqdef 1-\ess \sup_{x\in T_r^C} \abs{z_0(x)}>0.\label{eq:defer}
+\end{equation*}
+\todo{finish to incorporate the noise in this section}
+Let $E_\la$ be any level set of the solution $\ulaw$ of~$(\Pp_\la(f+w))$ . We assume without loss of generality that $\abs{E_\la}<+\infty$. We denote by $\vlaw$ (resp. $\vla$) the solution of $(\Dd_\la(f+w))$ (resp. $\Dd_\la(f))$)
+
+ 
+
+
+\begin{prop}\label{prop:partoutsidetube}
+  There is a constant $C>0$ (which only depends on $v_0$) such that 
+\begin{equation}
+  \deltar \HDU{\partial^*E_{\la,w}\setminus T_r}\leq \int_{E_{\la,w}}(v_{\la,w} - v_0)\leq C\normLdeux{v_{\la,w}-v_0},
+\end{equation}
+\end{prop}
+
+
+\begin{proof}
+Comparing the energy of $E_{\la,w}$ with that of the empty set we get,
+\begin{align*}
+  P(E_{\la,w})\leq \int_{E_{\la,w}}v_{\la,w} &= \int_{E_{\la,w}}(v_{\la,w}-v_0) + \int_{E_{\la,w}}v_0
+  \\
+                                 &\leq \normLdeux{v_{\la,w}-v_0}\sqrt{\abs{E_{\la,w}}} + \int_{\partial^* E_{\la,w}} z_0\cdot \nu
+                                 \\
+  \mbox{hence }  P(E_{\la,w})- \int_{\partial^* E_{\la,w}\cap T_R}z_0\cdot \nu - \int_{\partial^* E_{\la,w}\setminus T_r}z_0\cdot \nu &\leq C \normLdeux{v_{\la,w}-v_0}.
+\end{align*}
+Since $\left(\ess \sup_{\RR^N\setminus T_r}\abs{z_0}\right)\leq 1-\deltar$, and more generally $\normLinf{z_0}\leq 1$, 
+\begin{align*}
+  P(E_{\la,w})- \int_{\partial^* E_{\la,w}\cap T_R}z_0\cdot \nu - \int_{\partial^* E_{\la,w}\setminus T_r}z_0\cdot \nu  &\geq \HDU{\partial^*E_{\la,w}\setminus T_r}+\HDU{\partial^*E_{\la,w}\cap T_r}\\
+                                                                                                            &- (1-\deltar)\HDU{\partial^*E_{\la,w}\setminus T_r} - \HDU{\partial^*E_{\la,w}\cap T_r}\\
+                                                                                                            &\geq  \deltar \left(\HDU{\partial^*E_{\la,w}\setminus T_r}\right),
+\end{align*}
+hence the claimed result.
+
+\end{proof}
+
+
+
+\begin{prop}\label{prop:entiretubecomplement}
+Let $\la>0$ and $w\in \LDD$ be such that $\normLdeux{v_{\la,w}-v_0} <2\sqrt{\pi}\deltard$. Then, $E\in \FFlaw$ and $P(E)>0$ implies that
+  \begin{equation}
+    \HDU{\partial^* E \cap T_{r/2}}>0.
+  \end{equation}
+\end{prop}
+\begin{proof}
+Assume by contradiction that $P(E)>0$ and $\HDU{\partial^* E\cap T_{r/2}}=0$ so that $\partial^* E \subset T_{r/2}^c$ up to an $\Hh^1$-negligible set. Then,
+\begin{align*}
+P(E) &= \int_E \vlaw \leq \norm{E}^{1/2} \normLdeux{\vlaw - \voo} + \int_E \voo\\
+&\leq \frac{P(E) \normLdeux{\vlaw - \voo} }{2\sqrt{\pi}}+ (1-\delta_{r/2}) P(E)
+\end{align*}
+where we have applied the isoperimetric inequality and the fact that $\voo = \divx z_0$ with $\abs{z_0}leq (1-\delta_{r/2})$ on $T_{r/2}^c$. Since $P(E)>0$, this implies that
+$$
+2\delta_{r/2}\sqrt{\pi} \leq \normLdeux{\vlaw - \voo}.$$
+This contradicts the assumption of this proposition.
+\end{proof}
+
+
+
+We obtain the following stability theorem in the case $N=2$.
+
+
+\begin{thm}
+ If $\la>0$ and $w\in \LDD$ are such that
+  $$
+  \norm{v_{\la,w} - v_0}_{L^2}\leq \frac{r\delta_{r/2}}{2},
+  $$
+  then
+up to an $\Hh^1$-negligible set,
+\begin{equation}
+  \partial^* E_{\la,w} \subseteq T_r.
+\end{equation}
+
+\end{thm}
+

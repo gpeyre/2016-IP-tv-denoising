@@ -1,0 +1,88 @@
+%\documentclass[10pt]{article}
+\documentclass[11pt]{iopart}
+
+%\usepackage{fullpage}
+% Be sure to use PDF Latex
+
+
+\pdfoutput=1
+
+
+\usepackage{url}
+\usepackage{mystyle}
+\usepackage[utf8]{inputenc}
+
+
+%For personal comments: change your color below if you don't like yours
+\newcommand{\commentaire}[3]{{\color{#1}\textbf{#2 :} #3}} 
+\newcommand{\ac}[1]{\commentaire{blue}{Antonin}{#1}}
+\newcommand{\cp}[1]{\commentaire{cyan}{Clarice}{#1}}
+\newcommand{\gc}[1]{\commentaire{purple}{Gabriel}{#1}}
+\newcommand{\vd}[1]{\commentaire{violet}{Vincent}{#1}}
+
+%To include a low-quality image instead of the high quality
+\newcommand{\UseLowRes}[2]{#2}
+
+\newcommand*{\RED}[1]{{\color{red}#1}}
+
+
+\newcommand{\Ceremade}{CEREMADE, Universit\'e Paris-Dauphine, CNRS, Place du Marechal De Lattre De Tassigny, 75775 Paris 16, FRANCE}
+\newcommand{\INRIA}{INRIA, MOKAPLAN, 2 rue Simone Iff, Paris, FRANCE}
+\newcommand{\CMAP}{CMAP, Ecole Polytechnique, CNRS, 91128 Palaiseau, FRANCE}
+\newcommand{\CNRS}{CNRS}
+\newcommand{\Cam}{DAMTP, University of Cambridge, Wilberforce Road, Cambridge CB3 0DZ, UK}
+
+% bibliography management
+\usepackage[style=numeric-comp,natbib=true,backend=bibtex,maxbibnames=99]{biblatex}
+\bibliography{mybiblio.bib}
+\AtEveryBibitem{\clearlist{url}}
+\AtEveryBibitem{\clearlist{doi}}
+\renewcommand\cite{\citep}
+
+
+\begin{document}
+
+\title[Geometric properties of solutions to the total variation denoising problem]{Geometric properties of solutions \\ to the total variation denoising problem}
+
+\author{Antonin Chambolle$^1$, Vincent Duval$^2$, Gabriel Peyr{\'e}$^{3,4,2}$, Clarice Poon$^{4,2,5}$}
+
+\address{$^1$ \CMAP}
+\address{$^2$ \INRIA}
+\address{$^3$ \CNRS}
+\address{$^4$ \Ceremade}
+\address{$^5$ \Cam}
+
+\ead{antonin.chambolle@cmap.polytechnique.fr,vincent.duval@inria.fr\\gabriel.peyre@ceremade.dauphine.fr,cmhsp2@cam.ac.uk}
+
+
+% \maketitle
+
+\input{sections/sec-abstract.tex}
+
+%temporary
+%\tableofcontents
+
+
+\input{sections/sec-intro.tex}
+\input{sections/sec-preliminaries.tex}
+\input{sections/sec-duality.tex}
+\input{sections/sec-properties-lev-sets.tex}
+\input{sections/sec-extended.tex}
+\input{sections/sec-stability-outside.tex}
+\input{sections/sec-stability-square.tex}
+\input{sections/sec-nondegeneracy.tex}
+\input{sections/sec-numerics.tex}
+\input{sections/sec-conclusion.tex}
+
+
+%\input{sections/sec-burger-osher.tex}
+%\input{sections/comments.tex}
+
+
+\printbibliography
+
+%\bibliographystyle{plain}
+%\bibliography{mybiblio.bib}
+
+
+\end{document}

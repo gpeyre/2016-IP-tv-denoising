@@ -1,0 +1,15 @@
+% !TEX root = ../TV-Denoising.tex
+
+\begin{abstract}
+This article studies the denoising performance of total variation (TV) image regularization. More precisely, we study geometrical properties of the solution to the so-called Rudin-Osher-Fatemi total variation denoising method.  
+%
+% TV denoising is a popular denoising scheme, and is regarded as a baseline for edge-preserving image restoration. A folklore statement is that this method is able to restore sharp edges, but at the same time, might introduce some staircasing (i.e. ``fake'' edges) in flat areas. Quite surprisingly, put aside numerical evidences, almost no theoretical result are available to backup these claims. 
+%
+The first contribution of this paper is a precise mathematical definition of the ``extended support'' (associated to the noise-free image) of TV denoising. It is intuitively the region which is unstable and will suffer from the staircasing effect. We highlight in several practical cases, such as the indicator of convex sets, that this region can be determined explicitly.
+%
+Our second and main contribution is a proof that the TV denoising method indeed restores an image which is exactly constant outside a small tube surrounding the extended support. The radius of this tube shrinks toward zero as the noise level vanishes, and we are able to determine, in some cases, an upper bound on the convergence rate. 
+% 
+For indicators of so-called ``calibrable'' sets (such as disks or properly eroded squares), this extended support matches the edges, so that discontinuities produced by TV denoising cluster tightly around the edges. In contrast, for indicators of more general shapes or for complicated images, this extended support can be larger.  
+%
+Beside these main results, our paper also proves several intermediate results about fine properties of TV regularization, in particular for indicators of calibrable and convex sets, which are of independent interest. 
+\end{abstract}

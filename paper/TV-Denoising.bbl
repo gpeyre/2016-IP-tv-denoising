@@ -1,0 +1,2868 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 2.7 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated as
+% required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+\sortlist[entry]{nty/global/}
+  \entry{AcarVogel}{article}{}
+    \name{author}{2}{}{%
+      {{hash=AR}{%
+         family={Acar},
+         family_i={A\bibinitperiod},
+         given={R.},
+         given_i={R\bibinitperiod},
+      }}%
+      {{hash=VC}{%
+         family={Vogel},
+         family_i={V\bibinitperiod},
+         given={C.R.},
+         given_i={C\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{ARVC1}
+    \strng{fullhash}{ARVC1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{A}
+    \field{sortinithash}{A}
+    \field{pages}{1217?\bibrangedash 1229}
+    \field{title}{Analysis of bounded variation penalty methods for ill-posed
+  problems}
+    \field{volume}{10}
+    \field{journaltitle}{Inverse Problems}
+    \field{year}{1994}
+  \endentry
+
+  \entry{Aharon06}{article}{}
+    \name{author}{3}{}{%
+      {{hash=AM}{%
+         family={Aharon},
+         family_i={A\bibinitperiod},
+         given={M.},
+         given_i={M\bibinitperiod},
+      }}%
+      {{hash=EM}{%
+         family={Elad},
+         family_i={E\bibinitperiod},
+         given={M.},
+         given_i={M\bibinitperiod},
+      }}%
+      {{hash=BA}{%
+         family={Bruckstein},
+         family_i={B\bibinitperiod},
+         given={A.},
+         given_i={A\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {IEEE}%
+    }
+    \strng{namehash}{AMEMBA1}
+    \strng{fullhash}{AMEMBA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{A}
+    \field{sortinithash}{A}
+    \field{number}{11}
+    \field{pages}{4311\bibrangedash 4322}
+    \field{title}{{K-SVD}: An algorithm for designing overcomplete dictionaries
+  for sparse representation}
+    \field{volume}{54}
+    \field{journaltitle}{Signal Processing, IEEE Transactions on}
+    \field{year}{2006}
+  \endentry
+
+  \entry{Allard1}{article}{}
+    \name{author}{1}{}{%
+      {{hash=AW}{%
+         family={Allard},
+         family_i={A\bibinitperiod},
+         given={W.K.},
+         given_i={W\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{AW1}
+    \strng{fullhash}{AW1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{A}
+    \field{sortinithash}{A}
+    \field{number}{4}
+    \field{pages}{1150\bibrangedash 1190}
+    \field{title}{Total variation regularization for image denoising {I}:
+  Geometric theory}
+    \field{volume}{39}
+    \field{journaltitle}{SIAM Journal on Mathematical Analysis}
+    \field{year}{2007}
+  \endentry
+
+  \entry{Allard2}{article}{}
+    \name{author}{1}{}{%
+      {{hash=AW}{%
+         family={Allard},
+         family_i={A\bibinitperiod},
+         given={W.K.},
+         given_i={W\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{AW1}
+    \strng{fullhash}{AW1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{A}
+    \field{sortinithash}{A}
+    \field{number}{4}
+    \field{pages}{400\bibrangedash 417}
+    \field{title}{Total variation regularization for image denoising {II}:
+  Examples}
+    \field{volume}{1}
+    \field{journaltitle}{SIAM Journal on Imaging Sciences}
+    \field{year}{2008}
+  \endentry
+
+  \entry{Allard3}{article}{}
+    \name{author}{1}{}{%
+      {{hash=AW}{%
+         family={Allard},
+         family_i={A\bibinitperiod},
+         given={W.K.},
+         given_i={W\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{AW1}
+    \strng{fullhash}{AW1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{A}
+    \field{sortinithash}{A}
+    \field{number}{2}
+    \field{pages}{532\bibrangedash 568}
+    \field{title}{Total variation regularization for image denoising {III}:
+  Examples}
+    \field{volume}{2}
+    \field{journaltitle}{SIAM Journal on Imaging Sciences}
+    \field{year}{2009}
+  \endentry
+
+  \entry{alteruniq09}{article}{}
+    \name{author}{2}{}{%
+      {{hash=AF}{%
+         family={Alter},
+         family_i={A\bibinitperiod},
+         given={F.},
+         given_i={F\bibinitperiod},
+      }}%
+      {{hash=CV}{%
+         family={Caselles},
+         family_i={C\bibinitperiod},
+         given={V.},
+         given_i={V\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Elsevier}%
+    }
+    \strng{namehash}{AFCV1}
+    \strng{fullhash}{AFCV1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{A}
+    \field{sortinithash}{A}
+    \field{number}{1}
+    \field{pages}{32\bibrangedash 44}
+    \field{title}{Uniqueness of the {Cheeger} set of a convex body}
+    \field{volume}{70}
+    \field{journaltitle}{Nonlinear Analysis: Theory, Methods \& Applications}
+    \field{year}{2009}
+  \endentry
+
+  \entry{altercalib05}{article}{}
+    \name{author}{3}{}{%
+      {{hash=AF}{%
+         family={Alter},
+         family_i={A\bibinitperiod},
+         given={F.},
+         given_i={F\bibinitperiod},
+      }}%
+      {{hash=CV}{%
+         family={Caselles},
+         family_i={C\bibinitperiod},
+         given={V.},
+         given_i={V\bibinitperiod},
+      }}%
+      {{hash=CA}{%
+         family={Chambolle},
+         family_i={C\bibinitperiod},
+         given={A.},
+         given_i={A\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{AFCVCA1}
+    \strng{fullhash}{AFCVCA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{A}
+    \field{sortinithash}{A}
+    \field{pages}{29\bibrangedash 53}
+    \field{title}{A characterization of convex calibrable sets in $R^{N}$}
+    \field{volume}{7}
+    \field{journaltitle}{Math. Ann.}
+    \field{year}{2005}
+  \endentry
+
+  \entry{alter2005evolution}{article}{}
+    \name{author}{3}{}{%
+      {{hash=AF}{%
+         family={Alter},
+         family_i={A\bibinitperiod},
+         given={F.},
+         given_i={F\bibinitperiod},
+      }}%
+      {{hash=CV}{%
+         family={Caselles},
+         family_i={C\bibinitperiod},
+         given={V.},
+         given_i={V\bibinitperiod},
+      }}%
+      {{hash=CA}{%
+         family={Chambolle},
+         family_i={C\bibinitperiod},
+         given={A.},
+         given_i={A\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {European Mathematical Society}%
+    }
+    \strng{namehash}{AFCVCA1}
+    \strng{fullhash}{AFCVCA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{A}
+    \field{sortinithash}{A}
+    \field{number}{1}
+    \field{pages}{29}
+    \field{title}{Evolution of characteristic functions of convex sets in the
+  plane by the minimizing total variation flow}
+    \field{volume}{7}
+    \field{journaltitle}{Interfaces and free boundaries}
+    \field{year}{2005}
+  \endentry
+
+  \entry{alterconvex05}{article}{}
+    \name{author}{3}{}{%
+      {{hash=AF}{%
+         family={Alter},
+         family_i={A\bibinitperiod},
+         given={F.},
+         given_i={F\bibinitperiod},
+      }}%
+      {{hash=CV}{%
+         family={Caselles},
+         family_i={C\bibinitperiod},
+         given={V.},
+         given_i={V\bibinitperiod},
+      }}%
+      {{hash=CA}{%
+         family={Chambolle},
+         family_i={C\bibinitperiod},
+         given={A.},
+         given_i={A\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{AFCVCA1}
+    \strng{fullhash}{AFCVCA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{A}
+    \field{sortinithash}{A}
+    \field{pages}{329\bibrangedash 366}
+    \field{title}{Evolution of Convex Sets in the Plane by Minimizing the Total
+  Variation Flow}
+    \field{volume}{332}
+    \field{journaltitle}{Interfaces and Free Boundaries}
+    \field{year}{2005}
+  \endentry
+
+  \entry{AmaBel15}{misc}{}
+    \name{author}{3}{}{%
+      {{hash=AS}{%
+         family={Amato},
+         family_i={A\bibinitperiod},
+         given={S.},
+         given_i={S\bibinitperiod},
+      }}%
+      {{hash=BG}{%
+         family={Bellettini},
+         family_i={B\bibinitperiod},
+         given={G.},
+         given_i={G\bibinitperiod},
+      }}%
+      {{hash=TL}{%
+         family={Tealdi},
+         family_i={T\bibinitperiod},
+         given={L.},
+         given_i={L\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{ASBGTL1}
+    \strng{fullhash}{ASBGTL1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{A}
+    \field{sortinithash}{A}
+    \field{number}{1}
+    \field{pages}{2353\bibrangedash 3382}
+    \field{title}{Anisotropic mean curvature on facets and relations with
+  capillarity}
+    \field{volume}{1}
+    \field{journaltitle}{Geometric Flows}
+    \field{year}{2015}
+  \endentry
+
+  \entry{Ambrocorso}{book}{}
+    \name{author}{1}{}{%
+      {{hash=AL}{%
+         family={Ambrosio},
+         family_i={A\bibinitperiod},
+         given={L.},
+         given_i={L\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Pantograph, Genova}%
+    }
+    \strng{namehash}{AL1}
+    \strng{fullhash}{AL1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{A}
+    \field{sortinithash}{A}
+    \field{series}{Quad. Scuola Norm. Sup. Pisa}
+    \field{title}{Corso introduttivo alla teoria geometrica della misura ed
+  alle superfici minimime}
+    \field{year}{1997}
+  \endentry
+
+  \entry{Ambrosio}{book}{}
+    \name{author}{3}{}{%
+      {{hash=AL}{%
+         family={Ambrosio},
+         family_i={A\bibinitperiod},
+         given={L.},
+         given_i={L\bibinitperiod},
+      }}%
+      {{hash=FN}{%
+         family={Fusco},
+         family_i={F\bibinitperiod},
+         given={N.},
+         given_i={N\bibinitperiod},
+      }}%
+      {{hash=PD}{%
+         family={Pallara},
+         family_i={P\bibinitperiod},
+         given={D.},
+         given_i={D\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Oxford University Press}%
+    }
+    \strng{namehash}{ALFNPD1}
+    \strng{fullhash}{ALFNPD1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{A}
+    \field{sortinithash}{A}
+    \field{series}{Oxford mathematical monographs}
+    \field{title}{Functions of Bounded Variation and Free Discontinuity
+  Problems}
+    \field{year}{2000}
+  \endentry
+
+  \entry{ambcasmas99}{article}{}
+    \name{author}{4}{}{%
+      {{hash=AL}{%
+         family={Ambrosio},
+         family_i={A\bibinitperiod},
+         given={L.},
+         given_i={L\bibinitperiod},
+      }}%
+      {{hash=CV}{%
+         family={Caselles},
+         family_i={C\bibinitperiod},
+         given={V.},
+         given_i={V\bibinitperiod},
+      }}%
+      {{hash=MS}{%
+         family={Masnou},
+         family_i={M\bibinitperiod},
+         given={S.},
+         given_i={S\bibinitperiod},
+      }}%
+      {{hash=MJM}{%
+         family={Morel},
+         family_i={M\bibinitperiod},
+         given={J-M.},
+         given_i={J\bibinitperiod-M\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{AL+1}
+    \strng{fullhash}{ALCVMSMJM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{A}
+    \field{sortinithash}{A}
+    \field{pages}{213\bibrangedash 266}
+    \field{title}{Connected Components of Sets of Finite Perimeter and
+  Applications to Image Processing}
+    \field{volume}{3}
+    \field{journaltitle}{Journal of EMS.}
+    \field{year}{2001}
+  \endentry
+
+  \entry{andreu2004parabolic}{book}{}
+    \name{author}{3}{}{%
+      {{hash=AVF}{%
+         family={Andreu-Vaillo},
+         family_i={A\bibinitperiod-V\bibinitperiod},
+         given={F.},
+         given_i={F\bibinitperiod},
+      }}%
+      {{hash=CV}{%
+         family={Caselles},
+         family_i={C\bibinitperiod},
+         given={V.},
+         given_i={V\bibinitperiod},
+      }}%
+      {{hash=MJ}{%
+         family={Mazon},
+         family_i={M\bibinitperiod},
+         given={J.M.},
+         given_i={J\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Springer Verlag NY}%
+    }
+    \strng{namehash}{AVFCVMJ1}
+    \strng{fullhash}{AVFCVMJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{A}
+    \field{sortinithash}{A}
+    \field{isbn}{9783764366193}
+    \field{series}{Progress in Mathematics}
+    \field{title}{Parabolic Quasilinear Equations Minimizing Linear Growth
+  Functionals}
+    \field{year}{2004}
+  \endentry
+
+  \entry{Anzellotti}{article}{}
+    \name{author}{1}{}{%
+      {{hash=AG}{%
+         family={Anzellotti},
+         family_i={A\bibinitperiod},
+         given={G.},
+         given_i={G\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{AG1}
+    \strng{fullhash}{AG1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{A}
+    \field{sortinithash}{A}
+    \field{number}{135}
+    \field{pages}{293\bibrangedash 318}
+    \field{title}{Pairing Between Measures and Bounded Functions and
+  Compensated Compactness}
+    \field{volume}{IV}
+    \field{journaltitle}{Ann. di Matematica Pura ed Appl.}
+    \field{year}{1983}
+  \endentry
+
+  \entry{Aujol}{article}{}
+    \name{author}{4}{}{%
+      {{hash=AJF}{%
+         family={Aujol},
+         family_i={A\bibinitperiod},
+         given={J.-F.},
+         given_i={J\bibinitperiod-F\bibinitperiod},
+      }}%
+      {{hash=AG}{%
+         family={Aubert},
+         family_i={A\bibinitperiod},
+         given={G.},
+         given_i={G\bibinitperiod},
+      }}%
+      {{hash=BFL}{%
+         family={Blanc-F\'eraud},
+         family_i={B\bibinitperiod-F\bibinitperiod},
+         given={L.},
+         given_i={L\bibinitperiod},
+      }}%
+      {{hash=CA}{%
+         family={Chambolle},
+         family_i={C\bibinitperiod},
+         given={A.},
+         given_i={A\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{AJF+1}
+    \strng{fullhash}{AJFAGBFLCA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{A}
+    \field{sortinithash}{A}
+    \field{pages}{71\bibrangedash 88}
+    \field{title}{Image decomposition into a bounded variation component and an
+  oscillating component}
+    \field{volume}{22}
+    \field{journaltitle}{Journal of Mathematical Imaging and Vision}
+    \field{year}{2005}
+  \endentry
+
+  \entry{Barozzi}{article}{}
+    \name{author}{3}{}{%
+      {{hash=BE}{%
+         family={Barozzi},
+         family_i={B\bibinitperiod},
+         given={E.},
+         given_i={E\bibinitperiod},
+      }}%
+      {{hash=GE}{%
+         family={Gonzales},
+         family_i={G\bibinitperiod},
+         given={E.},
+         given_i={E\bibinitperiod},
+      }}%
+      {{hash=TI}{%
+         family={Tamanini},
+         family_i={T\bibinitperiod},
+         given={I.},
+         given_i={I\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{BEGETI1}
+    \strng{fullhash}{BEGETI1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{B}
+    \field{sortinithash}{B}
+    \field{pages}{313\bibrangedash 316}
+    \field{title}{The mean curvature of a set of finite perimeter}
+    \field{volume}{99}
+    \field{journaltitle}{AMS}
+    \field{year}{1987}
+  \endentry
+
+  \entry{BeckTeboulle}{article}{}
+    \name{author}{2}{}{%
+      {{hash=BA}{%
+         family={Beck},
+         family_i={B\bibinitperiod},
+         given={A.},
+         given_i={A\bibinitperiod},
+      }}%
+      {{hash=TM}{%
+         family={Teboulle},
+         family_i={T\bibinitperiod},
+         given={M.},
+         given_i={M\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{BATM1}
+    \strng{fullhash}{BATM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{B}
+    \field{sortinithash}{B}
+    \field{issn}{1057-7149}
+    \field{number}{11}
+    \field{pages}{2419\bibrangedash 2434}
+    \field{title}{Fast Gradient-Based Algorithms for Constrained Total
+  Variation Image Denoising and Deblurring Problems}
+    \field{volume}{18}
+    \field{journaltitle}{Image Processing, IEEE Transactions on}
+    \field{year}{2009}
+  \endentry
+
+  \entry{BellettiniEigen05}{article}{}
+    \name{author}{3}{}{%
+      {{hash=BG}{%
+         family={Bellettini},
+         family_i={B\bibinitperiod},
+         given={G.},
+         given_i={G\bibinitperiod},
+      }}%
+      {{hash=CV}{%
+         family={Caselles},
+         family_i={C\bibinitperiod},
+         given={V.},
+         given_i={V\bibinitperiod},
+      }}%
+      {{hash=NM}{%
+         family={Novaga},
+         family_i={N\bibinitperiod},
+         given={M.},
+         given_i={M\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{BGCVNM1}
+    \strng{fullhash}{BGCVNM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{B}
+    \field{sortinithash}{B}
+    \field{number}{4}
+    \field{pages}{1095\bibrangedash 1129}
+    \field{title}{Explicit Solutions of the Eigenvalue Problem $div \left(\frac
+  Du\vert Du \vert \right)=u$ in $R^2$}
+    \field{volume}{36}
+    \field{journaltitle}{SIAM Journal on Mathematical Analysis}
+    \field{year}{2005}
+  \endentry
+
+  \entry{beltvflow02}{article}{}
+    \name{author}{3}{}{%
+      {{hash=BG}{%
+         family={Bellettini},
+         family_i={B\bibinitperiod},
+         given={G.},
+         given_i={G\bibinitperiod},
+      }}%
+      {{hash=CV}{%
+         family={Caselles},
+         family_i={C\bibinitperiod},
+         given={V.},
+         given_i={V\bibinitperiod},
+      }}%
+      {{hash=NM}{%
+         family={Novaga},
+         family_i={N\bibinitperiod},
+         given={M.},
+         given_i={M\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{BGCVNM1}
+    \strng{fullhash}{BGCVNM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{B}
+    \field{sortinithash}{B}
+    \field{number}{2}
+    \field{pages}{475\bibrangedash 525}
+    \field{title}{The Total Variation Flow in ${{\mathbb{R}}^{N}}$}
+    \field{volume}{184}
+    \field{journaltitle}{J. Differential Equations}
+    \field{year}{2002}
+  \endentry
+
+  \entry{Benning13}{article}{}
+    \name{author}{2}{}{%
+      {{hash=BM}{%
+         family={Benning},
+         family_i={B\bibinitperiod},
+         given={M.},
+         given_i={M\bibinitperiod},
+      }}%
+      {{hash=BM}{%
+         family={Burger},
+         family_i={B\bibinitperiod},
+         given={M.},
+         given_i={M\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{BMBM1}
+    \strng{fullhash}{BMBM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{B}
+    \field{sortinithash}{B}
+    \field{pages}{295\bibrangedash 334}
+    \field{title}{Ground states and singular vectors of convex variational
+  regularization methods}
+    \field{volume}{20}
+    \field{journaltitle}{Meth. Appl. Analysis}
+    \field{year}{2013}
+  \endentry
+
+  \entry{bredies2012}{unpublished}{}
+    \name{author}{2}{}{%
+      {{hash=BK}{%
+         family={Bredies},
+         family_i={B\bibinitperiod},
+         given={K.},
+         given_i={K\bibinitperiod},
+      }}%
+      {{hash=HM}{%
+         family={Holler},
+         family_i={H\bibinitperiod},
+         given={M.},
+         given_i={M\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{BKHM1}
+    \strng{fullhash}{BKHM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{B}
+    \field{sortinithash}{B}
+    \field{title}{A pointwise characterization of the subdifferential of the
+  total variation functional}
+    \field{year}{2012}
+  \endentry
+
+  \entry{Briani2011}{article}{}
+    \name{author}{4}{}{%
+      {{hash=BA}{%
+         family={Briani},
+         family_i={B\bibinitperiod},
+         given={A.},
+         given_i={A\bibinitperiod},
+      }}%
+      {{hash=CA}{%
+         family={Chambolle},
+         family_i={C\bibinitperiod},
+         given={A.},
+         given_i={A\bibinitperiod},
+      }}%
+      {{hash=NM}{%
+         family={Novaga},
+         family_i={N\bibinitperiod},
+         given={M.},
+         given_i={M\bibinitperiod},
+      }}%
+      {{hash=OG}{%
+         family={Orlandi},
+         family_i={O\bibinitperiod},
+         given={G.},
+         given_i={G\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{BA+1}
+    \strng{fullhash}{BACANMOG1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{B}
+    \field{sortinithash}{B}
+    \field{number}{04}
+    \field{pages}{617\bibrangedash 635}
+    \field{title}{On the Gradient Flow of a one-homogeneous functional}
+    \field{volume}{03}
+    \field{journaltitle}{Confluentes Mathematici}
+    \field{year}{2011}
+  \endentry
+
+  \entry{BroxEquiv}{incollection}{}
+    \name{author}{4}{}{%
+      {{hash=BT}{%
+         family={Brox},
+         family_i={B\bibinitperiod},
+         given={T.},
+         given_i={T\bibinitperiod},
+      }}%
+      {{hash=WM}{%
+         family={Welk},
+         family_i={W\bibinitperiod},
+         given={M.},
+         given_i={M\bibinitperiod},
+      }}%
+      {{hash=SG}{%
+         family={Steidl},
+         family_i={S\bibinitperiod},
+         given={G.},
+         given_i={G\bibinitperiod},
+      }}%
+      {{hash=WJ}{%
+         family={Weickert},
+         family_i={W\bibinitperiod},
+         given={J.},
+         given_i={J\bibinitperiod},
+      }}%
+    }
+    \name{editor}{2}{}{%
+      {{hash=GLD}{%
+         family={Griffin},
+         family_i={G\bibinitperiod},
+         given={L.\bibnamedelima D.},
+         given_i={L\bibinitperiod\bibinitdelim D\bibinitperiod},
+      }}%
+      {{hash=LM}{%
+         family={Lillholm},
+         family_i={L\bibinitperiod},
+         given={M.},
+         given_i={M\bibinitperiod},
+      }}%
+    }
+    \list{language}{1}{%
+      {English}%
+    }
+    \list{publisher}{1}{%
+      {Springer Berlin Heidelberg}%
+    }
+    \strng{namehash}{BT+1}
+    \strng{fullhash}{BTWMSGWJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{B}
+    \field{sortinithash}{B}
+    \field{booktitle}{Scale Space Methods in Computer Vision}
+    \field{isbn}{978-3-540-40368-5}
+    \field{pages}{86\bibrangedash 100}
+    \field{series}{Lecture Notes in Computer Science}
+    \field{title}{Equivalence Results for TV Diffusion and TV Regularisation}
+    \field{volume}{2695}
+    \field{year}{2003}
+  \endentry
+
+  \entry{BuadesCM05}{article}{}
+    \name{author}{3}{}{%
+      {{hash=BA}{%
+         family={Buades},
+         family_i={B\bibinitperiod},
+         given={A.},
+         given_i={A\bibinitperiod},
+      }}%
+      {{hash=CB}{%
+         family={Coll},
+         family_i={C\bibinitperiod},
+         given={B.},
+         given_i={B\bibinitperiod},
+      }}%
+      {{hash=MJM}{%
+         family={Morel},
+         family_i={M\bibinitperiod},
+         given={J-M.},
+         given_i={J\bibinitperiod-M\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{BACBMJM1}
+    \strng{fullhash}{BACBMJM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{B}
+    \field{sortinithash}{B}
+    \field{number}{2}
+    \field{pages}{490\bibrangedash 530}
+    \field{title}{A Review of Image Denoising Algorithms, with a New One}
+    \field{volume}{4}
+    \field{journaltitle}{Multiscale Modeling \& Simulation}
+    \field{year}{2005}
+  \endentry
+
+  \entry{Buades2006}{article}{}
+    \name{author}{3}{}{%
+      {{hash=BA}{%
+         family={Buades},
+         family_i={B\bibinitperiod},
+         given={A.},
+         given_i={A\bibinitperiod},
+      }}%
+      {{hash=CB}{%
+         family={Coll},
+         family_i={C\bibinitperiod},
+         given={B.},
+         given_i={B\bibinitperiod},
+      }}%
+      {{hash=MJM}{%
+         family={Morel},
+         family_i={M\bibinitperiod},
+         given={J-M.},
+         given_i={J\bibinitperiod-M\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{BACBMJM1}
+    \strng{fullhash}{BACBMJM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{B}
+    \field{sortinithash}{B}
+    \field{number}{1}
+    \field{pages}{1\bibrangedash 34}
+    \field{title}{Neighborhood filters and PDE's}
+    \field{volume}{105}
+    \field{journaltitle}{Numerische Mathematik}
+    \field{year}{2006}
+  \endentry
+
+  \entry{burger2004convergence}{article}{}
+    \name{author}{2}{}{%
+      {{hash=BM}{%
+         family={Burger},
+         family_i={B\bibinitperiod},
+         given={M.},
+         given_i={M\bibinitperiod},
+      }}%
+      {{hash=OS}{%
+         family={Osher},
+         family_i={O\bibinitperiod},
+         given={S.},
+         given_i={S\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {IOP Publishing}%
+    }
+    \strng{namehash}{BMOS1}
+    \strng{fullhash}{BMOS1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{B}
+    \field{sortinithash}{B}
+    \field{number}{5}
+    \field{pages}{1411}
+    \field{title}{Convergence rates of convex variational regularization}
+    \field{volume}{20}
+    \field{journaltitle}{Inverse problems}
+    \field{year}{2004}
+  \endentry
+
+  \entry{buttmaximal07}{article}{}
+    \name{author}{3}{}{%
+      {{hash=BG}{%
+         family={Buttazzo},
+         family_i={B\bibinitperiod},
+         given={G.},
+         given_i={G\bibinitperiod},
+      }}%
+      {{hash=CG}{%
+         family={Carlier},
+         family_i={C\bibinitperiod},
+         given={G.},
+         given_i={G\bibinitperiod},
+      }}%
+      {{hash=CM}{%
+         family={Comte},
+         family_i={C\bibinitperiod},
+         given={M.},
+         given_i={M\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{BGCGCM1}
+    \strng{fullhash}{BGCGCM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{B}
+    \field{sortinithash}{B}
+    \field{number}{9}
+    \field{pages}{991\bibrangedash 1004}
+    \field{title}{On the selection of maximal {Cheeger} sets}
+    \field{volume}{20}
+    \field{journaltitle}{Differential and Integral Equations}
+    \field{year}{2007}
+  \endentry
+
+  \entry{carlierpeyre}{article}{}
+    \name{author}{3}{}{%
+      {{hash=CG}{%
+         family={Carlier},
+         family_i={C\bibinitperiod},
+         given={G.},
+         given_i={G\bibinitperiod},
+      }}%
+      {{hash=CM}{%
+         family={Comte},
+         family_i={C\bibinitperiod},
+         given={M.},
+         given_i={M\bibinitperiod},
+      }}%
+      {{hash=PG}{%
+         family={Peyr{\'e}},
+         family_i={P\bibinitperiod},
+         given={G.},
+         given_i={G\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{CGCMPG1}
+    \strng{fullhash}{CGCMPG1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{C}
+    \field{sortinithash}{C}
+    \field{number}{1}
+    \field{pages}{131\bibrangedash 150}
+    \field{title}{Approximation of maximal {Cheeger} sets by projection}
+    \field{volume}{43}
+    \field{journaltitle}{ESAIM: Mathematical Modelling and Numerical Analysis}
+    \field{year}{2009}
+  \endentry
+
+  \entry{casdiscont07}{article}{}
+    \name{author}{3}{}{%
+      {{hash=CV}{%
+         family={Caselles},
+         family_i={C\bibinitperiod},
+         given={V.},
+         given_i={V\bibinitperiod},
+      }}%
+      {{hash=CA}{%
+         family={Chambolle},
+         family_i={C\bibinitperiod},
+         given={A.},
+         given_i={A\bibinitperiod},
+      }}%
+      {{hash=NM}{%
+         family={Novaga},
+         family_i={N\bibinitperiod},
+         given={M.},
+         given_i={M\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{CVCANM1}
+    \strng{fullhash}{CVCANM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{C}
+    \field{sortinithash}{C}
+    \field{number}{3}
+    \field{pages}{879\bibrangedash 894}
+    \field{title}{The discontinuity set of solutions of the TV denoising
+  problem and some extensions}
+    \field{volume}{6}
+    \field{journaltitle}{Multiscale Modeling and Simulation}
+    \field{year}{2007}
+  \endentry
+
+  \entry{casuniq07}{article}{}
+    \name{author}{3}{}{%
+      {{hash=CV}{%
+         family={Caselles},
+         family_i={C\bibinitperiod},
+         given={V.},
+         given_i={V\bibinitperiod},
+      }}%
+      {{hash=CA}{%
+         family={Chambolle},
+         family_i={C\bibinitperiod},
+         given={A.},
+         given_i={A\bibinitperiod},
+      }}%
+      {{hash=NM}{%
+         family={Novaga},
+         family_i={N\bibinitperiod},
+         given={M.},
+         given_i={M\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{CVCANM1}
+    \strng{fullhash}{CVCANM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{C}
+    \field{sortinithash}{C}
+    \field{number}{1}
+    \field{pages}{77\bibrangedash 90}
+    \field{title}{Uniqueness of the {Cheeger} set of a convex body}
+    \field{volume}{232}
+    \field{journaltitle}{Pacific J. Math.}
+    \field{year}{2007}
+  \endentry
+
+  \entry{CasellesJumpFlow}{article}{}
+    \name{author}{3}{}{%
+      {{hash=CV}{%
+         family={Caselles},
+         family_i={C\bibinitperiod},
+         given={V.},
+         given_i={V\bibinitperiod},
+      }}%
+      {{hash=JK}{%
+         family={Jalalzai},
+         family_i={J\bibinitperiod},
+         given={K.},
+         given_i={K\bibinitperiod},
+      }}%
+      {{hash=NM}{%
+         family={Novaga},
+         family_i={N\bibinitperiod},
+         given={M.},
+         given_i={M\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Seminario Matematico of the University of Padua}%
+    }
+    \strng{namehash}{CVJKNM1}
+    \strng{fullhash}{CVJKNM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{C}
+    \field{sortinithash}{C}
+    \field{pages}{155\bibrangedash 168}
+    \field{title}{On the jump set of solutions of the total variation flow}
+    \field{volume}{130}
+    \field{journaltitle}{Rendiconti del Seminario Matematico della Università
+  di Padova}
+    \field{year}{2013}
+  \endentry
+
+  \entry{caselles2012tv}{article}{}
+    \name{author}{3}{}{%
+      {{hash=CV}{%
+         family={Caselles},
+         family_i={C\bibinitperiod},
+         given={V.},
+         given_i={V\bibinitperiod},
+      }}%
+      {{hash=NM}{%
+         family={Novaga},
+         family_i={N\bibinitperiod},
+         given={M.},
+         given_i={M\bibinitperiod},
+      }}%
+      {{hash=PC}{%
+         family={P{\"o}schl},
+         family_i={P\bibinitperiod},
+         given={C.},
+         given_i={C\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{CVNMPC1}
+    \strng{fullhash}{CVNMPC1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{C}
+    \field{sortinithash}{C}
+    \field{title}{TV denoising of two balls in the plane}
+    \field{journaltitle}{arXiv preprint arXiv:1605.00247}
+    \field{year}{2016}
+  \endentry
+
+  \entry{casregul11}{article}{}
+    \name{author}{3}{}{%
+      {{hash=CV}{%
+         family={Caselles},
+         family_i={C\bibinitperiod},
+         given={Vicent},
+         given_i={V\bibinitperiod},
+      }}%
+      {{hash=CA}{%
+         family={Chambolle},
+         family_i={C\bibinitperiod},
+         given={Antonin},
+         given_i={A\bibinitperiod},
+      }}%
+      {{hash=NM}{%
+         family={Novaga},
+         family_i={N\bibinitperiod},
+         given={Matteo},
+         given_i={M\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{CVCANM2}
+    \strng{fullhash}{CVCANM2}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{C}
+    \field{sortinithash}{C}
+    \field{issn}{0213-2230}
+    \field{number}{1}
+    \field{pages}{233\bibrangedash 252}
+    \field{title}{Regularity for solutions of the total variation denoising
+  problem}
+    \field{volume}{27}
+    \field{journaltitle}{Rev. Mat. Iberoam.}
+    \field{year}{2011}
+  \endentry
+
+  \entry{chambolle2004algorithm}{article}{}
+    \name{author}{1}{}{%
+      {{hash=CA}{%
+         family={Chambolle},
+         family_i={C\bibinitperiod},
+         given={A.},
+         given_i={A\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Springer}%
+    }
+    \strng{namehash}{CA1}
+    \strng{fullhash}{CA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{C}
+    \field{sortinithash}{C}
+    \field{number}{1}
+    \field{pages}{89\bibrangedash 97}
+    \field{title}{An algorithm for total variation minimization and
+  applications}
+    \field{volume}{20}
+    \field{journaltitle}{Journal of Mathematical Imaging and Vision}
+    \field{year}{2004}
+  \endentry
+
+  \entry{ChambolleDarbon2009}{article}{}
+    \name{author}{2}{}{%
+      {{hash=CA}{%
+         family={Chambolle},
+         family_i={C\bibinitperiod},
+         given={A.},
+         given_i={A\bibinitperiod},
+      }}%
+      {{hash=DJ}{%
+         family={Darbon},
+         family_i={D\bibinitperiod},
+         given={J.},
+         given_i={J\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{CADJ1}
+    \strng{fullhash}{CADJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{C}
+    \field{sortinithash}{C}
+    \field{issn}{1573-1405}
+    \field{number}{3}
+    \field{pages}{288\bibrangedash 307}
+    \field{title}{On Total Variation Minimization and Surface Evolution Using
+  Parametric Maximum Flows}
+    \field{volume}{84}
+    \field{journaltitle}{International Journal of Computer Vision}
+    \field{year}{2009}
+  \endentry
+
+  \entry{ChaGolNov12a}{article}{}
+    \name{author}{3}{}{%
+      {{hash=CA}{%
+         family={Chambolle},
+         family_i={C\bibinitperiod},
+         given={A.},
+         given_i={A\bibinitperiod},
+      }}%
+      {{hash=GM}{%
+         family={Goldman},
+         family_i={G\bibinitperiod},
+         given={M.},
+         given_i={M\bibinitperiod},
+      }}%
+      {{hash=NM}{%
+         family={Novaga},
+         family_i={N\bibinitperiod},
+         given={M.},
+         given_i={M\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{CAGMNM1}
+    \strng{fullhash}{CAGMNM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{C}
+    \field{sortinithash}{C}
+    \field{number}{1}
+    \field{pages}{31\bibrangedash 42}
+    \field{title}{Fine properties of the subdifferential for a class of
+  one-homogeneous functionals}
+    \field{volume}{8}
+    \field{journaltitle}{Adv. Calc. Var.}
+    \field{year}{2015}
+  \endentry
+
+  \entry{ChambolleLions}{article}{}
+    \name{author}{2}{}{%
+      {{hash=CA}{%
+         family={Chambolle},
+         family_i={C\bibinitperiod},
+         given={A.},
+         given_i={A\bibinitperiod},
+      }}%
+      {{hash=LPL}{%
+         family={Lions},
+         family_i={L\bibinitperiod},
+         given={P-L.},
+         given_i={P\bibinitperiod-L\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{CALPL1}
+    \strng{fullhash}{CALPL1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{C}
+    \field{sortinithash}{C}
+    \field{number}{2}
+    \field{pages}{167\bibrangedash 188}
+    \field{title}{Image recovery via total variation minimization and related
+  problems}
+    \field{volume}{76}
+    \field{journaltitle}{Numerische Mathematik}
+    \field{year}{1997}
+  \endentry
+
+  \entry{Chambolle10anintroduction}{inproceedings}{}
+    \name{author}{4}{}{%
+      {{hash=CA}{%
+         family={Chambolle},
+         family_i={C\bibinitperiod},
+         given={A.},
+         given_i={A\bibinitperiod},
+      }}%
+      {{hash=NM}{%
+         family={Novaga},
+         family_i={N\bibinitperiod},
+         given={M.},
+         given_i={M\bibinitperiod},
+      }}%
+      {{hash=CD}{%
+         family={Cremers},
+         family_i={C\bibinitperiod},
+         given={D.},
+         given_i={D\bibinitperiod},
+      }}%
+      {{hash=PT}{%
+         family={Pock},
+         family_i={P\bibinitperiod},
+         given={T.},
+         given_i={T\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{CA+1}
+    \strng{fullhash}{CANMCDPT1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{C}
+    \field{sortinithash}{C}
+    \field{booktitle}{in Theoretical Foundations and Numerical Methods for
+  Sparse Recovery, De Gruyter}
+    \field{title}{An introduction to total variation for image analysis}
+    \field{year}{2010}
+  \endentry
+
+  \entry{ChanMarquina00}{article}{}
+    \name{author}{3}{}{%
+      {{hash=CT}{%
+         family={Chan},
+         family_i={C\bibinitperiod},
+         given={T.},
+         given_i={T\bibinitperiod},
+      }}%
+      {{hash=MA}{%
+         family={Marquina},
+         family_i={M\bibinitperiod},
+         given={A.},
+         given_i={A\bibinitperiod},
+      }}%
+      {{hash=MP}{%
+         family={Mulet},
+         family_i={M\bibinitperiod},
+         given={P.},
+         given_i={P\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{CTMAMP1}
+    \strng{fullhash}{CTMAMP1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{C}
+    \field{sortinithash}{C}
+    \field{number}{2}
+    \field{pages}{503\bibrangedash 516}
+    \field{title}{High-Order Total Variation-Based Image Restoration}
+    \field{volume}{22}
+    \field{journaltitle}{SIAM Journal on Scientific Computing}
+    \field{year}{2000}
+  \endentry
+
+  \entry{ChaventCOV}{article}{}
+    \name{author}{2}{}{%
+      {{hash=CG}{%
+         family={Chavent},
+         family_i={C\bibinitperiod},
+         given={G.},
+         given_i={G\bibinitperiod},
+      }}%
+      {{hash=KK}{%
+         family={Kunisch},
+         family_i={K\bibinitperiod},
+         given={K.},
+         given_i={K\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{CGKK1}
+    \strng{fullhash}{CGKK1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{C}
+    \field{sortinithash}{C}
+    \field{issn}{1262-3377}
+    \field{pages}{359\bibrangedash 376}
+    \field{title}{Regularization of linear least squares problems by total
+  bounded variation}
+    \field{volume}{2}
+    \field{journaltitle}{ESAIM: Control, Optimisation and Calculus of
+  Variations}
+    \field{month}{01}
+    \field{year}{1997}
+  \endentry
+
+  \entry{Condat13}{article}{}
+    \name{author}{1}{}{%
+      {{hash=CL}{%
+         family={Condat},
+         family_i={C\bibinitperiod},
+         given={L.},
+         given_i={L\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{CL1}
+    \strng{fullhash}{CL1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{C}
+    \field{sortinithash}{C}
+    \field{number}{11}
+    \field{pages}{1054\bibrangedash 1057}
+    \field{title}{A Direct Algorithm for 1-{D} Total Variation Denoising}
+    \field{volume}{20}
+    \field{journaltitle}{IEEE Signal Process. Lett}
+    \field{year}{2013}
+  \endentry
+
+  \entry{Dabov07}{article}{}
+    \name{author}{4}{}{%
+      {{hash=DK}{%
+         family={Dabov},
+         family_i={D\bibinitperiod},
+         given={K.},
+         given_i={K\bibinitperiod},
+      }}%
+      {{hash=FA}{%
+         family={Foi},
+         family_i={F\bibinitperiod},
+         given={A.},
+         given_i={A\bibinitperiod},
+      }}%
+      {{hash=KV}{%
+         family={Katkovnik},
+         family_i={K\bibinitperiod},
+         given={V.},
+         given_i={V\bibinitperiod},
+      }}%
+      {{hash=EKO}{%
+         family={Egiazarian},
+         family_i={E\bibinitperiod},
+         given={K.\bibnamedelima O.},
+         given_i={K\bibinitperiod\bibinitdelim O\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{DK+1}
+    \strng{fullhash}{DKFAKVEKO1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{D}
+    \field{sortinithash}{D}
+    \field{number}{8}
+    \field{pages}{2080\bibrangedash 2095}
+    \field{title}{Image Denoising by Sparse 3-{D} Transform-Domain
+  Collaborative Filtering}
+    \field{volume}{16}
+    \field{journaltitle}{IEEE Trans. Image Processing}
+    \field{month}{08}
+    \field{year}{2007}
+  \endentry
+
+  \entry{DarbonSigelle}{incollection}{}
+    \name{author}{2}{}{%
+      {{hash=DJ}{%
+         family={Darbon},
+         family_i={D\bibinitperiod},
+         given={J.},
+         given_i={J\bibinitperiod},
+      }}%
+      {{hash=SM}{%
+         family={Sigelle},
+         family_i={S\bibinitperiod},
+         given={M.},
+         given_i={M\bibinitperiod},
+      }}%
+    }
+    \name{editor}{2}{}{%
+      {{hash=KR}{%
+         family={Klette},
+         family_i={K\bibinitperiod},
+         given={R.},
+         given_i={R\bibinitperiod},
+      }}%
+      {{hash=AJ}{%
+         family={Aunia},
+         family_i={A\bibinitperiod},
+         given={J.},
+         given_i={J\bibinitperiod},
+      }}%
+    }
+    \list{language}{1}{%
+      {English}%
+    }
+    \list{publisher}{1}{%
+      {Springer Berlin Heidelberg}%
+    }
+    \strng{namehash}{DJSM1}
+    \strng{fullhash}{DJSM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{D}
+    \field{sortinithash}{D}
+    \field{booktitle}{Combinatorial Image Analysis}
+    \field{isbn}{978-3-540-23942-0}
+    \field{pages}{548\bibrangedash 557}
+    \field{series}{Lecture Notes in Computer Science}
+    \field{title}{Exact Optimization of Discrete Constrained Total Variation
+  Minimization Problems}
+    \field{volume}{3322}
+    \field{year}{2005}
+  \endentry
+
+  \entry{davies2001}{article}{}
+    \name{author}{2}{}{%
+      {{hash=DPL}{%
+         family={Davies},
+         family_i={D\bibinitperiod},
+         given={P.\bibnamedelima L.},
+         given_i={P\bibinitperiod\bibinitdelim L\bibinitperiod},
+      }}%
+      {{hash=KA}{%
+         family={Kovac},
+         family_i={K\bibinitperiod},
+         given={A.},
+         given_i={A\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {The Institute of Mathematical Statistics}%
+    }
+    \strng{namehash}{DPLKA1}
+    \strng{fullhash}{DPLKA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{D}
+    \field{sortinithash}{D}
+    \field{number}{1}
+    \field{pages}{1\bibrangedash 65}
+    \field{title}{Local Extremes, Runs, Strings and Multiresolution}
+    \field{volume}{29}
+    \field{journaltitle}{Ann. Statist.}
+    \field{month}{02}
+    \field{year}{2001}
+  \endentry
+
+  \entry{Dumbgen2009}{article}{}
+    \name{author}{2}{}{%
+      {{hash=DL}{%
+         family={Dumbgen},
+         family_i={D\bibinitperiod},
+         given={L.},
+         given_i={L\bibinitperiod},
+      }}%
+      {{hash=KA}{%
+         family={Kovac},
+         family_i={K\bibinitperiod},
+         given={A.},
+         given_i={A\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{2}{%
+      {The Institute of Mathematical Statistics}%
+      {the Bernoulli Society}%
+    }
+    \strng{namehash}{DLKA1}
+    \strng{fullhash}{DLKA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{D}
+    \field{sortinithash}{D}
+    \field{pages}{41\bibrangedash 75}
+    \field{title}{Extensions of smoothing via taut strings}
+    \field{volume}{3}
+    \field{journaltitle}{Electron. J. Statist.}
+    \field{year}{2009}
+  \endentry
+
+  \entry{duvalpeyre13}{article}{}
+    \name{author}{2}{}{%
+      {{hash=DV}{%
+         family={Duval},
+         family_i={D\bibinitperiod},
+         given={V.},
+         given_i={V\bibinitperiod},
+      }}%
+      {{hash=PG}{%
+         family={Peyr{\'e}},
+         family_i={P\bibinitperiod},
+         given={G.},
+         given_i={G\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{DVPG1}
+    \strng{fullhash}{DVPG1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{D}
+    \field{sortinithash}{D}
+    \field{number}{5}
+    \field{pages}{1315\bibrangedash 1355}
+    \field{title}{Exact Support Recovery for Sparse Spikes Deconvolution}
+    \field{volume}{15}
+    \field{journaltitle}{Foundations of Computational Mathematics}
+    \field{year}{2015}
+  \endentry
+
+  \entry{elisabetta2013sets}{article}{}
+    \name{author}{2}{}{%
+      {{hash=EB}{%
+         family={E.},
+         family_i={E\bibinitperiod},
+         given={Barozzi},
+         given_i={B\bibinitperiod},
+      }}%
+      {{hash=UM}{%
+         family={U.},
+         family_i={U\bibinitperiod},
+         given={Massari},
+         given_i={M\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Springer}%
+    }
+    \strng{namehash}{EBUM1}
+    \strng{fullhash}{EBUM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{E}
+    \field{sortinithash}{E}
+    \field{number}{2}
+    \field{pages}{259\bibrangedash 268}
+    \field{title}{On sets with variational mean curvature in
+  $L^n(\mathbb{R}^n)$}
+    \field{volume}{59}
+    \field{journaltitle}{Annali Dell'Universita'Di Ferrara}
+    \field{year}{2013}
+  \endentry
+
+  \entry{EkelandTemam}{book}{}
+    \name{author}{2}{}{%
+      {{hash=EI}{%
+         family={Ekeland},
+         family_i={E\bibinitperiod},
+         given={I.},
+         given_i={I\bibinitperiod},
+      }}%
+      {{hash=TR}{%
+         family={Temam},
+         family_i={T\bibinitperiod},
+         given={R.},
+         given_i={R\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Siam}%
+    }
+    \keyw{Convex Analysis and Variational Problems}
+    \strng{namehash}{EITR1}
+    \strng{fullhash}{EITR1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{E}
+    \field{sortinithash}{E}
+    \field{isbn}{0-89871-450-8}
+    \field{series}{Classics in Applied Mathematics}
+    \field{title}{Convex Analysis and Variational Problems}
+    \list{location}{1}{%
+      {Philadelphia}%
+    }
+    \field{year}{1999}
+  \endentry
+
+  \entry{fadili2010tv}{article}{}
+    \name{author}{2}{}{%
+      {{hash=FMJ}{%
+         family={Fadili},
+         family_i={F\bibinitperiod},
+         given={M.\bibnamedelima J.},
+         given_i={M\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+      {{hash=PG}{%
+         family={Peyr\'e},
+         family_i={P\bibinitperiod},
+         given={G.},
+         given_i={G\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{FMJPG1}
+    \strng{fullhash}{FMJPG1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{F}
+    \field{sortinithash}{F}
+    \field{number}{3}
+    \field{pages}{657\bibrangedash 669}
+    \field{title}{Total Variation Projection with First Order Schemes}
+    \field{volume}{20}
+    \field{journaltitle}{IEEE Transactions on Image Processing}
+    \field{year}{2011}
+  \endentry
+
+  \entry{gilbarg1977elliptic}{book}{}
+    \name{author}{2}{}{%
+      {{hash=GD}{%
+         family={Gilbarg},
+         family_i={G\bibinitperiod},
+         given={D.},
+         given_i={D\bibinitperiod},
+      }}%
+      {{hash=TN}{%
+         family={Trudinger},
+         family_i={T\bibinitperiod},
+         given={N.S.},
+         given_i={N\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Springer}%
+    }
+    \strng{namehash}{GDTN1}
+    \strng{fullhash}{GDTN1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{G}
+    \field{sortinithash}{G}
+    \field{series}{Grundlehren der mathematischen Wissenschaften}
+    \field{title}{Elliptic partial differential equations of second order}
+    \field{year}{1977}
+  \endentry
+
+  \entry{giusti1977minimal}{book}{}
+    \name{author}{1}{}{%
+      {{hash=GE}{%
+         family={Giusti},
+         family_i={G\bibinitperiod},
+         given={E.},
+         given_i={E\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Dept. of Pure Mathematics}%
+    }
+    \strng{namehash}{GE1}
+    \strng{fullhash}{GE1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{G}
+    \field{sortinithash}{G}
+    \field{isbn}{9780708112946}
+    \field{series}{Notes on pure mathematics}
+    \field{title}{Minimal surfaces and functions of bounded variation}
+    \field{year}{1977}
+  \endentry
+
+  \entry{giusti78}{article}{}
+    \name{author}{1}{}{%
+      {{hash=GE}{%
+         family={Giusti},
+         family_i={G\bibinitperiod},
+         given={E.},
+         given_i={E\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{GE1}
+    \strng{fullhash}{GE1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{G}
+    \field{sortinithash}{G}
+    \field{number}{2}
+    \field{pages}{111\bibrangedash 137}
+    \field{title}{On the equation of surfaces of prescribed mean curvature}
+    \field{volume}{46}
+    \field{journaltitle}{Invent. Math.}
+    \field{year}{1978}
+  \endentry
+
+  \entry{gonzales1993boundaries}{article}{}
+    \name{author}{3}{}{%
+      {{hash=GEH}{%
+         family={Gonzales},
+         family_i={G\bibinitperiod},
+         given={E.\bibnamedelima HA},
+         given_i={E\bibinitperiod\bibinitdelim H\bibinitperiod},
+      }}%
+      {{hash=MU}{%
+         family={Massari},
+         family_i={M\bibinitperiod},
+         given={U.},
+         given_i={U\bibinitperiod},
+      }}%
+      {{hash=TI}{%
+         family={Tamanini},
+         family_i={T\bibinitperiod},
+         given={I.},
+         given_i={I\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Accademia Nazionale dei Lincei}%
+    }
+    \strng{namehash}{GEHMUTI1}
+    \strng{fullhash}{GEHMUTI1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{G}
+    \field{sortinithash}{G}
+    \field{number}{3}
+    \field{pages}{197\bibrangedash 206}
+    \field{title}{Boundaries of prescribed mean curvature}
+    \field{volume}{4}
+    \field{journaltitle}{Atti della Accademia Nazionale dei Lincei. Classe di
+  Scienze Fisiche, Matematiche e Naturali. Rendiconti Lincei. Matematica e
+  Applicazioni}
+    \field{year}{1993}
+  \endentry
+
+  \entry{massari1994variational}{article}{}
+    \name{author}{2}{}{%
+      {{hash=GEHA}{%
+         family={Gonzalez},
+         family_i={G\bibinitperiod},
+         given={E.\bibnamedelima H.\bibnamedelima A.},
+         given_i={E\bibinitperiod\bibinitdelim H\bibinitperiod\bibinitdelim
+  A\bibinitperiod},
+      }}%
+      {{hash=MU}{%
+         family={Massari},
+         family_i={M\bibinitperiod},
+         given={U.},
+         given_i={U\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{GEHAMU1}
+    \strng{fullhash}{GEHAMU1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{G}
+    \field{sortinithash}{G}
+    \field{pages}{1\bibrangedash 28}
+    \field{title}{Variational mean curvatures}
+    \field{volume}{52}
+    \field{journaltitle}{Rend. Sem. Mat. Univ. Pol. Torino}
+    \field{year}{1994}
+  \endentry
+
+  \entry{Grasmair2006}{article}{}
+    \name{author}{1}{}{%
+      {{hash=GM}{%
+         family={Grasmair},
+         family_i={G\bibinitperiod},
+         given={M.},
+         given_i={M\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{GM1}
+    \strng{fullhash}{GM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{G}
+    \field{sortinithash}{G}
+    \field{issn}{1573-7683}
+    \field{number}{1}
+    \field{pages}{59\bibrangedash 66}
+    \field{title}{The Equivalence of the Taut String Algorithm and
+  BV-Regularization}
+    \field{volume}{27}
+    \field{journaltitle}{Journal of Mathematical Imaging and Vision}
+    \field{year}{2006}
+  \endentry
+
+  \entry{Grasmair-cpam}{article}{}
+    \name{author}{3}{}{%
+      {{hash=GM}{%
+         family={Grasmair},
+         family_i={G\bibinitperiod},
+         given={M.},
+         given_i={M\bibinitperiod},
+      }}%
+      {{hash=SO}{%
+         family={Scherzer},
+         family_i={S\bibinitperiod},
+         given={O.},
+         given_i={O\bibinitperiod},
+      }}%
+      {{hash=HM}{%
+         family={Haltmeier},
+         family_i={H\bibinitperiod},
+         given={M.},
+         given_i={M\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Wiley Subscription Services, Inc., A Wiley Company}%
+    }
+    \strng{namehash}{GMSOHM1}
+    \strng{fullhash}{GMSOHM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{G}
+    \field{sortinithash}{G}
+    \field{number}{2}
+    \field{pages}{161\bibrangedash 182}
+    \field{title}{Necessary and sufficient conditions for linear convergence of
+  $\ell_1$-regularization}
+    \field{volume}{64}
+    \field{journaltitle}{Communications on Pure and Applied Mathematics}
+    \field{year}{2011}
+  \endentry
+
+  \entry{HinterbergerTube}{article}{}
+    \name{author}{5}{}{%
+      {{hash=HW}{%
+         family={Hinterberger},
+         family_i={H\bibinitperiod},
+         given={W.},
+         given_i={W\bibinitperiod},
+      }}%
+      {{hash=HM}{%
+         family={Hintermuller},
+         family_i={H\bibinitperiod},
+         given={M.},
+         given_i={M\bibinitperiod},
+      }}%
+      {{hash=KK}{%
+         family={Kunisch},
+         family_i={K\bibinitperiod},
+         given={K.},
+         given_i={K\bibinitperiod},
+      }}%
+      {{hash=vOM}{%
+         prefix={von},
+         prefix_i={v\bibinitperiod},
+         family={Oehsen},
+         family_i={O\bibinitperiod},
+         given={M.},
+         given_i={M\bibinitperiod},
+      }}%
+      {{hash=SO}{%
+         family={Scherzer},
+         family_i={S\bibinitperiod},
+         given={O.},
+         given_i={O\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{HW+1}
+    \strng{fullhash}{HWHMKKOMvSO1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{H}
+    \field{sortinithash}{H}
+    \field{number}{3}
+    \field{pages}{219\bibrangedash 235}
+    \field{title}{Tube Methods for {BV} Regularization}
+    \field{volume}{19}
+    \field{journaltitle}{Journal of Mathematical Imaging and Vision}
+    \field{month}{11}
+    \field{year}{2003}
+  \endentry
+
+  \entry{Hochbaum2001}{article}{}
+    \name{author}{1}{}{%
+      {{hash=HDS}{%
+         family={Hochbaum},
+         family_i={H\bibinitperiod},
+         given={D.\bibnamedelima S.},
+         given_i={D\bibinitperiod\bibinitdelim S\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{HDS1}
+    \strng{fullhash}{HDS1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{H}
+    \field{sortinithash}{H}
+    \field{number}{4}
+    \field{pages}{686\bibrangedash 701}
+    \field{title}{An Efficient Algorithm for Image Segmentation, Markov Random
+  Fields and Related Problems}
+    \field{volume}{48}
+    \field{journaltitle}{J. ACM}
+    \field{year}{2001}
+  \endentry
+
+  \entry{Jalalzai2015}{article}{}
+    \name{author}{1}{}{%
+      {{hash=JK}{%
+         family={Jalalzai},
+         family_i={J\bibinitperiod},
+         given={K.},
+         given_i={K\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{JK1}
+    \strng{fullhash}{JK1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{J}
+    \field{sortinithash}{J}
+    \field{number}{2}
+    \field{pages}{256\bibrangedash 268}
+    \field{title}{Some Remarks on the Staircasing Phenomenon in Total
+  Variation-Based Image Denoising}
+    \field{volume}{54}
+    \field{journaltitle}{Journal of Mathematical Imaging and Vision}
+    \field{year}{2015}
+  \endentry
+
+  \entry{kawohl06}{article}{}
+    \name{author}{2}{}{%
+      {{hash=KB}{%
+         family={Kawohl},
+         family_i={K\bibinitperiod},
+         given={B.},
+         given_i={B\bibinitperiod},
+      }}%
+      {{hash=LRT}{%
+         family={Lachand-Robert},
+         family_i={L\bibinitperiod-R\bibinitperiod},
+         given={T.},
+         given_i={T\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{KBLRT1}
+    \strng{fullhash}{KBLRT1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{K}
+    \field{sortinithash}{K}
+    \field{number}{1}
+    \field{pages}{103\bibrangedash 118}
+    \field{title}{Characterization of {Cheeger} sets for convex subsets of the
+  plane}
+    \field{volume}{225}
+    \field{journaltitle}{Pacific J. Math.}
+    \field{year}{2006}
+  \endentry
+
+  \entry{kawohlnovaga}{article}{}
+    \name{author}{2}{}{%
+      {{hash=KB}{%
+         family={Kawohl},
+         family_i={K\bibinitperiod},
+         given={B.},
+         given_i={B\bibinitperiod},
+      }}%
+      {{hash=NM}{%
+         family={Novaga},
+         family_i={N\bibinitperiod},
+         given={M.},
+         given_i={M\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {HELDERMANN VERLAG}%
+    }
+    \strng{namehash}{KBNM1}
+    \strng{fullhash}{KBNM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{K}
+    \field{sortinithash}{K}
+    \field{issn}{0944-6532}
+    \field{number}{3}
+    \field{pages}{623}
+    \field{title}{The $p$-{Laplace} eigenvalue problem as $p \to 1$ and
+  {Cheeger} sets in a {Finsler} metric}
+    \field{volume}{15}
+    \field{journaltitle}{Journal of Convex Analysis}
+    \field{year}{2008}
+  \endentry
+
+  \entry{Kawohl07}{article}{}
+    \name{author}{2}{}{%
+      {{hash=KB}{%
+         family={Kawohl},
+         family_i={K\bibinitperiod},
+         given={B.},
+         given_i={B\bibinitperiod},
+      }}%
+      {{hash=SF}{%
+         family={Schuricht},
+         family_i={S\bibinitperiod},
+         given={F.},
+         given_i={F\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{KBSF1}
+    \strng{fullhash}{KBSF1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{K}
+    \field{sortinithash}{K}
+    \field{number}{04}
+    \field{pages}{515\bibrangedash 543}
+    \field{title}{Dirichlet Problems for the 1-Laplace Operator, Including the
+  Eigenvalue Problem}
+    \field{volume}{09}
+    \field{journaltitle}{Communications in Contemporary Mathematics}
+    \field{year}{2007}
+  \endentry
+
+  \entry{kindermann2006denoising}{article}{}
+    \name{author}{3}{}{%
+      {{hash=KS}{%
+         family={Kindermann},
+         family_i={K\bibinitperiod},
+         given={S.},
+         given_i={S\bibinitperiod},
+      }}%
+      {{hash=OS}{%
+         family={Osher},
+         family_i={O\bibinitperiod},
+         given={S.},
+         given_i={S\bibinitperiod},
+      }}%
+      {{hash=XJ}{%
+         family={Xu},
+         family_i={X\bibinitperiod},
+         given={J.},
+         given_i={J\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Springer}%
+    }
+    \strng{namehash}{KSOSXJ1}
+    \strng{fullhash}{KSOSXJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{K}
+    \field{sortinithash}{K}
+    \field{number}{2-3}
+    \field{pages}{411\bibrangedash 444}
+    \field{title}{Denoising by {BV}-duality}
+    \field{volume}{28}
+    \field{journaltitle}{Journal of Scientific Computing}
+    \field{year}{2006}
+  \endentry
+
+  \entry{KolmogorovZabin}{article}{}
+    \name{author}{2}{}{%
+      {{hash=KV}{%
+         family={Kolmogorov},
+         family_i={K\bibinitperiod},
+         given={V.},
+         given_i={V\bibinitperiod},
+      }}%
+      {{hash=ZR}{%
+         family={Zabin},
+         family_i={Z\bibinitperiod},
+         given={R.},
+         given_i={R\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{KVZR1}
+    \strng{fullhash}{KVZR1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{K}
+    \field{sortinithash}{K}
+    \field{issn}{0162-8828}
+    \field{number}{2}
+    \field{pages}{147\bibrangedash 159}
+    \field{title}{What energy functions can be minimized via graph cuts?}
+    \field{volume}{26}
+    \field{journaltitle}{Pattern Analysis and Machine Intelligence, IEEE
+  Transactions on}
+    \field{year}{2004}
+  \endentry
+
+  \entry{Kor93}{article}{}
+    \name{author}{1}{}{%
+      {{hash=KNJ}{%
+         family={Korevaar},
+         family_i={K\bibinitperiod},
+         given={N.\bibnamedelima J.},
+         given_i={N\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{KNJ1}
+    \strng{fullhash}{KNJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{K}
+    \field{sortinithash}{K}
+    \field{issn}{0022-2518}
+    \field{issue}{1}
+    \field{pages}{73\bibrangedash 81}
+    \field{title}{Capillary Surface Convexity above Convex Domains}
+    \field{volume}{32}
+    \field{journaltitle}{Indiana Univ. Math. J.}
+    \field{year}{1983}
+  \endentry
+
+  \entry{korevaar1983convex}{article}{}
+    \name{author}{1}{}{%
+      {{hash=KNJ}{%
+         family={Korevaar},
+         family_i={K\bibinitperiod},
+         given={N.\bibnamedelima J.},
+         given_i={N\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{KNJ1}
+    \strng{fullhash}{KNJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{K}
+    \field{sortinithash}{K}
+    \field{number}{4}
+    \field{title}{Convex Solutions to Nonlinear Elliptic and Parabolic Boundary
+  Value Problems}
+    \field{volume}{32}
+    \field{journaltitle}{Indiana University Mathematics Journal}
+    \field{year}{1983}
+  \endentry
+
+  \entry{maggi2012sets}{book}{}
+    \name{author}{1}{}{%
+      {{hash=MF}{%
+         family={Maggi},
+         family_i={M\bibinitperiod},
+         given={F.},
+         given_i={F\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Cambridge University Press}%
+    }
+    \strng{namehash}{MF1}
+    \strng{fullhash}{MF1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{M}
+    \field{sortinithash}{M}
+    \field{title}{Sets of finite perimeter and geometric variational problems:
+  an introduction to Geometric Measure Theory}
+    \field{volume}{135}
+    \field{year}{2012}
+  \endentry
+
+  \entry{Malgouyres02}{article}{}
+    \name{author}{1}{}{%
+      {{hash=MF}{%
+         family={Malgouyres},
+         family_i={M\bibinitperiod},
+         given={F.},
+         given_i={F\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{MF2}
+    \strng{fullhash}{MF2}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{M}
+    \field{sortinithash}{M}
+    \field{pages}{1450\bibrangedash 1456}
+    \field{title}{Minimizing the total variation under a certain convex
+  constraint for image restoration}
+    \field{volume}{11}
+    \field{journaltitle}{IEEE Trans. Image Proc.}
+    \field{annotation}{%
+    imagery%
+    }
+    \field{year}{2002}
+  \endentry
+
+  \entry{mammen1997}{article}{}
+    \name{author}{2}{}{%
+      {{hash=ME}{%
+         family={Mammen},
+         family_i={M\bibinitperiod},
+         given={E.},
+         given_i={E\bibinitperiod},
+      }}%
+      {{hash=vdGS}{%
+         prefix={van\bibnamedelima de},
+         prefix_i={v\bibinitperiod\bibinitdelim d\bibinitperiod},
+         family={Geer},
+         family_i={G\bibinitperiod},
+         given={S.},
+         given_i={S\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {The Institute of Mathematical Statistics}%
+    }
+    \strng{namehash}{MEGSvd1}
+    \strng{fullhash}{MEGSvd1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{M}
+    \field{sortinithash}{M}
+    \field{number}{1}
+    \field{pages}{387\bibrangedash 413}
+    \field{title}{Locally adaptive regression splines}
+    \field{volume}{25}
+    \field{journaltitle}{Ann. Statist.}
+    \field{month}{02}
+    \field{year}{1997}
+  \endentry
+
+  \entry{Meyer}{book}{}
+    \name{author}{1}{}{%
+      {{hash=MY}{%
+         family={Meyer},
+         family_i={M\bibinitperiod},
+         given={Y.},
+         given_i={Y\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {American Mathematical Society}%
+    }
+    \strng{namehash}{MY1}
+    \strng{fullhash}{MY1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{M}
+    \field{sortinithash}{M}
+    \field{isbn}{0-8218-2920-3}
+    \field{note}{The fifteenth Dean Jacqueline B. Lewis memorial lectures}
+    \field{series}{University Lecture Series}
+    \field{title}{Oscillating patterns in image processing and nonlinear
+  evolution equations}
+    \field{volume}{22}
+    \list{location}{1}{%
+      {Providence, RI}%
+    }
+    \field{year}{2001}
+  \endentry
+
+  \entry{NeedelWard12}{article}{}
+    \name{author}{2}{}{%
+      {{hash=ND}{%
+         family={Needell},
+         family_i={N\bibinitperiod},
+         given={D.},
+         given_i={D\bibinitperiod},
+      }}%
+      {{hash=WR}{%
+         family={Ward},
+         family_i={W\bibinitperiod},
+         given={R.},
+         given_i={R\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{NDWR1}
+    \strng{fullhash}{NDWR1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{N}
+    \field{sortinithash}{N}
+    \field{title}{Stable image reconstruction using total variation
+  minimization}
+    \field{volume}{abs/1202.6429}
+    \field{journaltitle}{CoRR}
+    \field{year}{2012}
+  \endentry
+
+  \entry{NikolovaStrong00}{article}{}
+    \name{author}{1}{}{%
+      {{hash=NM}{%
+         family={Nikolova},
+         family_i={N\bibinitperiod},
+         given={M.},
+         given_i={M\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{NM1}
+    \strng{fullhash}{NM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{N}
+    \field{sortinithash}{N}
+    \field{number}{2}
+    \field{pages}{633\bibrangedash 658}
+    \field{title}{Local Strong Homogeneity of a Regularized Estimator}
+    \field{volume}{61}
+    \field{journaltitle}{SIAM Journal on Applied Mathematics}
+    \field{year}{2000}
+  \endentry
+
+  \entry{Paolini}{article}{}
+    \name{author}{1}{}{%
+      {{hash=PE}{%
+         family={Paolini},
+         family_i={P\bibinitperiod},
+         given={E.},
+         given_i={E\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{PE1}
+    \strng{fullhash}{PE1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{P}
+    \field{sortinithash}{P}
+    \verb{doi}
+    \verb 10.1007/s002290050082
+    \endverb
+    \field{issn}{1432-1785}
+    \field{number}{1}
+    \field{pages}{15\bibrangedash 35}
+    \field{title}{Regularity for minimal boundaries in $R^n$ with mean
+  curvature in $L^n$}
+    \verb{url}
+    \verb http://dx.doi.org/10.1007/s002290050082
+    \endverb
+    \field{volume}{97}
+    \field{journaltitle}{Manuscripta Mathematica}
+    \field{year}{1998}
+  \endentry
+
+  \entry{Poon15}{article}{}
+    \name{author}{1}{}{%
+      {{hash=PC}{%
+         family={Poon},
+         family_i={P\bibinitperiod},
+         given={C.},
+         given_i={C\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{PC1}
+    \strng{fullhash}{PC1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{P}
+    \field{sortinithash}{P}
+    \field{number}{1}
+    \field{pages}{682\bibrangedash 720}
+    \field{title}{On the Role of Total Variation in Compressed Sensing}
+    \field{volume}{8}
+    \field{journaltitle}{SIAM Journal on Imaging Sciences}
+    \field{year}{2015}
+  \endentry
+
+  \entry{Portilla03}{article}{}
+    \name{author}{4}{}{%
+      {{hash=PJ}{%
+         family={Portilla},
+         family_i={P\bibinitperiod},
+         given={J.},
+         given_i={J\bibinitperiod},
+      }}%
+      {{hash=SV}{%
+         family={Strela},
+         family_i={S\bibinitperiod},
+         given={V.},
+         given_i={V\bibinitperiod},
+      }}%
+      {{hash=WMJ}{%
+         family={Wainwright},
+         family_i={W\bibinitperiod},
+         given={M.\bibnamedelima J.},
+         given_i={M\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+      {{hash=SEP}{%
+         family={Simoncelli},
+         family_i={S\bibinitperiod},
+         given={E.\bibnamedelima P.},
+         given_i={E\bibinitperiod\bibinitdelim P\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{PJ+1}
+    \strng{fullhash}{PJSVWMJSEP1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{P}
+    \field{sortinithash}{P}
+    \field{number}{11}
+    \field{pages}{1338\bibrangedash 1351}
+    \field{title}{Image denoising using scale mixtures of gaussians in the
+  wavelet domain}
+    \field{volume}{12}
+    \field{journaltitle}{IEEE Trans. Image Processing}
+    \field{month}{11}
+    \field{year}{2003}
+  \endentry
+
+  \entry{Ring00}{article}{}
+    \name{author}{1}{}{%
+      {{hash=RW}{%
+         family={Ring},
+         family_i={R\bibinitperiod},
+         given={W.},
+         given_i={W\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{RW1}
+    \strng{fullhash}{RW1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{R}
+    \field{sortinithash}{R}
+    \field{issn}{1290-3841}
+    \field{issue}{04}
+    \field{pages}{799\bibrangedash 810}
+    \field{title}{Structural Properties of Solutions to Total Variation
+  Regularization Problems}
+    \field{volume}{34}
+    \field{journaltitle}{ESAIM: Mathematical Modelling and Numerical Analysis}
+    \field{month}{07}
+    \field{year}{2000}
+  \endentry
+
+  \entry{rockafellarwets}{book}{}
+    \name{author}{3}{}{%
+      {{hash=RRT}{%
+         family={Rockafellar},
+         family_i={R\bibinitperiod},
+         given={R.\bibnamedelima T.},
+         given_i={R\bibinitperiod\bibinitdelim T\bibinitperiod},
+      }}%
+      {{hash=WRJB}{%
+         family={Wets},
+         family_i={W\bibinitperiod},
+         given={R.\bibnamedelima J-B.},
+         given_i={R\bibinitperiod\bibinitdelim
+  J\bibinitperiod-B\bibinitperiod},
+      }}%
+      {{hash=WM}{%
+         family={Wets},
+         family_i={W\bibinitperiod},
+         given={M.},
+         given_i={M\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Springer}%
+    }
+    \strng{namehash}{RRTWRJBWM1}
+    \strng{fullhash}{RRTWRJBWM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{R}
+    \field{sortinithash}{R}
+    \field{series}{Grundlehren der mathematischen Wissenschaften}
+    \field{title}{Variational analysis}
+    \list{location}{1}{%
+      {Berlin, Heidelberg, New York}%
+    }
+    \field{year}{1998}
+  \endentry
+
+  \entry{rudin1992nonlinear}{article}{}
+    \name{author}{3}{}{%
+      {{hash=RLI}{%
+         family={Rudin},
+         family_i={R\bibinitperiod},
+         given={L.\bibnamedelima I.},
+         given_i={L\bibinitperiod\bibinitdelim I\bibinitperiod},
+      }}%
+      {{hash=OS}{%
+         family={Osher},
+         family_i={O\bibinitperiod},
+         given={S.},
+         given_i={S\bibinitperiod},
+      }}%
+      {{hash=FE}{%
+         family={Fatemi},
+         family_i={F\bibinitperiod},
+         given={E.},
+         given_i={E\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Elsevier}%
+    }
+    \strng{namehash}{RLIOSFE1}
+    \strng{fullhash}{RLIOSFE1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{R}
+    \field{sortinithash}{R}
+    \field{number}{1}
+    \field{pages}{259\bibrangedash 268}
+    \field{title}{Nonlinear total variation based noise removal algorithms}
+    \field{volume}{60}
+    \field{journaltitle}{Physica D: Nonlinear Phenomena}
+    \field{year}{1992}
+  \endentry
+
+  \entry{ScherzerBook09}{book}{}
+    \name{author}{5}{}{%
+      {{hash=SO}{%
+         family={Scherzer},
+         family_i={S\bibinitperiod},
+         given={O.},
+         given_i={O\bibinitperiod},
+      }}%
+      {{hash=GM}{%
+         family={Grasmair},
+         family_i={G\bibinitperiod},
+         given={M.},
+         given_i={M\bibinitperiod},
+      }}%
+      {{hash=GH}{%
+         family={Grossauer},
+         family_i={G\bibinitperiod},
+         given={H.},
+         given_i={H\bibinitperiod},
+      }}%
+      {{hash=HM}{%
+         family={Haltmeier},
+         family_i={H\bibinitperiod},
+         given={M.},
+         given_i={M\bibinitperiod},
+      }}%
+      {{hash=LF}{%
+         family={Lenzen},
+         family_i={L\bibinitperiod},
+         given={F.},
+         given_i={F\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Springer}%
+    }
+    \strng{namehash}{SO+1}
+    \strng{fullhash}{SOGMGHHMLF1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{S}
+    \field{sortinithash}{S}
+    \field{edition}{1st}
+    \field{howpublished}{Hardcover}
+    \field{isbn}{0387309314}
+    \field{series}{Applied Mathematical Sciences}
+    \field{title}{{Variational Methods in Imaging}}
+    \field{year}{2009}
+  \endentry
+
+  \entry{scherzer2008variational}{book}{}
+    \name{author}{5}{}{%
+      {{hash=SO}{%
+         family={Scherzer},
+         family_i={S\bibinitperiod},
+         given={Otmar},
+         given_i={O\bibinitperiod},
+      }}%
+      {{hash=GM}{%
+         family={Grasmair},
+         family_i={G\bibinitperiod},
+         given={Markus},
+         given_i={M\bibinitperiod},
+      }}%
+      {{hash=GH}{%
+         family={Grossauer},
+         family_i={G\bibinitperiod},
+         given={Harald},
+         given_i={H\bibinitperiod},
+      }}%
+      {{hash=HM}{%
+         family={Haltmeier},
+         family_i={H\bibinitperiod},
+         given={Markus},
+         given_i={M\bibinitperiod},
+      }}%
+      {{hash=LF}{%
+         family={Lenzen},
+         family_i={L\bibinitperiod},
+         given={Frank},
+         given_i={F\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Springer Science \& Business Media}%
+    }
+    \strng{namehash}{SO+2}
+    \strng{fullhash}{SOGMGHHMLF2}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{S}
+    \field{sortinithash}{S}
+    \field{title}{Variational Methods in Imaging}
+    \field{volume}{167}
+    \field{year}{2008}
+  \endentry
+
+  \entry{serra1982}{book}{}
+    \name{author}{1}{}{%
+      {{hash=SJ}{%
+         family={Serra},
+         family_i={S\bibinitperiod},
+         given={J.},
+         given_i={J\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Academic Press, London}%
+    }
+    \strng{namehash}{SJ1}
+    \strng{fullhash}{SJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{S}
+    \field{sortinithash}{S}
+    \field{title}{Image analysis and mathematical morphology}
+    \field{year}{1982}
+  \endentry
+
+  \entry{StrongExplicit96}{report}{}
+    \name{author}{2}{}{%
+      {{hash=SDM}{%
+         family={Strong},
+         family_i={S\bibinitperiod},
+         given={D.\bibnamedelima M.},
+         given_i={D\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+      {{hash=CTF}{%
+         family={Chan},
+         family_i={C\bibinitperiod},
+         given={T.\bibnamedelima F.},
+         given_i={T\bibinitperiod\bibinitdelim F\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{SDMCTF1}
+    \strng{fullhash}{SDMCTF1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{S}
+    \field{sortinithash}{S}
+    \field{title}{Exact Solutions to Total Variation Regularization Problems}
+    \list{institution}{1}{%
+      {UCLA}%
+    }
+    \field{type}{techreport}
+    \field{journaltitle}{CAM 96-41}
+    \field{year}{1996}
+  \endentry
+
+  \entry{VaiterPDF13}{article}{}
+    \name{author}{4}{}{%
+      {{hash=VS}{%
+         family={Vaiter},
+         family_i={V\bibinitperiod},
+         given={S.},
+         given_i={S\bibinitperiod},
+      }}%
+      {{hash=PG}{%
+         family={Peyr{\'e}},
+         family_i={P\bibinitperiod},
+         given={G.},
+         given_i={G\bibinitperiod},
+      }}%
+      {{hash=DC}{%
+         family={Dossal},
+         family_i={D\bibinitperiod},
+         given={C.},
+         given_i={C\bibinitperiod},
+      }}%
+      {{hash=FJ}{%
+         family={Fadili},
+         family_i={F\bibinitperiod},
+         given={J.},
+         given_i={J\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{VS+1}
+    \strng{fullhash}{VSPGDCFJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{V}
+    \field{sortinithash}{V}
+    \field{number}{4}
+    \field{pages}{2001\bibrangedash 2016}
+    \field{title}{Robust Sparse Analysis Regularization}
+    \field{volume}{59}
+    \field{journaltitle}{IEEE Transactions on Information Theory}
+    \field{year}{2013}
+  \endentry
+
+  \entry{Valkonen15}{article}{}
+    \name{author}{1}{}{%
+      {{hash=VT}{%
+         family={Valkonen},
+         family_i={V\bibinitperiod},
+         given={T.},
+         given_i={T\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{VT1}
+    \strng{fullhash}{VT1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{V}
+    \field{sortinithash}{V}
+    \field{number}{4}
+    \field{pages}{2587\bibrangedash 2629}
+    \field{title}{The Jump Set under Geometric Regularization. Part 1: Basic
+  Technique and First-Order Denoising}
+    \field{volume}{47}
+    \field{journaltitle}{SIAM J. Math. Analysis}
+    \field{year}{2015}
+  \endentry
+
+  \entry{VogelOman}{article}{}
+    \name{author}{2}{}{%
+      {{hash=VCR}{%
+         family={Vogel},
+         family_i={V\bibinitperiod},
+         given={C.\bibnamedelima R.},
+         given_i={C\bibinitperiod\bibinitdelim R\bibinitperiod},
+      }}%
+      {{hash=OME}{%
+         family={Oman},
+         family_i={O\bibinitperiod},
+         given={M.\bibnamedelima E.},
+         given_i={M\bibinitperiod\bibinitdelim E\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{VCROME1}
+    \strng{fullhash}{VCROME1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{V}
+    \field{sortinithash}{V}
+    \field{number}{1}
+    \field{pages}{227\bibrangedash 238}
+    \field{title}{Iterative Methods for Total Variation Denoising}
+    \field{volume}{17}
+    \field{journaltitle}{SIAM Journal on Scientific Computing}
+    \field{year}{1996}
+  \endentry
+
+  \entry{wertheimer1923}{article}{}
+    \name{author}{1}{}{%
+      {{hash=WM}{%
+         family={Wertheimer},
+         family_i={W\bibinitperiod},
+         given={M.},
+         given_i={M\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{WM1}
+    \strng{fullhash}{WM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{W}
+    \field{sortinithash}{W}
+    \field{pages}{301\bibrangedash 350}
+    \field{title}{Untersuchungen zur Lehre der Gestalt, II}
+    \field{volume}{4}
+    \field{journaltitle}{Psychologische Forschung}
+    \field{year}{1923}
+  \endentry
+\endsortlist
+\endinput

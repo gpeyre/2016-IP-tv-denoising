@@ -1,0 +1,411 @@
+% !TEX root = ../TV-Denoising.tex
+
+
+\section{Preliminaries}
+\label{sec:prelim}
+The main contributions of our paper are presented in Sections \ref{sec:duality} to \ref{sec:stab_grad} with some numerical illustrations in Section \ref{sec:numerics}; the purpose of this section is to recall some essential results which are applied throughout this paper.
+
+\subsection{Set convergence}
+\label{sec:prelim-setcv}
+We shall use the notion of \textit{Painlev\'e-Kuratowski} set convergence (see~\cite{rockafellarwets} for more detail). Given a sequence of sets $\{S_n\}_{n\in\NN}$, $S_n\subseteq \RR^2$,  let us define the outer (resp. inner) limit of $\{S_n\}_{n\in\NN}$ as
+\begin{align}
+  \limsup_{n\to +\infty} S_n\eqdef\enscond{x\in\RR^2}{\liminf_{n\to +\infty} \dist(x,S_n)=0}, \\
+  \mbox{(resp.)}\quad  \liminf_{n\to +\infty} S_n\eqdef\enscond{x\in\RR^2}{\limsup_{n\to +\infty} \dist(x,S_n)=0}.
+\end{align}
+It is clear that $\liminf_{n\to +\infty} S_n\subseteq \limsup_{n\to +\infty} S_n$. Moreover, those two sets are closed. We say that $S_n$ converges towards $S\subseteq \RR^2$, \textit{i.e.\ } $\lim_{n\to+\infty} S_n=S$, if
+\begin{equation}
+  \liminf_{n\to +\infty} S_n =S =\limsup_{n\to +\infty} S_n.
+\end{equation}
+
+If the sequence $S_n$ is bounded (there exists $R>0$ such that  $S_n\subseteq B(0,R)$ for all $n$ large enough), then the \textit{Painlev\'e-Kuratowski} convergence is equivalent to the so-called Hausdorff convergence, that is,
+\begin{equation}
+  \lim_{n\to+\infty} \sup_{x\in S\cup S_n}\abs{\dist(x,S_n)-\dist(x,S)}=0.
+\end{equation}
+
+\subsection{Functions with bounded variation and sets with finite perimeter}
+We briefly recall some properties of functions of bounded variations and sets of finite perimeter. We refer the reader to \cite{Ambrosio,maggi2012sets} for a comprehensive treatment of the subject.
+
+\paragraph{Total variation, perimeter.}
+Given $u\in L^1_{loc}(\RR^2)$, its total variation is equal to
+\begin{align*}
+\int_{\RR^2} \abs{Du} \eqdef \sup \enscond{\int_{\RR^2}u \divx z }{z\in \Cder{1}_c(\RR^2,\RR^2), \normi{z}\leq 1 }.
+\end{align*}
+
+
+If $J(u)<+\infty$, we say that $u$ has bounded variation.
+%The space of functions $u\in L^1(\RR^2)$ such that $\int_{\RR^2} \abs{Du}<+\infty$ is the Banach space of function with bounded variations, denoted by $\BVD$.
+The mapping $u\mapsto J(u)$ is lower semi-continuous  with respect to the $L^1_{loc}(\RR^2)$ topology (hence for the $L^2$ topology).
+
+If $E\subseteq \RR^2$ is a measurable set, we denote by $|E|$ its 2-dimensional Lebesgue measure. The set $E$ is said to be of finite perimeter if $J(\bun{E})<+\infty$, where $\bun{E}$ is the indicator function of $E$. Its perimeter is defined as $P(E)=\int_{\RR^2} |D\bun{E}|$. For a Borel set $S\subseteq \RR^2$, $\Hh^1\llcorner S$ denotes the 1-dimensional Hausdorff measure restricted to $S$, namely $\Hh^1\llcorner S(A)=\Hh^1(A\cap S)$. 
+
+The reduced boundary of $E$ is defined as
+\begin{equation}
+  \partial^* E\eqdef \enscond{x\in \supp \abs{D\bun{E}}}{\nu_E(x)\eqdef \lim_{r\to 0^+}\frac{-D\bun{E}(B(x,r)}{\abs{D\bun{E}(B(x,r))}}\mbox{ exists and }\abs{\nu_E(x)}=1}. 
+\end{equation}
+The vector $\nu_E(x)$ is the measure theoretic outer unit normal to $E$. When the context is clear, we shall write $\nu$ instead of $\nu_E$. Moreover, $D\bun{E}=-\nu_E\Hh^1\llcorner \partial^*E$, and $\abs{D\bun{E}}(A)=\Hh^1(\partial^*E \cap A)$ for all open set $A\subseteq \RR^2$.
+
+In the following, we use the construction in~\cite[Prop.~3.1]{giusti1977minimal} so as to always consider a Lebesgue representative of $E$ such that for all $x$ in the topological boundary $\partial E$, $0<\abs{E\cap B(x,r)}<\abs{B(x,r)}$. Then, with this representative,
+\begin{equation*}
+  \supp D\bun{E}=\overline{\partial^*E}=\partial E.
+\end{equation*}
+
+The area and the perimeter are related by the so-called isoperimetric inequality: for any Lebesgue measurable set $E\subseteq \RR^2$, 
+$$\cD\min\{\abs{E},\abs{\RR^N\setminus E}\}\leq (P(E))^2,$$ where  $\cD=4\pi$ is the isoperimetric constant.
+
+\paragraph{Level sets and the coarea formula.}
+The coarea formula relates the total variation of a function $f\in L^1_{loc}(\RR^2)$ and the perimeter of its level sets. Define the level sets of $f$ as
+\begin{equation}\label{eq:lev_sets}
+\begin{split}
+  \F{t}\eqdef \enscond{x\in\RR^2}{f(x)\geq t} \mbox{ for } t\geq 0,\\
+  \F{t}\eqdef \enscond{x\in\RR^2}{f(x)\leq t} \mbox{ for } t< 0.
+  \end{split}
+\end{equation}
+It is clear that $\abs{\F{t}}<+\infty$ except possibly for $t=0$. Moreover, the family is monotone on $[0,+\infty)$ and $(-\infty,0)$ with
+\begin{equation*}
+  \F{t}=\bigcap_{0<t'<t}\F{t'} \mbox{ for $t>0$,} \quad  \F{t}=\bigcap_{0>t'>t}\F{t'} \mbox{ for $t<0$}.
+\end{equation*}
+We handle $0$ as a special case with $\F{0}=\RR^2\setminus\bigcup_{t'<0}\F{t'}$.
+Now, given an open set $U\subseteq \RR^2$, the coarea formula states that if $J(f)<+\infty$ then
+\begin{equation*}
+  \int_{U}\abs{Df} =\int_{-\infty}^{+\infty} P(\F{t};U)\d t,
+\end{equation*}
+where $P(\F{t};U)\eqdef \abs{D\bun{E}}(U)$.
+
+\subsection{Subdifferential of $J$}
+\label{sec-subdiff}
+
+In the following, unless otherwise stated, we use the $\LDD$ topology. The functional $J:\LDD\rightarrow \RR\cup \{+\infty\}$ is convex, proper lower semi-continuous. It is in fact the support function of the closed convex set
+\begin{equation*}
+  \enscond{\divx z }{z\in \XDD, \normi{z}\leq 1}\subseteq \LDD, 
+\end{equation*}
+where we defined 
+\eq{
+	\XD \eqdef \enscond{z\in \Linf(\RR^2, \RR^2) }{ \divx z\in\LDD  }.
+}
+As a result, it is possible to prove that
+\begin{align}
+  \label{eq:tvsubdiff}
+  \partial J(0)&= \enscond{\divx z }{z\in \XDD, \normi{z}\leq 1},\\
+\label{eq:tvsubdiffu}  \partial J(u)&= \enscond{v\in \partial J(0) }{\int_{\RR^N} uv = J(u)}.
+\end{align}
+
+Provided that $J(u)<+\infty$, $Du$ is a Radon measure, i.e  it is possible to evaluate $(z,Du)$ for all vector field $z\in C_c^0(\RR^2; \RR^2))$.
+Following the construction by Anzellotti~\cite{Anzellotti}, it is possible to define $(z,Du)$ for less smooth $z$, namely $z\in \XD$ provided that $u\in \LDD$ and $J(u)<+\infty$. Given $\varphi\in \Cder{1}_c(\RR^2)$, define
+\begin{align*}
+  \langle (z,Du), \varphi \rangle= -\int_{\RR^2} u(x)\varphi(x) \divx z(x)dx - \int_{\RR^2} u(x)z(x)\cdot \nabla \varphi(x)dx.
+\end{align*}
+Then $(z,Du)$ is a Radon measure which is absolutely continuous with respect to $\abs{Du}$, with 
+\begin{equation*}
+  \abs{\langle (z,Du),\varphi\rangle} \leq \normi{\varphi}\norm{z}_{L^\infty(U)} \int_U \abs{Du},
+\end{equation*}
+for all $\varphi\in \Cder{1}_c(\RR^2)$ and $U\subset \RR^2$ open set such that $\supp(\varphi)\subset U$. Moreover, the following integration by parts holds:
+\begin{equation*}
+  \int_{\RR^2}u\divx z = -\int_{\RR^2}(z,Du).
+\end{equation*}
+
+If $\theta(z,Du)$ denotes the Radon-Nikodym derivative of $(z,Du)$ with respect to $\abs{Du}$, we may also write write $\int_{\RR^2}(z,Du)=\int_{\RR^2}\theta(z,Du)\d \abs{Du}$.
+
+
+%Given $z\in X_2(\RR^N)$ and $u\in \LDD\cap \BVD$, we may define a linear form $(z,Dw): C^\infty_c(\RR^N) \longrightarrow \RR$ by
+%\begin{align*}
+%  \langle (z,Du), \varphi \rangle= -\int_{\RR^N} u(x)\varphi(x) \divx z(x)dx - \int_{\RR^N} u(x)z(x)\cdot \nabla \varphi(x)dx.
+%\end{align*}
+%Then $(z,Du)$ is continuous for the topology of $C^0_c(\RR^N)$  and, by Riesz theorem, it is a Radon measure.
+%One may prove that it is absolutely continuous with respect to $|Du|$, with:
+%\begin{align*}
+%  \left|\int_B (z,Du) \right|\leq \int_B |(z,Du)| \leq \|z\|_\infty \int_B |Du|, \quad \forall B \mbox{ Borel set } \subseteq \RR^N,
+%\end{align*}
+%and we shall denote its density with respect to $|Du|$ by $\theta(z,Du)$, i.e.
+%\begin{align*}
+%  (z,Du)(B) = \int_B \theta(z,Du) \diff|Du| \quad \mbox{ for any Borel set } B \subseteq \RR^N.
+%\end{align*}
+%Then $\abs{\theta(z,Du)}\leq \normi{z}$ almost everywhere.
+%The following integration by parts formula holds for $u\in \BVD\cap \LDD$ and $z\in L^2(\RR^N,\RR^N)$
+%\begin{align*}
+%  \int_{\RR^N} u(x)\divx z(x)dx  + \int_{\RR^N} (z,Du) =0.
+%\end{align*}
+%\end{detail}
+
+%\paragraph{Examples.}
+\begin{rem}
+If $u$ is smooth, then $(z,Du)$ can be interpreted as a (defined almost everywhere) pointwise inner product:
+\begin{align*}
+  \int_B (z,Du) = \int_B z(x) \cdot \nabla u(x)dx \quad \mbox{ for any Borel set } B \subseteq \RR^2.
+\end{align*}
+If $u$ is the characteristic function of set with finite perimeter $E\subset \RR^2$, then
+\begin{align*}
+ \int_E \divx z(x)dx = \int_E (z,-D\bun{E}).
+\end{align*}
+The question whether it is possible to give a pointwise meaning to $(z,-D\bun{E})$ is investigated in~\cite{bredies2012,ChaGolNov12a}.
+In~\cite{bredies2012}, under some regularity assumption on $z$ (which holds if $\divx z \in \partial J(\bun{E})$), it is interpreted as $(z,-D\bun{E})=Tz\cdot \nu_E \Hh^1\llcorner \partial^*E$, where $Tz$ is the full trace of $z$ defined on $\Hh^1$-a.e. on $\partial^*E$~\cite{bredies2012}. In~\cite{ChaGolNov12a}, it is shown that (in dimension $N=2$ or $3$), if $\divx z \in \partial J(\bun{E})\cap L^N(\RR^N)$, then every point of the reduced boundary $\partial^*E$ is a Lebesgue point of $z$, with thus $z=\nu_E$ $\Hh^1$-a.e.~on $\partial^*E$.
+%hence $(z,-D\bun{E})=z\cdot \nu_E \Hh^1\llcorner \partial^*E$.
+
+In the general case, recalling that $\abs{D\bun{E}}= \Hh^1\llcorner \partial^*E$, we shall write
+\begin{equation}
+  \int_E \divx z(x)dx = \int_{\partial^*E} \theta(z,-D\bun{E})\d\Hh^{1},
+\end{equation}
+keeping in mind that in regular cases this amounts to $\int_{\partial^*E} z\cdot \nu_E\d\Hh^{1}$.
+\end{rem}
+
+\begin{rem}
+  That  enables us to interpret the optimality $\int_{\RR^2} uv = J(u)$ as an ``optimality $\abs{Du}$-almost everywhere'': 
+\begin{align*}
+  \label{eq:}
+  \quad \int_{\RR^N} u\divx z = \int_{\RR^N} \abs{Du} 
+  &\Leftrightarrow   -\int_{\RR^N} (z,Du) = \int_{\RR^N} \abs{Du} \\
+  &\Leftrightarrow  0 = \int_{\RR^N} (1+\theta(z,Du))\diff \abs{Du},
+\end{align*}
+where $\theta(z,Du)$ is the Radon-Nikodym derivative of $(z,Du)$ with respect to $\abs{Du}$.
+Since $\abs{\theta(z,Du)}\leq 1$, this implies that in fact the equality $(z,Du)=-\abs{Du}$ holds $\abs{Du}$-a.e.
+Informally, recalling that $\normi{z}\leq 1$, this means that
+\begin{equation*}
+  z= -\frac{Du}{\abs{Du}}, \quad \abs{Du}-\mbox{almost everywhere.}
+\end{equation*}
+
+\textbf{In other words $z$ must be orthogonal to the level lines, and its saturation points contains the support of $Du$} (see also~\cite{bredies2012,ChaGolNov12a} for more rigorous statements).
+\end{rem} %\begin{detail}
+
+\paragraph{Examples}
+Let us examine two examples which can be found in~\cite{Meyer}.
+
+\subparagraph{Characteristic function of a disc:}
+Given $R>0$, consider the vector field 
+\begin{equation}\label{eq-calib-disc}
+  z(x)=\begin{cases}
+    \frac{x}{R} & \text{if } \abs{x}\leq R, \\
+    %\frac{R^{N-1}}{\abs{x}^{N}}x & \text{ otherwise.}
+    \frac{R}{\abs{x}^2}x & \text{ otherwise.}
+  \end{cases}
+\end{equation}
+%One may check that $z\in \Linf(\RR^N,\RR^N)$, $\divx z= \frac{N}{R}\bun{B(0,R)}\in \Linf(\RR^N,\RR^N)$, $\normi{z}\leq 1$, and $z\cdot \nu =1$ on $\enscond{x\in\RR^N}{\abs{x}=R}$. Hence  $\divx z\in \partial J(u)$ for $u=\bun{B(0,R)}$.
+One may check that $z\in \Linf(\RR^2,\RR^2)$, $\divx z= \frac{2}{R}\bun{B(0,R)}\in \Linf(\RR^2,\RR^2)$, $\normi{z}\leq 1$, and $z\cdot \nu =1$ on $\enscond{x\in\RR^2}{\abs{x}=R}$. Hence  $\divx z\in \partial J(u)$ for $u=\bun{B(0,R)}$.
+
+
+\subparagraph{Characteristic function of a square~:} Let $u= \bun{[0,1]^2}$ be the characteristic function of the unit square. It turns out that $\partial J(u)= \emptyset$. 
+The argument provided in~\cite{Meyer} is the following. Assume that there exists $v\in \partial J(u)$ and let $z\in \Linf(\RR^2,\RR^2)$ be the corresponding vectorfield. We denote by $T_{\varepsilon}$ the triangle $\enscond{x\in \RR^2}{0\leq x_1\leq 1,\ 0\leq x_2\leq 1,\ x_1+x_2\leq \varepsilon}$ and by $\nu$ its outer unit normal (defined $\Hh^1$-a.e.). By the Gauss-Green theorem:
+\begin{equation*}
+  \int_{T_\varepsilon} \divx z  = \int_{\partial T_\varepsilon} \theta(z,-D\bun{T_\varepsilon})\diff \Hh^1.
+\end{equation*}
+Since $v=\divx z\in\Ldeux(\RR^2)$, the left term is upper-bounded by $\sqrt{\int_{T_\varepsilon} ({\divx z})^2}\sqrt{\abs{T_\varepsilon}}=\smallo{\varepsilon}$ whereas the right term is lower-bounded by $(2-\sqrt{2})\varepsilon$. This is a contradiction. Hence $\partial J(u)= \emptyset$
+
+
+% ADD THE SECTION OF CALIBRABLE SETS
+\subsection{Calibrable sets in $\RR^2$}
+\label{sec-calibrable}
+
+
+A remarkable family of elements of $\partial J(0)$ is the family of characteristic functions of sets $F$ such that $\la_F\bun{F}\in \partial J(\bun{F})$ for some $\la_F\in \RR$. This family of functions, known as the calibrable sets, will serve as a prime example in the illustration of our theoretical results.   In this section, we recall some key results about these functions.
+
+\subsubsection{Sets that evolve at constant speed}
+The work \cite{beltvflow02} presented a study on the total variation flow $\frac{\partial u}{\partial t}\in -\partial J(u)$, namely:
+\begin{align}
+  \frac{\partial u}{\partial t}= \divx \left(\frac{Du}{|Du|} \right),
+  \label{eq-tvflow}
+\end{align}
+in $[0,\infty]\times \RR^2$ subject to initial data $u(\cdot,0) = u_0\in \LDD$.
+They prove existence and uniqueness of a ``strong solution'' (see \cite{beltvflow02}) for all initial data $u_0\in \LDD$, and existence and uniqueness of an ``entropy solution'' for $u_0\in L^1_{loc}(\RR^N)$.
+In the second part of the paper, they characterize the bounded sets of finite perimeter $\Omega$ such that $u=\bun{\Omega}$ satisfies
+\begin{align}
+  -\divx \left(\frac{Du}{|Du|}\right)= \lambda_\Omega u, \quad \mbox{ where } \la_\Omega\eqdef \frac{P(\Omega)}{|\Omega|}.
+\end{align}
+
+Such sets are exactly the sets which evolve with constant boundary, i.e. such that $u(x,t)=\la(t)\bun{\Omega}(x)$, with $\la \geq 0$, and they are called  calibrable. They are characterized by the fact that $\la_\Omega\bun{\Omega}\in \partial J(\bun{\Omega})$:
+
+\begin{defn}[Calibrable sets]
+  A set of finite perimeter $\Omega\subset \RR^2$ is said to be calibrable if, writing $v=\bun{\Omega}$, there exists a vector field $z\in L^{\infty}(\RR^2,\RR^2)$ such that $\|z\|_\infty \leq 1$
+  and 
+  \begin{align*}
+    \int_{\RR^N} (z, Dv)=\int_{\RR^2} |Dv|,\\
+    -\divx z =\la_\Omega v.
+  \end{align*}
+  In that case, we say that $z$ is a calibration for $\Omega$.
+\end{defn}
+
+\begin{rem} If $\la \bun{\Omega}\in \partial J(\bun{\Omega})$ for some $\la\in \RR$, then necessarily $\la=\la_\Omega$.
+\end{rem}
+
+\subsubsection{Characterization in $\RR^2$}
+The following results characterize convex calibrable sets.
+\begin{prop}[\protect{\cite{beltvflow02}}]
+Let $C\subset \RR^2$ be a bounded set of finite perimeter, and assume that $C$ is connected. $C$ is calibrable if and only if the following three conditions hold:
+\begin{enumerate}
+  \item $C$ is convex;
+  \item $\partial C$ is of class $C^{1,1}$;
+  \item the following inequality holds:
+    \begin{align}\label{eq:prelimcalibchar}
+      \ess \sup_{p\in \partial C} \kappa_{\partial C} (p)\leq \frac{P(C)}{|C|}.
+    \end{align}
+\end{enumerate}
+\end{prop}
+\begin{prop}[\protect{\cite{beltvflow02}}]\label{prop:prelimcalibminimal}
+Let $\Omega \subset \RR^2$ be a bounded set of finite perimeter which is calibrable. Then,
+\begin{enumerate}
+  \item the following relation holds:
+    \begin{align*}
+      \frac{P(\Omega)}{|\Omega|} \leq \frac{P(D)}{|D\cap \Omega|}, \quad \forall D\subseteq \RR^2, D \mbox{ of finite perimeter;}
+    \end{align*}
+  \item each connected component of $\Omega$ is convex.
+\end{enumerate}
+\end{prop}
+
+\subsection{From the subdifferential to the level sets}\label{sec:subdif_to_lev}
+Let $f\in\LDD$, $J(f)<+\infty$, and $v\in \partial J(f)$. By definition of the subdifferential,
+\begin{equation}\label{eq:prelim-subdiff}
+  \forall g\in \LDD,\quad \int_{\RR^2}\abs{Dg} - \int_{\RR^2} vg \geq \int_{\RR^2}\abs{Df}-\int_{\RR^2} vf.
+\end{equation}
+
+In fact, using the coarea formula, one may reformulate that optimality property (see Proposition~\ref{prop:prelim-subdiff} below) as an optimality property of the level sets. The following result is very similar to~\cite[Corollary~2.4]{kindermann2006denoising} but it requires a bit more care in our framework since the domain is $\RR^2$ and $v\in \LDD$.
+The level sets of $f$ (resp. $g$), are denoted by $\{\F{t}\}_{t\in \RR}$ (resp. $\{\G{t}\}_{t\in \RR}$).
+
+\begin{prop}\label{prop:prelim-subdiff}
+  Let $f\in \LDD$, $J(f)<+\infty$, and $v\in \LDD$. The following conditions are equivalent.
+\begin{itemize}
+  \item[(i)] $v\in \partial J(f)$.
+  \item[(ii)]  $v\in \partial J(0)$ and the level sets of $f$ satisfy
+    \begin{align}\label{eq:prelim-setgeomcalib}
+      \forall t>0,\quad P(\F{t})&=\int_{\F{t}} v, \quad \forall t<0,\quad P(\F{t})&=-\int_{\F{t}} v.
+    \end{align}
+
+  \item[(iii)] The level sets of $f$ satisfy
+    \begin{align}
+      \label{eq:setgeompbplus}\forall t>0,\quad \forall G\subset \RR^2, \abs{G}<+\infty,\quad P(G) - \int_{G} v &\geq P(\F{t})-\int_{\F{t}} v, \\
+      \label{eq:setgeompbminus}\forall t<0,\quad \forall G\subset \RR^2, \abs{G}<+\infty,\quad P(G) + \int_{G} v &\geq P(\F{t})+\int_{\F{t}} v. 
+    \end{align}
+  \end{itemize}
+   \end{prop}
+
+\begin{proof}
+  $(iii) \Rightarrow (i)$ It suffices to use the coarea formula $\int \abs{Dg} = \int_{-\infty}^{\infty} P(\G{t})\d t$ and Fubini's theorem in \begin{equation}
+    \int_{\RR^2} gv = \int_{\RR^2}\left( \int_0^{+\infty}\bun{g(x)\geq t}v(x)\d t -  \int_{-\infty}^0\bun{g(x)\leq t}v(x)\d t \right)\d x,
+  \end{equation}
+and similarly for the level sets of $f$.
+
+$(i) \Rightarrow (ii)$ Using~\eqref{eq:tvsubdiffu}, we see that $v\in \partial J(0)$ and $\int_{\RR^2}fv=J(f)$. 
+From $v\in \partial J(0)$, and choosing $\pm\bun{F}$ (for any $F\subset \RR^2$ with $\abs{F}<+\infty$) in the subdifferential inequality, we infer that  $P(F)\pm\int_{\RR^2}\bun{F}v \geq 0$. Now, $\int_{\RR^2}fv=J(f)$ rewrites
+\begin{align*}
+  0 =\int_0^{+\infty}\left( P(\F{t})-\int_{\F{t}}v\right)\d t + \int_{-\infty}^0\left(P(\F{t})+\int_{\F{t}}v \right)\d t.
+\end{align*}
+Since the integrands are nonnegative, we obtain that for a.e. $t\in \RR$, $P(\F{t})=\sign(t)\int_{\F{t}}v$. In fact, the equality holds for all $t\neq 0$. Indeed, for $t>0$, we may find a sequence $t_n\nearrow t$ as $n\to +\infty$ such that $ P(\F{t_n})=\int_{\F{t_n}}v$. Since $\abs{\F{t}}<+\infty$ and by monotonicity, $\bun{\F{t_n}}$ converges in $\LDD$ towards $\bun{\F{t}}$ and we have
+\begin{equation*}
+  P(\F{t})=P\left(\bigcap_{n\in\NN} \F{t_n}\right)\leq \liminf_{n\to +\infty} P\left(\F{t_n}\right)= \liminf_{n\to +\infty} \int_{\F{t_n}}v = \int_{\F{t}} v.
+\end{equation*}
+The converse inequality holds from the fact that $v\in \partial J(0)$ so that $\int_{\F{t}} v\leq   P(\F{t})$.
+In a similar way, we may prove that for all $t<0$, $P(\F{t})= \int_{\F{t}} v$.
+
+$(ii)\Rightarrow (iii)$ From $v\in \partial J(0)$, we infer that $P(G) \pm \int_{G} v\geq 0$ for any $G\subset \RR^2$ with $\abs{G}<+\infty$. Since $P(\F{t})-\sign(t)\int_{\F{t}}v=0$, we obtain the claimed result.
+\end{proof}
+
+As a consequence of Proposition~\ref{prop:prelim-subdiff}, if we are given $v\in \partial J(f)$ rather than $f$, we may control the localization of the support of $Df$ simply by studying the solutions of~\eqref{eq:prelim-setgeomcalib}. The following proposition formalizes this idea.
+
+\begin{prop}\label{prop:prelim-suppdf}
+  Let $f\in \LDD$ with $J(f)<+\infty$,  $v\in \partial J(f)$ and let $\supp (Df)$ denote the support of the Radon measure $Df$. Then
+\begin{align}
+  \label{eq:prelim-suppdfequal}  \supp(Df)&=\overline{\bigcup\enscond{\partial^*\F{t}}{t\in \RR\setminus\{0\}}}\\
+ \label{eq:prelim-suppdfinclude}&\subseteq \overline{\bigcup\enscond{\partial^*F}{\abs{F}<+\infty \qandq P(F)=\pm \int_F v }}. 
+\end{align}
+\end{prop}
+
+\begin{proof}
+  Let $x\in \RR^2\setminus\supp (Df)$. There exists $r>0$ such that $\abs{Df}(B(x,r))=0$, hence $f$ is constant in $B(x,r)$, identically equal to some $C\in \RR$. Depending the value of $t\in \RR$, we see that either $B(x,r)\subseteq \F{t}$ or $B(x,r)\cap \F{t}=\emptyset$. In any case, $\partial^*\F{t}\subseteq \RR^2\setminus B(x,r)$. As a result $x\in \RR^2\setminus \overline{\bigcup\enscond{\partial^*\F{t}}{t\in \RR}}$, which proves that $\overline{\bigcup\enscond{\partial^*\F{t}}{t\in \RR}}\subseteq  \supp(Df)$. 
+
+  For the converse inclusion, let $x\in \supp(Df)$, so that for all $r>0$, $$\abs{Df}(B(x,r))>0.$$ We apply the coarea formula 
+\begin{equation*}
+  \abs{Df}(B(x,r))= \int_{-\infty}^{\infty} P(\F{t},B(x,r))\d t
+\end{equation*}
+to see that $\HDU{\partial^*\F{t}\cap B(x,r)}>0$ for some $t\in \RR$, hence $$B(x,r)\cap \bigcup\enscond{\partial^*\F{t}}{t\in \RR}\neq \emptyset.$$ Since this is true for all $r>0$, we see that $x\in \overline{\bigcup\enscond{\partial^*\F{t}}{t\in \RR}}$.
+
+Now, we prove the last inclusion in~\eqref{eq:prelim-suppdfinclude}. First, we observe that 
+\begin{equation*}
+  \overline{\bigcup\enscond{\partial^*\F{t}}{t\in \RR}} = \overline{\bigcup\enscond{\partial^*\F{t}}{t\neq 0}}\cup \overline{\partial^*\F{0}}.
+\end{equation*}
+By Proposition~\ref{prop:prelim-subdiff}, we know that for every $t\neq 0$, $\F{t}$ satisfies $\abs{\F{t}}<+\infty$ and $\pm\int_{\F{t}}v=P(\F{t})$. Hence
+\begin{align*}
+  \overline{\bigcup\enscond{\partial^*\F{t}}{t\neq 0}}&\subseteq \overline{\bigcup\enscond{\partial^*F}{\abs{F}<+\infty \qandq P(F)=\pm \int_F v }},\\
+  \intertext{and it is sufficient to prove that}
+  \overline{\partial^*\F{0}}&\subseteq \overline{\bigcup\enscond{\partial^*\F{t}}{t\neq 0}}.
+\end{align*}
+
+Let $x\in \partial^*\F{0} = \partial^*\left(\RR^N\setminus \bigcup_{k\in\NN^*}\F{-1/k} \right) =  \partial^*\left(\bigcup_{k\in\NN^*}\F{-1/k} \right)$.
+Then for all $r>0$, 
+\begin{equation*}
+  \abs{B(x,r)\cap \bigcup_{k\in\NN^*}\F{-1/k}}>0 \qandq  \abs{B(x,r)\setminus \bigcup_{k\in\NN^*}\F{-1/k}}>0.
+\end{equation*}
+In particular, there exists $k_0$ such that $\abs{B(x,r)\cap \F{-1/k_0}}>0$, and moreover $\abs{B(x,r)\setminus \F{-1/k_0}}\geq  \abs{B(x,r)\setminus \bigcup_{k\in\NN^*}\F{-1/k}}>0$.
+Hence $\bun{\F{-1/k_0}}$ is not constant in $B(x,r)$, so that $\partial^* \F{-1/k_0}\cap B(x,r)\neq \emptyset$.
+As a result, $B(x,r)\cap \bigcup\enscond{\partial^*\F{t}}{t\neq 0}\neq \emptyset$ for all $r>0$, which proves that $x\in \overline{\bigcup\enscond{\partial^*\F{t}}{t\neq 0}}$.
+
+\end{proof}
+
+
+
+
+\subsection{The prescribed mean curvature problem}\label{sec:PMC_prob}
+As a consequence of Propositions~\ref{prop:prelim-subdiff} and~\ref{prop:prelim-suppdf}, we are led to study the solutions of the \textit{prescribed curvature problem}
+\begin{equation}\label{eq:prelim-varcurv}
+  \min_{\substack{X\subset \RR^N\\\abs{X}<+\infty}} P(X) + \int_X H,
+\end{equation}
+for $H=\pm v$, where $v\in \partial J(f)$ is fixed.
+Following~\cite{Barozzi}, if $E\subset \RR^2$ is a solution to~\eqref{eq:prelim-varcurv}, we say that $v$ is a \textit{variational mean curvature}~\footnote{The careful reader will note that we make a slight abuse in the terminology since in~\cite{Barozzi, massari1994variational} the function $H$ is assumed to be integrable, and the condition $\abs{F}<+\infty$ is not imposed. We make this slight abuse since the local properties of the sets studied in~\cite{Barozzi, massari1994variational} also hold for the solutions of~\eqref{eq:prelim-varcurv}.} for $E$.
+
+In the case where $H\in L^p_{loc}(\RR^N)$ for some $p\in (N,+\infty]$ and $E\subseteq \RR^N$ be a nonempty solution of~\eqref{eq:prelim-varcurv}, it can be shown \cite{Ambrocorso} that $\Sigma=\partial E\setminus \partial^*E$ is a closed set of Hausdorff dimension at most $N-8$, and $\partial^* E$ is a $\Cder{1,\alpha}$ hypersurface for all $\alpha<(p-N)/2p$. Furthermore, when $H$ is continuous on an open set $A$ and $N=2$, $-\frac{1}{N-1} H$ can be shown \cite[Th. 1.1.3]{Ambrocorso} to be the mean curvature in the classical sense.
+However, the integrability of $H$ is crucial of such regularity results.
+It is easy to show that the level sets of the solution of $(\Pp_\la(f))$ have
+$p$-integrable curvature whenever $f\in L^p(\RR^N)$ (which yields the
+same integrability for $u$), and even continuous curvature if $f$ is continuous~\cite{casregul11}.
+However in general in this paper,  we are interested in a limit case $p=N$ where there exist counterexamples \cite{massari1994variational,elisabetta2013sets} for which  the Hausdorff dimension of $\partial E\setminus \partial^*E$ is more than $N-8$.
+
+Nonetheless, when $p=N$, we may rely on a weak regularity theorem~\cite[Th.~3.6]{massari1994variational} (see also \cite{gonzales1993boundaries}) which ensures that for all $x\in \partial E$,\begin{equation}\label{eq:weak_regularity}
+  1>  D_E(x)\eqdef \lim_{r\to 0^+} \frac{\abs{E\cap B(x,r)}}{\abs{B(x,r)}}>0.
+\end{equation}
+Additionally, in the case of $N<8$, we have that $D_E(x) = 1/2$.
+In particular, the topological boundary $\partial E$ is equal to the \textit{essential boundary} $\partial^M E$,
+\begin{align*}
+  \partial E &= \partial^M E \eqdef \enscond{x\in \RR^2}{\overline{D_E}(x)>0 \qandq \underline{D_E}(x)>0},\\
+  \qwhereq \overline{D_E}(x)&=\limsup_{r\to 0^+} \frac{\abs{E\cap B(x,r)}}{\abs{B(x,r)}} \qandq \underline{D_E}(x)=\liminf_{r\to 0^+} \frac{\abs{E\cap B(x,r)}}{\abs{B(x,r)}}.
+\end{align*}
+Furthermore, it was shown in \cite{Paolini} that  if $H\in L^N(\RR^N)$, then $\partial^* E$ is a $C^{0,\alpha}$ hypersurface up to some possible singularities.
+Thus, in the case where $p=N$, the boundary $\partial E$ does not contain wild singular points such as cusps or points of zero density. In Section \ref{sec:props_weak_reg}, we apply \eqref{eq:weak_regularity} to show that this weak regularity holds uniformly for the boundaries of the level sets of solutions to ($\Pp_\la(f+w)$) in some low noise regime.
+
+
+
+\subsection{Decomposition of boundaries into Jordan curves}\label{sec:jordan_decomp}
+We shall occasionally rely on the results on the decomposition of sets with finite perimeter provided in~\cite{ambcasmas99}.
+
+ Let $E$ be a set of finite perimeter. By~\cite[Corollary 1]{ambcasmas99}, $E$ can be decomposed into an at most countable union of its $M$-connected components
+\begin{equation*}
+  E =\bigcup_{i\in I \subseteq \NN} E_{i} \qwhereq P(E)=\sum_{i\in I} P(E_{i}), \quad \abs{E_{i}}>0,
+\end{equation*}
+and each $M$-connected component can be decomposed as 
+$$
+E_{i}=\interop(\gamma_i^+)\setminus \bigcup_{j\in L_i}\interop(\gamma_j^-)\qandq \partial^M E_{i} = \gamma_i^+ \cup \bigcup_{j\in L_i} \gamma_j^- \pmod{\Hh^{1}},
+$$ where each $\gamma_k^{\pm}$ is a \textit{rectifiable Jordan curve}, $L_i\eqdef\enscond{j\in \NN}{\interop(\gamma_j^-)\subseteq \interop(\gamma_i^+)}$. Here $\interop(\gamma)$ denotes the interior of a Jordan curve (but when the context is clear, we shall also use $\interop$ to denote the topological interior).
+
+Moreover,
+\begin{equation*}
+  P(E)=\sum_i \HDU{\gamma_i^+} +\sum_j \HDU{\gamma_j^-} \qandq P(\interop \gamma_i^\pm)= \HDU{\gamma_i^\pm} \mbox{ for all } i.
+\end{equation*}
+
+\begin{rem}\label{rem:decomp}
+  Let $E\subset \RR^2$ with $\abs{E}<+\infty$ such that $P(E)=\int_E v$, where $v\in \partial J(0)$. Let us decompose $E$ into its $M$-connected components, $E =\bigcup_{i\in I} E_{i}$, where we can assume that $I$ is either $\NN$ or of the form $\{0, 1,\ldots, n\}$. We observe that $\{E_i\}_{i\in I, i\geq 1}$ yields the decomposition of $E\setminus E_0$ into its M-connected components. Hence,
+\begin{align*}
+  0&=  P(E)- \int_E v \\
+   &= P(E_{0}) -\int_{E_{0}}v + P\left(\bigcup_{i\in I, i\geq 1} E_{i}\right)-\int_{\bigcup_{i\in I, i\geq 1} E_{i}}v.
+\end{align*}
+Since $P(E_{0}) -\int_{E_{0}}v\geq 0$ and $ P\left(\bigcup_{i\in I, i\geq 1} E_{i}\right)-\int_{\bigcup_{i\in I, i\geq 1} E_{i}}v\geq 0$, we deduce that these inequalities are in fact equalities. By induction, we deduce that for all $i\in I$,
+\begin{equation*}
+P(E_{i}) -\int_{E_{i}}v =0.
+\end{equation*}
+Now decomposing, $\partial^ME_{i}$ into rectifiable Jordan curves, this equivalent to 
+\begin{align*}
+0  &= \left(P(\interop \gamma_i^+)-\int_{\interop \gamma_i^+}v\right)  +\sum_{j\in L_i} \left(P(\interop \gamma_j^-)+\int_{\interop \gamma_j^-}v\right) .
+\end{align*}
+Since each Jordan curve $\gamma$ satisfies $P(\interop \gamma)-\abs{\int_{\gamma}v}\geq 0$, we see that for all $i$ and $j$ in the decomposition,
+\begin{equation*}
+  P(\interop \gamma_i^+)=\int_{\gamma_i^+}v \qandq P(\interop \gamma_j^-)=-\int_{\gamma_j^-}v.
+\end{equation*}
+Similarly, we may prove that if $P(E)=-\int_E v$,
+\begin{align*}
+  P(E_i)&=-\int_{E_i}v,\\
+  P(\interop \gamma_i^+)&=-\int_{\gamma_i^+}v \qandq P(\interop \gamma_j^-)=\int_{\gamma_j^-}v.
+\end{align*}
+\end{rem}

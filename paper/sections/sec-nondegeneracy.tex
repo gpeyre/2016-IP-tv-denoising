@@ -1,0 +1,312 @@
+% !TEX root = ../TV-Denoising.tex
+
+
+\section{Support stability and calibrations}\label{sec:stab_grad}
+Theorem \ref{thm:spt_stability} shows that as a result of the strong $L^2$ convergence of $\vlaw$ to $\voo$, one is guaranteed support stability outside a small neighbourhood of the extended support. This section upper bounds the rate of convergence in the outer limit inclusion of \eqref{eq:suppliminfsup}. In particular, we make explicit the relationship between the width of this neighbourhood, the decay of $\normLdeux{\vlaw-\voo}$ and the nondegeneracy of $z_0$, the vector field for which $\voo = -\divx z_0$. 
+
+
+\subsection{Support stability}
+In this section, we define 
+\begin{equation*}
+T_r \eqdef  \enscond{x\in \RR^2}{\mathrm{dist}(x,\ext(Df))\leq r },
+\end{equation*}
+and we make an additional assumption about the decay of $z_0$ away from the extended support: 
+\begin{equation}
+  \deltar\eqdef 1-\ess \sup_{x\in T_r^C} \abs{z_0(x)}>0.\label{eq:defer}
+\end{equation}
+We also let $C$ be such that
+$$
+\abs{E}\leq C^2, \qquad \forall~E\in\FFlaw, ~ (\la,w)\in D_{1,\sqrt{\cD}/4}.
+$$
+Recall that the existence of $ C$ is guaranteed by Lemma \ref{lem:unif_bd_lev_sets}.
+Examples of  vector fields whose decay is known outside the extended support are described in Section~\ref{sec:calibrable}.
+
+
+
+
+\begin{prop}\label{prop:partoutsidetube}
+ Given any $E\in \FFlaw$ with $(\la,w)\in D_{1,\sqrt{\cD}/4}$,
+\begin{equation*}
+  \deltar \HDU{\partial^*E\setminus T_r}\leq \int_{E}(v_{\la,w} - \voo)\leq C\normLdeux{v_{\la,w}-\voo},
+\end{equation*}
+\end{prop}
+
+
+\begin{proof}
+Comparing the energy of $E$ with that of the empty set we get,
+\begin{align*}
+  P(E)\leq \int_{E}v_{\la,w} &= \int_{E}(v_{\la,w}-\voo) + \int_{E}\voo
+  \\
+                                 &\leq \normLdeux{v_{\la,w}-\voo}\sqrt{\abs{E}} + \int_{\partial^* E} z_0\cdot \nu                               .
+\end{align*}
+Recall from  Lemma \ref{lem:unif_bd_lev_sets} that  there exists $C>0$ such that $\abs{E}\leq C^2$. So, $$ P(E)- \int_{\partial^* E\cap T_r}z_0\cdot \nu - \int_{\partial^* E\setminus T_r}z_0\cdot \nu \leq C \normLdeux{v_{\la,w}-\voo}.$$
+Since $\left(\ess \sup_{\RR^N\setminus T_r}\abs{z_0}\right)\leq 1-\deltar$, and more generally $\normLinf{z_0}\leq 1$, 
+\begin{align*}
+  P(E)- \int_{\partial^* E\cap T_r}z_0\cdot \nu - \int_{\partial^* E\setminus T_r}z_0\cdot \nu  &\geq \HDU{\partial^*E\setminus T_r}+\HDU{\partial^*E\cap T_r}\\
+                                                                                                            &- (1-\deltar)\HDU{\partial^*E\setminus T_r} - \HDU{\partial^*E\cap T_r}\\
+                                                                                                            &\geq  \deltar \left(\HDU{\partial^*E\setminus T_r}\right),
+\end{align*}
+hence the claimed result.
+
+\end{proof}
+
+
+
+\begin{prop}\label{prop:entiretubecomplement}
+Let $\la>0$ and $w\in \LDD$ be such that $\normLdeux{v_{\la,w}-v_0} <\deltard\sqrt{\cD}$. Then, $E\in \FFlaw$ and $P(E)>0$ implies that
+  \begin{equation*}
+    \HDU{\partial^* E \cap T_{r/2}}>0.
+  \end{equation*}
+\end{prop}
+\begin{proof}
+Assume by contradiction that $P(E)>0$ and $\HDU{\partial^* E\cap T_{r/2}}=0$ so that $\partial^* E \subset T_{r/2}^c$ up to an $\Hh^1$-negligible set. Then,
+\begin{align*}
+P(E) &= \int_E \vlaw \leq \norm{E}^{1/2} \normLdeux{\vlaw - \voo} + \int_E \voo\\
+&\leq \frac{P(E) \normLdeux{\vlaw - \voo} }{\sqrt{\cD}}+ (1-\delta_{r/2}) P(E),
+\end{align*}
+where we have applied the isoperimetric inequality and the fact that $\voo = \divx z_0$ with $\abs{z_0}\leq (1-\delta_{r/2})$ on $T_{r/2}^c$. Since $P(E)>0$, this implies that
+$$
+\delta_{r/2}\sqrt{\cD} \leq \normLdeux{\vlaw - \voo}.$$
+This contradicts the assumption of this proposition.
+\end{proof}
+
+
+
+
+
+\begin{thm}\label{thm:stab_w_vec_field}
+Let $r>0$.
+ If $(\la,w)\in D_{1,\sqrt{\cD}/4}$ are such that
+  \begin{equation}\label{eq:thm_vec_conds}
+  \norm{v_{\la,w} - v_0}_{L^2}\leq \delta_{r/2} \min \left\{\frac{r}{2C}, \sqrt{\cD}\right\},
+  \end{equation}
+  then for all level sets $E$ of $u_{\la,w}$, 
+$  \partial E \subseteq T_r.
+$
+\end{thm}
+
+
+\begin{proof}
+  It is sufficient to show that $\Hh^1(\partial^* E \setminus T_r) = 0$ for all $E\in\FFlaw$ with $\la>0$ and $w\in \LDD$ satisfying (\ref{eq:thm_vec_conds}). For, if we have $\Hh^1(\partial^* E \setminus T_r) = 0$, this means that $\bun{E}$ is constant on every connected component of the open set $\RR^2\setminus T_r$, hence the topological boundary satisfies $\partial E\subseteq T_r$.
+Furthermore, by Section~\ref{sec:jordan_decomp}, we may assume that  up to an $\Hh^1$-negligible set, $\partial^* E$ is equivalent to a Jordan curve $\gamma$.
+
+First observe that by Proposition \ref{prop:entiretubecomplement}, $\Hh^1(\partial^* E\cap T_{r/2})>0$. Now, for a contradiction, suppose that $\Hh^1(\partial^* E\setminus T_{r})>0$. Then since this implies that $\Hh^1(\gamma\cap T_{r/2})>0$, $\Hh^1(\gamma\setminus T_r)>0$ and $\gamma$ is a continuous curve, it follows that $$\Hh^1(\gamma \setminus T_{r/2}) = \Hh^1(\partial^* E \setminus T_{r/2})> r/2.$$ However, this is a contradiction Proposition \ref{prop:partoutsidetube} implies that
+$$\lim_{(\la_0,\alpha_0)\to (0,0)} \sup \enscond{\HDU{\partial^*\Elaws\setminus T_r}}{\Elaws \in \FFlaw,\ (\la,\alpha)\in \lnr{\alpha_0}{\la_0}}=0.$$
+Indeed, by our choice of $(\la,w)$ in (\ref{eq:thm_vec_conds}), if $\Hh^1(\partial^* E\setminus T_r)>0$, then the combination of Proposition  \ref{prop:partoutsidetube} and Proposition \ref{prop:entiretubecomplement} yields
+\begin{equation*}
+\frac{r\delta_{r/2}}{2} < \HDU{\partial^*E\setminus T_{r/2}}\leq C\normLdeux{v_{\la,w}-\voo} \leq \frac{r \delta_{r/2}}{2}.
+\end{equation*}
+
+\end{proof}
+
+\paragraph{Example}
+In the case where $f = \bun{B(0,R)}$, by  the construction of $z_0$ from  (\ref{eq-calib-disc}), $\delta_r\leq r/R$.
+Furthermore, since $\vlaw = \frac{2}{R}f$, for each $E\in \FFlaw$,
+$$
+2\sqrt{\pi}\abs{E}^{1/2}\leq P(E) \leq \int_E \vlaw
+\leq 2\pi R + \norm{w}_{L^2}\abs{E}^{1/2},
+$$
+and $\abs{E}^{1/2}\leq 2\pi R/(2\sqrt{\pi} - \normLdeux{w})$ provided that $2\sqrt{\pi} > \normLdeux{w}$.
+ So, Theorem \ref{thm:stab_w_vec_field} implies that for all $\la>0$, and $w\in\LDD$ such that $$\norm{w}_{L^2}\leq \min\left\{2\sqrt{\pi}-\pi,~\frac{\la  r^2}{8R^2}\right\},$$ any level set $E$ of $\ulaw$ satisfies $\partial^* E\subset T_{r}$ up to an $\Hh^1$-negligible set.
+
+\subsection{Non-degeneracy of calibrable sets}\label{sec:calibrable}
+
+The aim of this section is to show that if $C\subset\RR^2$ is a convex calibrable set, the minimal norm certificate $\voo=h_C\bun{C}$ (where $h_C=\frac{P(C)}{\abs{C}}$) can be written as $\voo=\divx z_0$ where $z_0\in \XDD$, $(z,D\bun{C})=-\abs{D\bun{C}}$ and for every compact set $K\subset \RR^2\setminus \partial C$,
+\begin{equation*}
+  \ess \sup_{K} \abs{z_0} <1,
+\end{equation*}
+with an estimation on that inequality. We do not aim at full generality, and we assume that $\partial C$ is of class $\Cder{2}$ for the sake of simplicity. Reducing the hypotheses is the subject of future work.
+
+The proof relies on the notion of inner and outer calibrations described in~\cite{beltvflow02}, which amounts to constructing vector fields ``inside'' and ``outside'' the studied set, and then ``glue'' the two constructions.
+
+\begin{defn}
+Let $C \subseteq \RR^2$ be a set of finite perimeter. We say that $C$ is $-$calibrable if there exists a vector field $z^-_C: \RR^2\rightarrow \RR^2$ 
+such that 
+\begin{enumerate}
+  \item $z^-_C\in L^2_{loc}(\RR^2,\RR^2)$ and $\divx z^-_C \in L^2_{loc}(\RR^2)$;
+  \item $|z^-_{C}| \leq 1$ almost everywhere in $C$;
+  \item $\divx z^-_C$ is constant on $C$;
+  \item $\theta(z^-,-D\bun{C})(x)=-1$ for $\Hh^1$-almost every $x\in \partial^* C$.
+\end{enumerate}
+Similarly $C$ is $+$calibrable if $1),2),3)$ hold and $\theta(z^+,-D\bun{C})(x)=+1$ in $4)$.
+\end{defn}
+The following lemma tells that one may ``glue'' calibrations:
+\begin{lem}[\protect{\cite{beltvflow02}}]
+  Let  $C$ be a bounded set of finite perimeter. Then $v=\bun{C}$ is calibrable if and only if $C$ is $-$calibrable with $-\divx \xi^-_{C}=h_C$ in $C$, and $\RR^2\setminus C$ is $+$calibrable with $\divx z^+_{\RR^2}=0$ in $\RR^2\setminus C$,
+  defining
+  \begin{align*}
+    z\eqdef \left\{ \begin{array}{cc}
+        z^-_C & \mbox{on }  C,\\
+        z^+_C & \mbox{on } \RR^2\setminus C.
+    \end{array}\right.
+  \end{align*}
+\end{lem}
+
+
+
+\subsection{Inner calibrations}
+Let $C\subset \RR^2$ be a bounded open convex set of class $\Cder{2}$ 
+%\footnote{In the original paper~\cite{giusti78}, it is assumed that $C$ is of class $\Cder{2}$, but as noted in~\cite[Remark 6.1]{AmaBel15} the proof is still valid for $C$ of class $\Cder{1,1}$.}
+, and $h_C \eqdef \frac{P(C)}{C}$.
+Following~\cite{AmaBel15} in order to build the calibration, we consider the following auxiliary problem:
+\begin{equation}
+  \divx\left(\frac{\nabla u}{\sqrt{1+\abs{\nabla u}^2}}\right) = h_C \label{eq:pscbmean}
+\end{equation}
+and we define
+\begin{equation}\label{eq:zinnercalib}
+  z\eqdef\begin{cases}
+\frac{\nabla u}{\sqrt{1+\abs{\nabla u}^2}} &\mbox{on $C$}\\
+\nu_C & \mbox{on $\partial C$}.\end{cases}
+\end{equation}
+
+Giusti proved the following result in~\cite{giusti78} (see also~\cite[Prop.6.2]{AmaBel15})
+\begin{thm}[\cite{giusti78}]\label{thm:giustiexist} There exists a solution $u\in\Cder{2}(C)$ to~\eqref{eq:pscbmean} if and only if 
+  \begin{equation}
+    \forall B\subsetneq C, B\neq \emptyset, \quad h_C < \frac{P(B)}{\abs{B}}. \label{eq:uniqcheeg}
+  \end{equation}
+Furthermore, the solution $u$ is unique up to an additive constant, bounded from below in $C$, and its graph is vertical at the boundary of $C$, in the sense that 
+  \begin{equation*}
+    \frac{\nabla u}{\sqrt{1+\abs{\nabla u}^2}} \to \nu_C \mbox{ uniformly on }\partial C.
+  \end{equation*}
+\end{thm}
+The consequence is that $z$ defined in~\eqref{eq:zinnercalib} is a $\Cder{1}$ vector field in $C$, (in fact analytic, see~\cite{AmaBel15}), continuous in $\overline{C}$.
+
+In fact, Giusti also proved that the condition~\eqref{eq:uniqcheeg} is equivalent to~\eqref{eq:prelimcalibchar}, namely the calibrability of $C$ (this result was extended to $\RR^N$ in \cite{alteruniq09}). As a result, for a calibrable set $C$, one may choose the calibration given by the vectorfield $z$ such that
+\begin{equation*}
+  \forall x\in C,\quad  z(x)=\frac{\nabla u(x)}{\sqrt{1+\abs{\nabla u(x)}^2}}
+\end{equation*}
+and $\restr{z}{\RR^2\setminus C}$ is a vectorfield such that $\normi{z}\leq 1$, $\divx z=h_C$ and $\theta(z,D\bun{C})=-1$.
+A first step in proving that $\abs{z}<1$ inside $C$ is the following theorem by Giusti.
+\begin{thm}[\cite{giusti78}]\label{thm:giustibounded}
+  For every compact set $K\subset \interop{C}$, there exist exists $Q>0$ such that for any solution of~\eqref{eq:pscbmean} in $\interop{C}$, 
+  \begin{equation*}
+    \sup_K\abs{\nabla u}\leq Q.
+  \end{equation*}
+\end{thm}
+This implies that $\sup_{K}\frac{\abs{\nabla u}}{\sqrt{1+\abs{\nabla u}^2}}<1$. In the next proposition, we study further its decay  inside $C$, which yields a non-degenerate inner calibration for $C$.
+
+\begin{prop}
+  Let $C\subset \RR^2$ be a bounded strictly convex calibrable set such that $\partial C$ is of class $\Cder{2}$ 
+  %$h_C > (N-1)\ess \sup_{\partial C} \abs{H_C}$.
+  and $h_C >\sup_{\partial C} \abs{\kappa_{\partial C}}$. 
+  Assume moreover that the solution to~\eqref{eq:pscbmean} is continuous up to the boundary, i.e.\ $u\in \Cder{}(\overline{C})$.
+Then, there exists $\alpha>0$, there exists a vector field $z\in \Cder{}(\overline{\Omega})\cap \Cder{1}(\Omega)$ such that $\divx z= h_C$, $z\cdot \nu =1$ on $\partial C$, and
+  \begin{equation*}
+    \forall x\in C, \quad \abs{z(x)}\leq \frac{\alpha}{\sqrt{d(x)^2+ \alpha^2}}, 
+  \end{equation*}
+  where $d(x)\eqdef \mathrm{dist}(x,\partial C)$.
+\end{prop}
+\begin{proof}
+
+  By~Theorem~\ref{thm:giustiexist}, there exists a $\Cder{2}$ solution $u$ to~\eqref{eq:pscbmean} which is vertical at the boundary, and the inequality $h_C > \ess \sup_{\partial C} \abs{\kappa_{\partial C}}$ implies that $u$ is bounded (see~\cite[Th. 3.1]{giusti78}). We define $z(x)\eqdef \frac{\nabla u(x)}{\sqrt{1+\abs{\nabla u(x)}^2}}$ for all $x\in C$. 
+
+  Let us prove that $\abs{\nabla u(x)}>0$ for a.e.\ $x\in C$.
+  First, we assume that $C$ is strictly convex. Since $u\in  \Cder{2}{(\Omega)}\cap\Cder{}{(\overline{\Omega})}$, by \cite[Th.~2.2]{korevaar1983convex} u is a convex function. As a result, $\enscond{x\in C}{\nabla u(x)=0}=\argmin_C u$, and it is thus a closed convex set. Assume by contradiction that the dimension of $\argmin_C u$ is $2$, i.e.\ $\argmin_C u$ contains an open ball $B(x_0,r) \subset \interop(C)$ for some $x_0\in \interop(C)$, $r>0$. Let $T$ denote the operator $T:u\mapsto \frac{\nabla u}{\sqrt{1+\abs{\nabla u}^2}}$, and let $w$ be the constant function $x\mapsto \min_C u$.  We have $u\leq w$ in $\partial B(x_0,r)$ (in fact equality holds), and $0=\divx Tw< \divx Tu=h_C$ in $B(x_0,r)$. By Theorem~\ref{thm:giustibounded}, Problem~\eqref{eq:pscbmean} is locally uniformly elliptic, and the comparison principle~\cite[Th.~10.1]{gilbarg1977elliptic} yields that $u<w$ in $B(x_0,r)$, which is a contradiction. As a result, the dimension of $\argmin_C u$ is strictly less than $2$ and $\argmin_C u$ is Lebesgue-negligible.
+
+  Now, for a.e.\ $x\in \interop(C)$, we may define $y\eqdef x+d(x)\frac{\nabla u(x)}{\abs{\nabla u(x)}}$, and we observe that $y\in C$. By convexity of $u$, $u(y)-u(x)\geq \nabla u(x)\cdot(y-x)=d(x)\abs{\nabla u(x)}$. As a result, $\abs{\nabla u(x)}\leq \frac{2\normi{u}}{d(x)}$, and
+  \begin{equation*}
+    \abs{Tu(x)}\leq \frac{2\normi{u}}{\sqrt{d(x)^2+4\normi{u}^2}}. 
+  \end{equation*}
+The claimed result holds by a density argument.  
+\end{proof}
+
+\subsection{Outer calibrations}
+\label{sec:calibout}
+It is proved in~\cite[Th. 5]{beltvflow02} (see also \cite[Th. 13]{altercalib05} in dimension $N$) that sets which satisfy a geometric condition (namely convex sets that are far enough from one another) have a complement which is $+$calibrable. That condition holds for $\Cder{1,1}$ convex sets.
+
+However, it is not clear from the proof that the corresponding vector field has norm $<1$ in compact sets of $\RR^2\setminus C$.
+We provide below an explicit construction when the set has $\Cder{2}$ boundary. Admittedly the hypothesis is quite restrictive but we think that this construction gives some insight on the geometric properties involved.
+
+\begin{prop}
+Let $C\subset \RR^2$ be a nonempty bounded open convex subset with $\Cder{2}$ boundary.
+There exists a vector field $z\in L^\infty\cap \Cder{}{(\overline{\RR^2\setminus C})}$ such that $z=\nu$ on $\partial C$, $\divx z=0$ in the sense of distributions and $\abs{z}<1$ on every compact subset of $\RR^2\setminus C$.
+\end{prop}
+The decay of $z$ is discussed in Remark~\ref{rem:decayz} below.
+
+\begin{proof}
+ We choose an arclength parametrization of $\partial C$, $s\mapsto y(s)$ defined on $S\eqdef \RR/(P(C)\ZZ)$, and we consider a basis $(\tau(s),\nu(s))$ such that $\tau(s)=y'(s)$, $\nu(s)=R_{-\pi/2}\tau(s)$, where $R_{-\pi/2}$ the rotation with angle $-\pi/2$. We assume that the parametrization is such that $\nu(s)$ is the outer unit normal to $C$.
+
+The mapping $\varphi: (s,d)\mapsto y(s)+d\nu(s)$ is a $\Cder{1}$-diffeomorphism from $S\times \RR_+^*$ onto $\RR^2\setminus \overline{C}$, with
+\begin{equation*}
+  \frac{\partial \varphi}{\partial s}(s,d)=\tau(s) + d\kappa(s)\tau(s),\qandq  \frac{\partial \varphi}{\partial d}(s,d)= \nu(s),
+\end{equation*}
+where $\kappa(s)\geq 0$ is the curvature of $\partial C$ at $y(s)$.
+
+In order to define a vector field $\overline{z}:\RR^2\setminus\overline{C}\rightarrow \RR^2$ such that $\divx \overline{z}=0$, it is sufficient to define a vector field $\tz:S\times \RR_+^*\rightarrow \RR^2$ such that $\overline{z}(x)=\tz(\varphi^{-1}(x))$ and
+\begin{equation*}
+  \Tr(D\tz D\varphi^{-1})=0.
+\end{equation*}
+In other words, we shall build a vector field $\tz$ such that
+\begin{equation}\label{eq:divzzero}
+  \frac{1}{1+\kappa(s)d}\partial_s z_1(s,d) +  \frac{\kappa(s)}{1+\kappa(s)d}z_2(s,d) +\partial_d z_2(s,d) =0.
+\end{equation}
+Here, for the sake of brevity, we have denoted by $\partial_s$ (resp. $\partial_d$) the derivatives with respect to $s$ (resp. $d$), and by $(z_1,z_2)$ the coordinates of $\tz$ in the basis  $(\tau(s),\nu(s))$.
+
+
+Given $\alpha>0$ (to be fixed later), and the function $\eta: t\mapsto \min(t,2-t)$, we define
+\begin{align}
+  \label{eq:constrzoutu}  z_1(s,d)&= -\alpha \left(\int_0^s (\kappa(s')-\frac{2\pi}{P(C)})\d s'\right)\eta(d),\\
+ \label{eq:constrzoutd}   z_2(s,d)&= \frac{1}{1+\kappa(s)d}\left(1+\alpha \left(\int_0^d \eta\right)\left(\kappa(s)- \frac{2\pi}{P(C)}\right)\right).
+\end{align}
+Observe that $\lim_{(s,d)\to (s_0,0)} z(s,d)=\nu(s_0)$, and that $z$ is continuous in $\RR^2\setminus \overline{C}$ since $\int_0^{P(C)}\kappa(s')\d s'=2\pi$.
+Moreover, it is not difficult to check that $z$ satisfies~\eqref{eq:divzzero} as well.
+As a result, $\divx \overline{z}=0$ pointwise in $\RR^2\setminus \overline{C}$, and since $\overline{z}$ is continuous we see by approximation that it also holds in the sense of distributions.
+
+It remains to prove that $\abs{z}^2-1<0$.
+\begin{align*}
+  z_1^2+z_2^2-1&= \alpha^2 \left(\int_0^s (\kappa-\frac{2\pi}{P(C)})\right)^2\eta^2 \\
+               &+ \frac{1}{(1+\kappa d)^2}\left[\left(1+\alpha \left(\int_0^d \eta\right)\left(\kappa- \frac{2\pi}{P(C)}\right)\right)^2 -1 - (\kappa d)^2-2\kappa d\right].
+\end{align*}
+There is a constant $M>0$ which only depends on $\sup_{\partial C} \kappa$ and $P(C)$ such that $\left(\int_0^s (\kappa-\frac{2\pi}{P(C)})\right)^2\leq M$ and $\abs{\kappa-\frac{2\pi}{P(C)}}^2\leq M$.
+
+The term inside brackets is equal to 
+\begin{align*}
+  &\alpha^2 \left(\int_0^d \eta\right)^2\left(\kappa- \frac{2\pi}{P(C)}\right)^2 +2\alpha \left(\int_0^d \eta\right)\left(\kappa- \frac{2\pi}{P(C)}\right)- (\kappa d)^2-2\kappa d\\
+  &\leq \alpha^2 M \left(\int_0^d \eta\right)^2 + 2\kappa \left( \alpha \left(\int_0^d \eta\right) -d \right) - \frac{4\pi \alpha}{P(C)} \int_0^d\eta - (\kappa d)^2 \\
+  &\leq  2\kappa \left( \alpha \left(\int_0^d \eta\right) -d \right) +  \left(\alpha^2 M - \frac{4\pi \alpha}{P(C)}\right) \int_0^d\eta - (\kappa d)^2,
+\end{align*}
+since $\int_0^d\eta\leq 1$.
+Hence, for $d\leq 1$, we obtain that for $\alpha$ small enough (depending on $M$ and $P(C)$), that term is less than or equal to
+\begin{align*}
+-\kappa d  - \frac{2\pi \alpha}{P(C)}\frac{d^2}{2} - (\kappa d)^2\leq 0,
+\end{align*}
+which yields (writing $K\eqdef \sup_{\partial C} \kappa$)
+\begin{align}
+  z_1^2+z_2^2-1&\leq \alpha^2 M d^2 + \frac{1}{1+K}\left(-\kappa d  - \frac{2\pi \alpha}{P(C)}\frac{d^2}{2} - (\kappa d)^2\right)\nonumber\\
+               &\leq - \frac{1}{1+K}\left(\kappa d + \frac{\pi \alpha}{P(C)}\frac{d^2}{2}+(\kappa d)^2 \right) <0\label{eq:convexUpBound},
+\end{align}
+for $\alpha>0$ small enough (depending on $M$, $K$ and $P(C)$).
+
+As for $d>1$, we may assume that $\alpha$ is small enough so that $\alpha \int_0^{+\infty}\eta \leq 1/2\leq d/2$. Moreover, $\int_0^d\eta\geq \int_0^1\eta=1/2$, so that the term inside brackets is less than or equal to
+\begin{align*}
+ -\kappa d- \frac{\pi \alpha}{P(C)} - (\kappa d)^2.
+\end{align*}
+%Hence for  $1\leq d\leq 2$ and $\alpha>0$ small enough (depending on $M$, $K$, $P(C)$),
+%\begin{align*}
+%  z_1^2+z_2^2-1&\leq \alpha^2M -\frac{1}{1+2K}  \left(\kappa d+ \frac{\pi \alpha}{P(C)}+ (\kappa d)^2 \right)\\
+%               &\leq -\frac{1}{1+2K}  \left(\kappa + \frac{\pi \alpha}{2P(C)} \right) <0.
+%\end{align*}
+So,
+\begin{align*}
+  z_1^2+z_2^2-1&\leq  \alpha^2M -\frac{1}{1+\kappa d}  \left(\kappa d+ \frac{\pi \alpha}{P(C)} + (\kappa d)^2 \right)\\
+               &\leq  \alpha^2M - \frac{1}{1+\kappa d}  \left(\kappa d+ \frac{\pi \alpha}{P(C)} \right).
+\end{align*}
+For $a\eqdef \frac{\pi \alpha}{P(C)}<1$, the mapping $x\mapsto -\frac{x+a}{x+1}$ is (strictly) decreasing on $[0,+\infty)$, hence upper bounded by $-a$, and we obtain that $z_1^2+z_2^2-1\leq \alpha^2M  -\frac{\pi \alpha}{P(C)}<0$ for $\alpha$ small enough.
+\end{proof}
+
+\begin{rem}\label{rem:decayz}
+  A more straightforward construction would have been to construct $z$ parallel to the normals to $C$, or equivalently set $\alpha=0$ in~\eqref{eq:constrzoutu} and \eqref{eq:constrzoutd}. However, such a vector field would not decay in front of flat areas, where $\kappa(s)=0$, and we would have $\abs{z(s,d)}=1$ for all $d>0$. The above construction ``twists'' the field lines so as to obtain some decay of the norm. 
+  
+Still, the resulting upper bound~\eqref{eq:convexUpBound} for small $d$ depends on the local curvature of $\partial C$.
+  If $\kappa(s)>0$, then, as $d\to 0^+$,
+  \begin{equation*}
+  \abs{z(s,d)}^2 \leq  1-\frac{\kappa(s)}{1+K}d + \smallo{d} .
+  \end{equation*}
+  On the other hand, if $\kappa(s)=0$, then
+  \begin{equation*}
+    \abs{z(s,d)}^2 \leq  1-\frac{\pi \alpha}{(1+K)P(C)}\frac{d^2}{2}.
+  \end{equation*}
+\end{rem}
+
+
+

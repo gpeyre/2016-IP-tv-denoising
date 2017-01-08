@@ -1,0 +1,79 @@
+% !TEX root = ../TV-Denoising.tex
+
+
+
+\section{Comments for later}
+
+In dimensions higher than 2, we have not proved that all level sets are contained in some ball. However, this result is not essential for bounding that the measure of the perimeter outside a tube around the extended support.
+
+\begin{lem}
+Let $\la\in (0,1]$ and 
+For all $\delta>0$ and there exists $R>0$ and $\al_0>0$ such that $\Hh^{N-1}(\partial^* E\cap B(0,R)^c)\leq \delta$ for all $E\in \FFlaw$ and $(\la,w)\in D_{1,\al_0}$.
+\end{lem}
+\begin{proof}
+Let $\epsilon>0$
+Since $\{v_{\la,0}\}_{0\leq \la\leq 1}$ is equiintegrable, there exists $R>0$ such that $\int_{\RR^N\setminus B(0,R)} v_{\la,0}^2 \leq \epsilon^2$. Let $\al_0\leq \epsilon$. Given $E\in \FFlaw$ with $(\la,w)\in D_{1,\al_0}$,
+$$
+P(E) = \int_E \vlaw = \int_{E\cap B_R^c} \vlaw + \Hh^{N-1}(\partial^* E \cap B_R) -\int_{\partial B_R \cap E} z_{\la,w}\cdot\nu.
+$$
+So, \begin{align*}
+\abs{\Hh^{N-1}(\partial^* E \cap B(0,R)^c) +\int_{\partial B(0,R) \cap E} z_{\la,w}\cdot\nu}&\leq \abs{\int_{E\cap B(0,R)^c} \vlaw} \\
+&\leq C\sqrt{\int_{\RR^N\setminus B(0,R)}\abs{\vlaw}^2}\leq C \epsilon,
+\end{align*}
+where $C$ is the constant from Lemma \ref{}. Therefore,
+$$
+C\epsilon \geq \int_{E\cap B_R^c} \vlaw = \Hh^{N-1}(\partial^* E \cap B_R^c) -\int_{\partial B\cap E}z_{\la,w}\cdot \nu \geq 2 \Hh^{N-1}(\partial^* E \cap B_R^c) -C\epsilon
+$$
+and
+$$
+\Hh^{N-1}(\partial^* E\cap B_R^c)\leq C\epsilon.
+$$
+\end{proof} 
+
+
+
+
+
+\begin{prop}
+Let $r, R>0$. The following limit holds.
+  \begin{equation}
+    \lim_{(\la_0,\alpha_0)\to (0,0)} \sup \enscond{\HDU{\partial^*\Elaws\cap B(0,R) \setminus T_r}}{\Elaws \in \FFlaw,\ (\la,\alpha)\in \lnr{\alpha_0}{\la_0}}=0.
+  \end{equation}
+\end{prop}
+
+\begin{proof}
+  By contradiction, we assume that there exists $C>0$, such that for all $n\in\NN^*$, there exists $\la_n>0$, $w_n\in\LDD$ with $\la_n+\norm{w_n}\leq \frac{1}{n}$, and $E_n\in \Ff_{\la_n,w_n}$ such that  $\HDU{\partial^*E_n\cap B(0,R) \setminus T_r}\geq C$
+
+  By Lemma~\ref{lem:unif_bd_lev_sets} and~\ref{lem:largeball}, the family $\{E_n\}_{n\in\NN}$ is {\color{blue} locally precompact in the $L^1$ topology (see \cite[Cor. 12.27]{maggi2012sets}), that is, there exists $E\subseteq \RR^2$ with finite measure such that, up to the extraction of a subsequence, for all compact sets $K$, $\lim_{n\to +\infty} \left(\abs{(E\setminus E_n)\cap K}+\abs{(E_n\setminus E)\cap K}\right)=0$ (we do not relabel the subsequence).} Moreover, up to the additional extraction of a subsequence, we may assume that either for all $n$, $\int_{E_n}v_{\la_n,w_n} =P(E_n)$, or for all $n$,
+$\int_{E_n}v_{\la_n,w_n} =-P(E_n)$. We deal with the first case, the other being similar.
+
+Recall that there exists $A>0$ and $N\in\NN$ such that
+$$
+P(E_n)\leq A, \qandq \abs{E_n}\leq A, \qquad\forall n\geq N.
+$$
+This implies that $E$ is of finite measure and since by lower semi-continuity of the perimeter
+$$
+P(E; B(0,R))\leq \liminf_{n\to\infty} P(E_n; B(0,L)) \leq \liminf_{n\to\infty} P(E_n) \leq A
+$$
+for all  $L>0$, it follows that $E$ is of finite perimeter. Moreover, for all $L>0$
+\begin{align*}
+  P(E)&\leq \liminf_{n\to +\infty}P(E_n)=\lim_{n\to+\infty}\int_{E_n\cap B(0,L)}v_{\la_n,w_n} + \int_{E_n\cap B(0,L)^c}v_{\la_n,w_n}  \\
+  &\leq \int_{E\cap B(0,L)}\voo + \sqrt{\int_{B(0,L)^c}\abs{\voo}^2},
+\end{align*}
+ since $v_{\la_n,w_n}$ converges strongly in $\LDD$ towards $\voo$ and $E_n$ converges locally to $E$. As this is true for all $L>0$ and $\voo \in \LDD$, $P(E)\leq \int_E \voo$. Since $\voo\in \partial J(f)\subseteq \partial J(0)$, the converse inequality also holds, so that $P(E)=\int_E\voo$,  and $E\in \FFoo$. By definition of the extended support, this means that $\partial^*E\subseteq \ext(Df)$.
+
+ 
+Now, let $U_r\eqdef\enscond{x\in \overline{B(0,R)}}{\dist(x,\ext(Df)\geq r/2}$. Since $U_r\supseteq B(0,R)\setminus T_r$, we see that
+\begin{equation*}
+\HDU{\partial^*E_n\cap U_r}\geq \HDU{\partial^*E_n\cap B(0,R)\setminus T_r}\geq C.
+\end{equation*}
+  
+From~\cite[Cor. 12.27]{maggi2012sets}, we also see that the vector-valued Radon measures $D\bun{E_n}$ converge towards $D\bun{E}$ in the weak-* topology. In particular, since $U_r$ is compact, Proposition 4.26 in\cite{maggi2012sets} ensures that
+\begin{equation}
+\HDU{\partial^*E\cap U_r}=\abs{D\bun{E}}(U_r)\geq \limsup_{n\to+\infty}\abs{D\bun{E_n}}(U_r) \geq \HDU{\partial^*E_n\cap U_r}\geq C.
+\end{equation}
+This contradicts the fact that $\partial^*E\subseteq \ext(Df)\subset \RR^N\setminus U_r$.
+The claimed result follows.
+\end{proof}
+
+

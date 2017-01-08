@@ -1,0 +1,225 @@
+% !TEX root = ../TV-Denoising.tex
+
+\section{Introduction}
+
+The total variation (TV) denoising method was introduced by Rudin, Osher and Fatemi in~\cite{rudin1992nonlinear}. It is one of the first proposed non-linear image restoration methods, and has had an enormous impact on shaping modern imaging sciences. Despite being quite old, this method is still routinely used today, and its popularity probably stems from both its simplicity and its ability to restore ``cartoon-looking'' images. While  far from being the state of the art for denoising in terms of performance (see Section~\ref{sec-pw} for some more recent works), it is still featured as a benchmark in most papers being published on image restoration. 
+
+%%%%
+\subsection{Total Variation Denoising}
+
+The total variation a function $u \in \LDD$ is defined as 
+\begin{align}
+  J(u)&\eqdef \int_{\RR^2} \abs{Du} 
+  \eqdef \sup \enscond{\int_{\RR^2}u \divx z }{z\in \Cder{1}_c(\RR^2,\RR^2), \normi{z}\leq 1 }.
+\end{align}
+
+Given some noisy input function $f$, following~\cite{rudin1992nonlinear}, we are interested in the total variation denoising problem
+\begin{equation}
+  \min_{u\in \LDN} \la J(u)+ \frac{1}{2} \normLdeux{u-f}^2.
+\tag{$\Pp_\la(f)$}\label{eq-rof}
+\end{equation}
+Here, $\la>0$ is the regularization parameter, and it should adapted by the user to the noise level. 
+%
+
+The goal of this paper is to study the ability to restore the geometrical structures (in particular the edges) of some (typically unknown) noise-free function $f$ by solving $\Pp_\la(f+w)$, i.e. by applying TV regularization to the input noisy image $f+w$. Here $w$ accounts for some additive noise in the image formation process, and is assumed to have a finite $L^2$ norm $\normLdeux{w}$. 
+
+
+Let us first emphasize that our analysis focusses on regimes where the noise and the regularization parameter are small. It is not very difficult to see that, as $\la\to 0^+$ and $\normLdeux{w}\to 0^+$, the solution $\ulaw$ to $\Pp_\la(f+w)$ converges towards $f$ in the $L^2$ topology. Our goal is to describe this convergence more precisely: \textit{is it possible to say that the level lines of $\ulaw$ converge to those of $f$? In what sense? Moreover, does the support of $D\ulaw$ converge towards the support of $Df$?}
+These questions are all the more important as it is widely acknowledged in image analysis theory that the shape information of an image is contained in the level sets of an image~\cite{wertheimer1923,serra1982}, determined in particular by their boundary. 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Previous Works}
+\label{sec-pw}
+
+
+%%%%
+\paragraph{Image restoration.}
+
+
+The TV denoising method, often referred to as the Rudin-Osher-Fatemi (ROF) model, was introduced in~\cite{rudin1992nonlinear}. Its basic properties (including the existence and uniqueness of the solution) are derived in~\cite{ChambolleLions}. We refer to~\cite{Chambolle10anintroduction} for an introduction to this model and an overview of its numerous applications in image processing. A thorough study of its properties can be found in~\cite{Allard1,Allard2}.
+%
+It is important to realize that TV is no longer  the state of the art in imaging sciences, and we refer to recent works such as~\cite{Portilla03,BuadesCM05,Aharon06,Dabov07} that obtain superior denoising performance on natural images by exploiting more complex and involved regularizers and statistical models. 
+
+% Variations around the initial TV model are still being developed to cope with some of its limitations, most notably the staircasing effect~\cite{LouchetMoisan}
+
+% TODO : \cite{kindermann2006denoising}
+
+
+Beyond denoising, TV methods have been used successfully to solve a wide range of ill-posed inverse problems, see for instance~\cite{AcarVogel,ChanMarquina00,ChaventCOV,Malgouyres02}.
+%
+Following the work of Meyer~\cite{Meyer}, TV regularization in conjunction to a norm dual of TV (favoring oscillations) is used to separate texture from structure, see for instance~\cite{Aujol}.  
+%
+In a finite dimensional setting (using a discretization of the gradient operator), TV methods have been used to solve compressed sensing, where the linear operator is randomized~\cite{NeedelWard12,Poon15} to obtain accurate reconstructions when the number of random samples is nearly proportional to the number of the discretized edges. 
+
+%%%%
+\paragraph{Jump sets stability.}
+
+The use of non-smooth (possibly non-convex) regularizations to restore edges and promote sharp features has been advocated by Mila Nikolova. She provided in a series of papers a detailed analysis of a general class of regularization schemes which admit piecewise smooth solutions, see for instance~\cite{NikolovaStrong00}. 
+%
+In the case of the TV regularization, this analysis can be refined. 
+%
+Explicit solutions are known, mostly in 1-D and for radial 2-D functions (see for instance~\cite{StrongExplicit96}), as well as for indicators of convex sets in the plane~\cite{alter2005evolution,Allard3}. They suggest that TV methods indeed do maintain sharp features.
+%
+A landmark result is presented in ~\cite{casdiscont07} which shows that total variation regularization does not introduce new jumps, i.e. the ``jump set'' of the solution of~\eqref{eq-rof} is included in the one of the input $f$. A review of this result and extensions can be found in~\cite{Valkonen15}.
+
+
+These results are, however, of little interest when $f$ is replaced by a noisy function $f+w$ (which is the setting of practical use of the method), since the noise $w$, which is only assumed to be in $L^2$, might introduce jumps everywhere. It is actually the presence of this noise which is responsible for the ``staircasing'' effect, which 
+creates spurious edges in flat area. Properties of this staircasing are studied in 1-D~\cite{Ring00} and in higher dimension in~\cite{Jalalzai2015}.  It is the purpose of the present paper to fill this theoretical gap by analyzing the impact of the noise on the jump set of the solution to $\Pp_\la(f+w)$, when both $\normLdeux{w}$ and $\la$ are not too large. 
+
+%%%%
+\paragraph{Calibrable and Cheeger sets.} 
+
+Of particular importance for the analysis of TV methods are indicator functions of sets, and their behavior under the regularization.
+%
+Indicator functions which are invariant (up to a rescaling) under TV denoising define so-called ``calibrable'' sets. These sets play the role of ``stable'' sets and one expects the corresponding edges to be well restored by TV denoising, a statement which is made precise in the present paper. 
+%
+We refer to section~\ref{sec-calibrable} for a detailed description of these sets and their basic properties. 
+%
+An important result is the full characterization of convex calibrable sets in~\cite{altercalib05}.
+%
+We remark also that the indicators of calibrable sets are in fact eigenvectors of the curvature operator \cite{BellettiniEigen05}. This operator informally reads $\divx(\tfrac{D u}{|Du|})$, and is also known as the $1$-Laplacian, see~\cite{Kawohl07}. These eigenvectors can be used for image processing purposes, as advocated in~\cite{Benning13}.
+%
+The study of fine geometrical properties of TV minimizers is thus deeply linked with geometric measure theory and in particular sets of finite perimeters~\cite{ambcasmas99,maggi2012sets}. In particular, the construction of calibrable sets is related to minimal surface problems~\cite{giusti1977minimal} and capillarity problems~\cite{Kor93}.
+%
+Calibrable sets are also related to Cheeger sets, which are subsets of a given set minimizing the ratio of perimeter over area. These Cheeger sets are useful in the construction of  solutions to the TV denoising problem. Cheeger sets associated to a given convex sets are unique~\cite{casuniq07,alteruniq09,kawohl06}, and can be approximated using either $p$-Laplacian~\cite{kawohlnovaga} or strictly convex penalizations~\cite{buttmaximal07} to recover an unique maximal set, which can in turn be computed numerically~\cite{carlierpeyre}. 
+
+%%%%
+\paragraph{TV flow.}
+
+While our paper studies variational problems, a closely related denoising method is obtained by solving the PDE obtained as a gradient flow of $J$, see~\cite{beltvflow02} for a formal definition. In this setting, the evolution time $t$ plays the role of $\la$. 
+% 
+This TV flow can be shown in 1-D, for characteristic of convex sets and for radial functions to be equivalent to the TV regularization~\eqref{eq-rof}, see~\cite{Ring00,Briani2011,BroxEquiv,Jalalzai2015}.
+%
+All the results available for the variational formulation~\eqref{eq-rof} have equivalent formulations in the PDE setting, such as explicit solutions for the indicators of convex sets~\cite{alter2005evolution} and the evolution of the jump-set~\cite{CasellesJumpFlow}. Some of these results have been extended to more general PDE's, see~\cite{andreu2004parabolic}. 
+
+
+
+%%%%
+\if 0
+\paragraph{Links with wavelet regularization.}
+
+Total variation regularization shares similarities with wavelet-based methods. This stems in most part because the space of bounded variation functions is tightly approximated from the inside and from the outside by Besov spaces, which are characterized by the sparsity of wavelet expansions, see~\cite{CohenDevore01}. This means that $J$ is well approximated by a (weighted) $\ell^1$ norm of wavelet coefficients, so that one can expect that the solution to $\ell^1$ Wavelet regularization and of TV regularization to be close. For the denoising problem, wavelet regularization corresponds to thresholding operators applied to wavelet coefficients, and have been advocated by Donoho and his collaborators, see for instance~\cite{DonohoJohnstone1998}. They proved that wavelet thresholding leads to asymptotically optimal denoising in a minimax sense over Besov balls. These thresholding can also be interpreted as solution to sparsity-promoting variational problems~\cite{ChambolleDeVore98}. Going beyond orthogonal wavelet bases, translation invariant wavelet thresholding~\cite{CoifmanDonoho} offer an alternative way, not based on PDE's or optimization schemes, to perform edge-preserving restoration~\cite{ChambolleLucier01}.
+%
+The connexion between TV and wavelet methods is made more precise in~\cite{welk2008locally} and more recently in~\cite{cai2012image} who proves a $\Gamma$-convergence result. This connexion is however still quite loose, and in particular, does not shed light on the actually ability of both class of methods to recover sharp edges, as we intended to do in the present paper. 
+\fi
+
+%%%%
+\paragraph{1-D setting and statistical estimation.}
+
+1-D TV denoising, sometimes referred to as the ``taut string method''~\cite{mammen1997}, is a method of choice to perform statistical analysis of time series and in particular to detect jumps and transitions. 
+% 
+In 1-D, TV flow and TV regularization are known to be equivalent~\cite{Ring00,Briani2011}. 
+%
+In the special 1-D case, it is possible to compute exactly the solution on a grid of $P$ points in $O(P^2)$ operations using a dynamic programming method~\cite{Condat13,Dumbgen2009,Grasmair2006,HinterbergerTube}.
+%
+Similarly to wavelet thresholding estimators, 1-D TV denoising is known to achieve asymptotic optimal estimation results~\cite{mammen1997}. This optimality is however measured in term of $L^2$ error, which does not provide geometric information about the location of jumps. A more precise analysis of the distribution of the jumps is provided in~\cite{davies2001}. This analysis is however probabilistic and does not extend to higher dimensions, whereas we targets a deterministic geometric analysis in 2-D (although some of our results cover the general $N$-dimensional case).
+
+
+%%%%
+\paragraph{Inverse problem and source condition.}
+
+The systematic study of noise stability of regularization schemes for general regularizing functionals $J$ relies on the so-called source-condition~\cite{ScherzerBook09}, which reads in the simple denoising setting that $\partial J(f)$ should be non-empty (see Section~\ref{sec-subdiff} for a primer on the total variation sub-differential $\partial J$). For non-smooth regularizations over Banach spaces, this study started with the seminal paper of Burger and Osher~\cite{burger2004convergence} who show that this source condition implies stability of the solution according to the Bregman divergence associated to $J$. This Bregman measure of stability is however quite weak, and in particular it does not lead to a precise geometric characterization of the restored jump set. Our analysis can be seen as a generalization and refinement of this approach, as highlighted in Section~\ref{sec:ourapproach}. Note that under a non-degeneracy condition, namely that $0$ is in the relative interior of $\partial J(f)$, it is possible to state much stronger results, as detailed in the book~\cite{ScherzerBook09} for $\ell^1$-based methods. These results however do not cover the TV regularization and can only be applied to discretized versions of TV regularization problems, see~\cite{VaiterPDF13}. 
+
+
+%%%%
+\paragraph{Numerical algorithms.}
+
+While this is not the topic of this article, let us note that the discretization (often using finite differences) and the numerical resolution of~\eqref{eq-rof} is notoriously difficult, in large part because of the non-smoothness of the TV functional $J$. 
+%
+Early algorithms rely on various smooth approximations of $J$~\cite{VogelOman,ChambolleLions}. 
+%
+The dual projected gradient method proposed by~\cite{chambolle2004algorithm} started a wave of activity on the use of first order proximal splitting schemes to solve~\eqref{eq-rof} with a provably convergent scheme, see for instance~\cite{BeckTeboulle} for accelerated first order schemes. 
+%
+Another option is to solve exactly the denoising problem using graph-cuts methods~\cite{Hochbaum2001}, see also~\cite{KolmogorovZabin,DarbonSigelle,ChambolleDarbon2009} and the references therein. These algorithms work however only for the anisotropic total variation, and thus do not cover our $J$ functional, which is the isotropic total variation. 
+%
+Let us also recall that TV methods, and their discretizations, are intimately linked with iterative non-linear filterings, and in particular local median filters, see~\cite{Buades2006}. 
+
+%%%%
+\if 0
+\paragraph{Extension of the basic TV model.}
+
+Many results known in the case of the isotropic total variation $J$ have been extended to the more general setting of anisotropic total variation (sometime called ``crystalline'' total variations). This includes in particular calibrable sets \cite{casanisotrop08}, gradient flows~\cite{belfacetbreak01,belcrystmcm07} and Cheeger sets~\cite{anisocheeg2009}.
+%
+Another generalization is to include some spatially varying weights, see \cite{carlier07} for the analysis of Cheeger sets and~\cite{CasellesJumpFlow} for a study of the jump set stability.  
+%
+Lastly, it is possible to devise higher order regularization schemes~\cite{ChanMarquina00,BrediesTGV} to promote piecewise smooth (e.g. piecewise polynomial) instead of piecewise constant solutions.
+%
+While our analysis does not cover these more general settings, it could serve as a starting point for the systemic study of non-smooth regularization methods for denoising. 
+\fi
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{A brief overview of our results}
+\label{sec:ourapproach}
+
+A common approach to studying the stability properties of a variational problems is  by analysis of the source condition. To explain our approach, we  first recall a result of Burger and Osher \cite{burger2004convergence} which provides a link between the source condition and the stability of regularized solutions:  Given  $f\in \LDD$ with finite total variation, suppose that the source condition holds, i.e.  there exists some $v\in \partial J(f)$ such that $v = -\divx z$ for some $z\in \mathrm{L}^\infty(\RR^2, \RR^2)$ with $\norm{z}_{L^\infty}\leq 1$. Note that elements in $\partial J(f)$ are often referred to as \emph{dual certificates}. Let $T\subset \RR^2$ and $\delta \in (0,1)$ be such that $\abs{z(x)}<1- \delta$  for a.e. $x\not\in T$. Then,
+ $\ulaw$, the solution to $\Pp_\la(f+w)$ satisfies
+$$
+(1-\delta)\int_{\RR^2\setminus T} \abs{D \ulaw}\leq  \frac{\normLdeux{w}^2}{2\lambda} +\frac{\lambda  \norm{v}_{L^2}^2}{2} + \normLdeux{w} \norm{v}_{L^2}.
+$$
+
+While this result informs us that the variation of $\ulaw$ is concentrated in the region $T$, it does not provide any information on the regions where $D \ulaw$ is identically zero and no information is given about how the support of $D \ulaw$ differs from the support of $D f$. 
+
+Instead of studying \textit{any} $v\in \partial J(f)$, in this paper, we shall study the minimal norm certificate
+\begin{equation}\label{intro:mnc}
+\voo \eqdef \mathop{\argmin}\enscond{\norm{v}_{L^2}}{ v\in\partial J(f)}.
+\end{equation}
+
+The minimal norm certificate was first proposed in \cite{duvalpeyre13} for  studying the support of solutions to the sparse spikes deconvolution problem using total variation of measures regularization, but in this particular framework of denoising, it is also known as the \textit{minimal section} of $\partial J(f)$ \cite{scherzer2008variational}.
+%
+Although dual certificates have been widely used  to derive stability properties of solutions to the sparse spikes deconvolution problem in terms of the $L^2$ norm, see for instance \cite{Grasmair-cpam}, the novelty of the minimal norm certificate (which is itself a dual certificate) is that it additionally addresses support stability questions such as the number and the location of the recovered diracs.
+
+In this paper, we  follow the same philosophy: Similarly to the problem of sparse spikes deconvolution, we show that the minimal norm certificate naturally gives rise to the definition of an instability region which we refer to as the extended support. This region, in turn, governs the support of the regularized solution in the low noise regime.
+Unlike previous works, our analysis is carried out for this very specific dual certificate and in doing so, we are able to characterize the support stability of the total variation denoising problem.
+
+
+
+
+We now present a sketch of why the minimal norm certificate \eqref{intro:mnc} governs the support of the regularized solutions in the low noise regime:
+
+\subsection{The significance of the minimal norm certificate for support stability}
+ The minimal norm certificate arises naturally as the strong $L^2$ limit of $v_{\la,w}$, the solutions to the dual problems associated with ($\Pp_\la(f+w)$) as $\la$ and $\norm{w}_{L^2}/\la$ converges to 0.  The significance of this is that if $u_{\la,w}$ and $v_{\la,w}$ are respectively the primal and the dual solutions associated with ($\Pp_\la(f+w)$), then $v_{\la,w} \in \partial J(u_{\la,w})$ and a consequence of this is that
+\begin{equation}\label{eq:levelsetsandcertificate}
+\supp(D u_{\la,w}) = \bigcup \enscond{\partial^* F}{ \abs{F}<\infty, P(F) = \pm\int v_{\la,w}},
+\end{equation}
+where $\partial^* F$ denotes the reduced boundary of the set $F$. Thus, one observes that $v_{\la,w}$ is intimately linked to the level sets of $u_{\la,w}$ and intuitively, one can infer information on the level sets of $u_{\la,w}$ since $\voo$ is the strong $L^2$ limit of $v_{\la,w}$. In particular, in light of \eqref{eq:levelsetsandcertificate}, one would expect  $\supp(D u_{\la,w})$ to be concentrated around the extended support of $f$, which can be written as
+$$
+  \ext(Df) = \overline{\bigcup\enscond{\partial^*E}{\abs{E}<+\infty \qandq  \pm\int_E \voo =P(E)}}.
+$$
+
+ The dual problems associated to ($\Pp_\la(f+w)$) and their limit is discussed in Section \ref{sec:duality}, while the relationship between the subdifferential and the level sets of a function is recalled in  Section \ref{sec:subdif_to_lev} and in particular, Proposition \ref{prop:prelim-suppdf}. 
+  The notion of the extended support is described in Section \ref{sec:extended}.  Examples of the minimal norm certificate and the expected support can also be found, respectively, in Sections \ref{sec:MNC_convex} and \ref{sec:ext_calib}. 
+
+\subsection{Properties of the level sets}
+To formalize the link between $\voo$ and the level sets of $u_{\la,w}$, we  derive some properties on the level sets of $u_{\la,w}$ in Section \ref{sec:proplev}. In particular, we show that for all $\la$ and $\norm{w}_{L^2}$ sufficiently small, 
+\begin{enumerate}
+\item there exists \emph{uniform} upper (c.f. Lemma \ref{lem:unif_bd_lev_sets}) and lower  bounds (c.f. Lemma \ref{lem:lower_bound_lev_sets}) on the perimeters and measures of the level sets of $u_{\la,w}$,
+\item there exists some ball which contains all level sets of $u_{\la,w}$ (c.f. Lemma \ref{lem:largeball}),
+\item there is a uniform weak regularity on the boundaries of the level sets of $u_{\la,w}$ (c.f. Proposition \ref{prop:weak_reg}), so that despite the inevitable lack of strong regularity results (as explained in Section \ref{sec:PMC_prob}), this uniform weak regularity essentially prevents the boundaries from exhibiting singularity properties such as cusps.
+\end{enumerate}
+
+Using the properties described above, we show in Section \ref{sec:stab_extended_spt} that one can exploit compactness properties of the level sets of $u_{\la,w}$ to prove our main result, Theorem \ref{thm:spt_stability}, which shows that $\supp(D u_{\la,w})$ is contained inside a small neighbourhood around $\ext(Df)$. In particular, given sequences $w_n\in L^2(\RR^2)$ and $\la_n\in \RR_+$ such that
+${\normLdeux{w_n}}/{\la_n}\to 0$ as $n\to +\infty$, the conclusion of our main result is that
+\begin{equation*}
+  \supp(Df)\subseteq \liminf_{n\to +\infty} \supp(D\un) \subseteq \limsup_{n\to+\infty} \supp(D\un)\subseteq \ext(Df),
+\end{equation*}
+where the limits are in the sense of Painlev\'e-Kuratowski set convergence, which we recall in Section \ref{sec:prelim-setcv}.
+
+\subsection{Further extensions}
+
+\paragraph{Stability estimates in the absence of the source condition.}
+Section \ref{sec:no_source_cond} presents stability analysis for cases where the source condition is not satisfied, i.e. $\partial J(f) = \emptyset$. One important class of functions which this covers are the indicator functions  on convex sets with nonsmooth boundary, such as the  square. To our knowledge, there were no previous studies on stability analysis in the absence of the source condition and hence, no stability guarantees for even the simple case of denoising the indicator function of a square. Although  in this case, the minimal norm certificate  is not defined, we show in Theorem \ref{thm:union_cvx_sets} that the techniques developed in the analysis of the minimal norm certificate can be adapted to such special cases to derive stability estimates for general convex sets.
+
+
+
+\paragraph{Convergence rates.}
+
+We stress that  via the approach of \cite{burger2004convergence}, characterization of the regions where the variation of $\ulaw$ is small is possible only when the source condition holds \emph{and} there is precise knowledge of the extremal points and decay of some vector field $z\in \mathrm{L}^\infty(\RR^2, \RR^2)$ for which $v=-\divx z \in \partial J(f)$. In general, this vector field  is not unique and such precise characterization is a difficult problem. 
+In contrast, via our approach, explicit knowledge of the vector field associated with the minimal norm certificate is not essential, and in fact, the definition of the extended support is dependent only $v_0$ and not on the vector fields $z$ for which $v_0= -\divx z$.  
+
+Nonetheless, we show in Section \ref{sec:stab_grad} that in the special cases where the vector field associated with $v_0$ is known, our main result in Theorem \ref{thm:spt_stability} can be further refined.
+More specifically, we provide in Theorem \ref{thm:stab_w_vec_field} an explicit upper bound on the rate of shrinkage of the tube around the extended support with respect to the decay of the noise level. For the indicator function on a calibrable set $C$ with $\Cder{2}$ boundary,  we describe an explicit construction of the vector field $z_0$ associated with the minimal norm certificate with $\abs{z_0}<1$ on all compact subsets of $\RR^2\setminus \partial C$.
+Therefore, our main result can be seen as a refinement of the work of \cite{burger2004convergence} and can be applied in much greater generality. Some numerical examples are presented in Section \ref{sec:numerics} for the illustration of our theoretical results with respect to the underlying vector field.
+
+
+

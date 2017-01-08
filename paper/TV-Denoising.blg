@@ -1,0 +1,65 @@
+This is BibTeX, Version 0.99d (TeX Live 2016)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: TV-Denoising.aux
+The style file: biblatex.bst
+Reallocated glb_str_ptr (elt_size=4) to 20 items from 10.
+Reallocated global_strs (elt_size=20001) to 20 items from 10.
+Reallocated glb_str_end (elt_size=4) to 20 items from 10.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated field_info (elt_size=4) to 17232 items from 5000.
+Database file #1: TV-Denoising-blx.bib
+Database file #2: mybiblio.bib
+Biblatex version: 3.3
+Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+You've used 88 entries,
+            6256 wiz_defined-function locations,
+            1741 strings with 22096 characters,
+and the built_in function-call counts, 459636 in all, are:
+= -- 29086
+> -- 10553
+< -- 3077
++ -- 11700
+- -- 3847
+* -- 33413
+:= -- 43678
+add.period$ -- 0
+call.type$ -- 88
+change.case$ -- 1601
+chr.to.int$ -- 66
+cite$ -- 174
+duplicate$ -- 53184
+empty$ -- 41997
+format.name$ -- 6212
+if$ -- 95416
+int.to.chr$ -- 0
+int.to.str$ -- 235
+missing$ -- 0
+newline$ -- 2816
+num.names$ -- 4457
+pop$ -- 29544
+preamble$ -- 1
+purify$ -- 2085
+quote$ -- 0
+skip$ -- 16823
+stack$ -- 0
+substring$ -- 41540
+swap$ -- 13972
+text.length$ -- 2487
+text.prefix$ -- 87
+top$ -- 1
+type$ -- 2979
+warning$ -- 0
+while$ -- 5788
+width$ -- 0
+write$ -- 2729

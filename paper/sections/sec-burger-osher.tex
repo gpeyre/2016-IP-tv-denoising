@@ -1,0 +1,141 @@
+% !TEX root = ../TV-Denoising.tex
+
+\section{The Burger-Osher approach}
+\label{sec-burger-osher}
+
+\todo{We should remove this section and place a discussion in the introduction/our contributions section where we discuss the significance of the MNC: standard certificates give integral stability estimates, but the MNC will additionally provide structural estimates. }
+
+
+\todo{The aim of this section is different from the rest of the paper. We study the bound on the total variation provided by Burger and Osher outside the tube. We show that this enables to bound the oscillation (but not the support of the gradient)
+}
+Let $u_0\in \LDD$.
+Let $u_\lambda$ be a minimizer of (\ref{eq-rof}), with $\norm{ f -  u_0}_{L^2}\leq \delta$. Let $p\in \LDD$ be such that $v \in \partial J (u_0)$ and so, there exists $z\in \mathrm{L}^\infty(\RR^2, \RR^2)$ so that $v = -\divx z$, $(z, D u_0) = \abs{Du_0}$ and $\normi{z}\leq 1$. Let $T_r$ be a ring of width $r$ around the saturation points of $z_0$ so that $\abs{z(x)}<1- e_r$ with $e_r\in (0,1)$ for a.e. $x\in T_r^c$.
+
+
+We first recall two results and their proofs from \cite{burger2004convergence}.
+
+
+\begin{thm}\label{thm:burger}\cite{burger2004convergence}
+$$
+J(u_\lambda) - J(u_0) - \dotp{v}{u_\lambda-u_0}\leq \frac{\delta^2}{2\lambda} +\frac{\lambda  \norm{v}_{L^2}^2}{2} + \delta \norm{v}_{L^2}.
+$$
+\end{thm}
+\begin{proof}
+Let $d=  J(u_\lambda) -  J(u_0) - \dotp{v}{u_\lambda-u_0}$. Since $u^\lambda$ is a minimizer of (\ref{eq-rof}),
+$$
+\lambda J(u_\lambda) + \frac{1}{2}\norm{ u_\lambda - f}_{L^2}^2 \leq \lambda J(u_0) +  \frac{1}{2}\norm{ u_0 - f}_{L^2}^2\leq \lambda J(u_0) + \frac{\delta^2}{2}.$$
+It follows that 
+\begin{align*}
+ \frac{1}{2}\norm{ u_\lambda - f}_{L^2}^2 +  \lambda d + \lambda \dotp{v}{u_\lambda - u_0} \leq \frac{\delta^2}{2}\\
+\implies \frac{1}{2}\norm{ u_\lambda - f}_{L^2}^2 + \lambda d + \lambda \dotp{v}{ u_\lambda - f} + \lambda \dotp{v}{f -  u_0 } \leq \frac{\delta^2}{2}\\
+\implies \frac{1}{2}\norm{ u_\lambda - f + \lambda v}_{L^2}^2 + \lambda d - \frac{\lambda^2 \norm{v}_{L^2}^2}{2} + \lambda \dotp{v}{f -  u_0 } \leq \frac{\delta^2}{2}.
+\end{align*}
+Therefore,
+$$
+d\leq \frac{\delta^2}{2\lambda} +\frac{\lambda  \norm{v}_{L^2}^2}{2} + \delta \norm{v}_{L^2} .
+$$
+\end{proof}
+
+
+
+
+  
+  We have the following result from \cite{burger2004convergence}, from which we may bound the height of the jumps of $u_\lambda$ outside $T_r$ in Theorem \ref{thm:jump_height}.
+
+
+
+\begin{thm}\cite{burger2004convergence}\label{thm:burger_outside_tube}
+For each $r>0$,
+$$
+(1-e_r)\int_{T_r^c} \abs{D u_\lambda}\leq  \frac{\delta^2}{2\lambda} +\frac{\lambda  \norm{v}_{L^2}^2}{2} + \delta \norm{v}_{L^2}.
+$$
+\end{thm}
+\begin{proof}
+\begin{align*}
+&d:= J(u_\lambda) - J(u_0) - \dotp{v}{u_\lambda-u_0}\\
+&= J(u_\lambda) - J(u_0) + \dotp{\divx z}{u_\lambda} -\dotp{\divx z }{u}\\
+&= J(u_\lambda)  + \dotp{\divx z}{u_\lambda}\\
+&= J(u_\lambda)  -\int ( z, D u_\lambda)\\
+&= J(u_\lambda)  -\int_{T_r} ( z, D u_\lambda) -\int_{T_r^c} ( z, D u_\lambda)\\
+&\geq J(u_\lambda)  -\int_{T_r}\abs{D u_\lambda} -e_r \int_{T_r^c} \abs{D u_\lambda}\\
+&\geq (1-e_r) \int_{T_r^c} \abs{D u_\lambda}.
+\end{align*}
+The conclusion now follows by applying the upper bound on $d$ from Theorem \ref{thm:burger}.
+\end{proof}
+
+
+
+\begin{thm}\label{thm:jump_height}
+Let $B$ be any connected subset of $T_r^c$. Then,
+$$
+\mathrm{ess}\sup_B u - \mathrm{ess}\inf_B u = \Oo \left(\frac{\delta^2}{2\lambda} +\frac{\lambda  \norm{v}_{L^2}^2}{2} + \delta \norm{v}_{L^2}\right).
+$$
+\end{thm}
+
+\begin{proof}
+Assume that $u$ is not constant a.e. on $B$. Let $F_t = \{ u> t \}$. Then,
+$$
+\mathrm{ess}\sup_B u = \sup_t \{ t: F_t \cap B \neq \emptyset \}, \qquad \mathrm{ess}\inf_B u = \sup \{ t: F_t\supseteq B \}.
+$$ 
+Let $s_2 := \mathrm{ess}\sup_B u$ and $s_1:= \mathrm{ess}\inf_B u$. Note that $s_2>s_1$ since $u$ is not constant a.e. on $B$. 
+
+
+We first show that $\Hh^1(\partial^* F_{t} \cap T_r^c)>0$ for all $t\in (s_1,s_2)$:  
+Recall from Section \ref{sec:prelim} that for each $t$, there exists $E_t$ and Jordan curves $\{J_{j}^{(t)}\}_{j=1}^K$ such that  $\partial^M E_t = \cup_{j=1}^{K}J_{j}^{(t)}$, $E_t = F_t$ (up to $\Hh^2$) and $\partial^M E_t = \partial^M F_t$ (up to $\Hh^1$). In particular, $\partial E_t$ is of class $\Cder{}$.
+Note also that $\partial^M F_t = \partial^* F_t$ up to $\Hh^1$.
+
+
+ Since $F_{s_1}\supseteq F_t \supseteq F_{s_2}$, it follows that $E_{s_1}\supseteq E_t \supseteq E_{s_2}$, $E_t\cap B \neq \emptyset$ and $E_t\not\supseteq B$. This implies that   $\Hh^1(\partial^M E_t \cap B) >0$  because $B$ is connected. Since $B\subseteq T_r^c$, we have that $\Hh^1(\partial^M E_t \cap T_r^c)>0$.
+
+
+If $\Hh^1(\partial^M E_s\cap T_{r/2})= \Hh^1(\partial^* F_s\cap T_{r/2})=0$ for all $s\in (s_1,s_2)$, then by Proposition \ref{prop:curvature_viaBurger} and Theorem \ref{thm:burger_outside_tube}, there exists $C>0$ and $\la_0>0$ such that
+$$
+ s_2-s_1 \leq  C\left(\frac{\delta^2}{2\lambda} +\frac{\lambda  \norm{v}_{L^2}^2}{2} + \delta \norm{v}_{L^2}\right), \qquad \forall \la \in (0,\la_0),
+$$
+and the conclusion follows.
+
+
+Otherwise, let $t_1$ and $t_2$ be respectively the smallest  and largest values of $ t\in [s_1,s_2]$ for which   $\Hh^1(\partial^M E_t \cap T_{r/2} )>0$. 
+
+We can now show that $\Hh^1(\partial^* F_t \cap T_{r/2} )>0$ for all $t\in [t_1,t_2]$:  Let $t\in (t_1,t_2)$. Let $x_1\in \partial^M E_{t_1} \cap T_{r/2}$ and $x_2\in \partial^M E_{t_2}\cap T_{r/2}$. Suppose that $\Hh^1(\partial^M E_t \cap T_{r/2})=0$. Then, since $x_2\in E_{t_2}\subset E_{t}$, we must have $x_2\in \mathring{E_{t}}$. If $x_1\in E_t$, then we must have $x_1\in \partial^M E_t$ since $E_t\subset E_{t_1}$, but since $\partial^M E_t \cap T_{r/2}=\emptyset$, this is impossible. So, $x_1\not\in E_t$. We can now define a continuous curve $\gamma:[a,b]\to T_{r/2}$ with $\gamma(a) = x_1$ and $\gamma(b) = x_2$. However, because $x_1\not\in E_t$, $x_2 \in \mathring{E_t}$, $\gamma$ must intersect $\partial^M E_t$, which contradicts our assumption that $\partial^M E_t \cap T_{r/2}=\emptyset$.  Thus, $0<\Hh^1(\partial^M E_{t} \cap T_{r/2}) =  \Hh^1(\partial^* F_{t} \cap T_{r/2}) $ for all $t\in [t_1,t_2]$.
+
+
+
+So, by Proposition \ref{prop:closed_curves_viaBurger} and Theorem \ref{thm:burger_outside_tube},  
+\begin{equation}\label{eq:osc_bd1}
+ t_2 - t_1 \leq \frac{2}{r(1-e_{r/2})}\left(\frac{\delta^2}{2\lambda } +\frac{\lambda  \norm{v}_{L^2}^2}{2 } + \delta \norm{v}_{L^2} \right),
+\end{equation}
+and since $F_s\subset T_{r/2}$ for all $s \in [s_1,t_1)\cup (t_2,s_2]$,
+\begin{equation}\label{eq:osc_bd2}
+ s_2-t_2+s_1-t_1 \leq C \left(\frac{\delta^2}{2\lambda} +\frac{\lambda  \norm{v}_{L^2}^2}{2} + \delta \norm{v}_{L^2}\right)
+\end{equation}
+for all $\la$ sufficiently small.
+The result follows by adding together (\ref{eq:osc_bd1}) and (\ref{eq:osc_bd2}).
+\end{proof}
+
+\begin{prop}\label{prop:curvature_viaBurger}
+ There exists $C>0$ and $\la_0>0$ such that the following holds:
+  Let $s_1,s_2\in \RR$ and let $F_t = \{ u_\lambda > t\}$. If $\Hh^1(\partial^* F_t \cap T_r) = 0$ for all $t\in [s_1,s_2]$, then 
+$$C(s_2-s_1)  \leq  \int_{T_r^c}\abs{D u_\la}.
+$$
+\end{prop}
+\begin{proof}
+By Lemma \ref{lem:lower_bound_lev_sets}, there exists $\la_0$ and $C>0$ such that if $\la\leq \la_0$ and $P(F_t)\neq 0$, then $P(F_t)\geq C$. Therefore, by the co-area formula,
+$$C(s_2-s_1) \leq \int_{t=s_1}^{s_2} P(F_t)\mathrm{d}t \leq  \int_{T_r^c}\abs{D u_\la}.
+$$
+
+\end{proof}
+
+\begin{prop}\label{prop:closed_curves_viaBurger}
+ Let $F_t = \{ u_\lambda > t\}$ and suppose that $\Hh^1(\partial^* F_t \cap T_{2r}^c)\neq 0$ and $\Hh^1(\partial^* F_t \cap T_{r})\neq 0$ for all $t\in [s_1,s_2]$. Then,
+ $$
+ s_2-s_1 \leq \frac{1}{r }\int_{T_r^c}\abs{D u_\lambda} 
+$$
+\end{prop}
+\begin{proof}
+ By our assumption on the level sets $F_t$ and since $\partial^M F_t$ is continuous, for each $t\in [s_1,s_2]$,   there exists $x_1\in T_{r}$ and $x_2\in T_{2r}^c$ such that $\gamma(a)  = x_1$ and $\gamma_{\lambda}(b) = x_2$ where $\gamma_\lambda : [a,b] \to \Omega$ is continuous and $\gamma_\lambda \subset \partial^M F_t\setminus T_{r}$. Note that the length of $\gamma$ is at least $r$ and so, $P(F_t, T_r^c)= \Hh^1(\partial^M F_t \setminus T_r) \geq r$. By the co-area formula,
+$$
+\int_{T_r^c}\abs{D u_\lambda} \geq \int_{s_1}^{s_2} P(F_t; T_r^c) \mathrm{d}t \geq (s_2-s_1)r.
+$$ 
+
+\end{proof}

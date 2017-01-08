@@ -1,0 +1,145 @@
+% !TEX root = ../TV-Denoising.tex
+
+\section{Duality for the study of the low noise regime}\label{sec:duality}
+
+\subsection{Dual problems and ``dual certificates''}
+
+We are interested in solving:
+\begin{equation}
+\min_{u\in \LDD} J(u) + \frac{1}{2\la}\normLdeux{f-u}^2,\tag{$\Pp_\la(f)$}\label{eq-rof-primal}\end{equation}
+where $J(u)=\int_{\RR^2} |Du|\in \RR_+\cup\{+\infty\}$.
+
+
+Using the framework and notations of~\cite{EkelandTemam}, we set $V=\LDD$, $\La=Id$, $Y=\LDD$, $F=J$, $G=\frac{1}{2\la}\|\cdot-f \|^2$ and we compute the Fenchel-Rockafellar dual problem as
+\begin{align}
+  \sup_{v\in \partial J(0)} \langle f,v\rangle -\frac{1}{2\la} \normLdeux{v}^2, \tag{$\Dd'_\la(f)$}\label{eq-rof-dualsup}\\
+  \mbox{or equivalently }\quad \inf_{v\in \partial J(0)} \normLdeux{\frac{f}{\la} - v}^2. \tag{$\Dd_\la(f)$}\label{eq-rof-dual}
+\end{align}
+It is easy to check that Problem~\eqref{eq-rof-primal} is stable in the sense of~\cite{EkelandTemam}. In particular, there exists a solution to\eqref{eq-rof-dualsup} and strong duality holds between \eqref{eq-rof-primal} and \eqref{eq-rof-dualsup}, namely $\inf\eqref{eq-rof-primal} = \sup \eqref{eq-rof-dualsup}$. In fact, since ~\eqref{eq-rof-dual} is a projection problem onto a nonempty closed convex set,  it always has a unique solution. 
+
+Observe that formally, the limit of~\eqref{eq-rof} as $\la\to 0^+$ is the trivial problem
+\begin{equation}
+\min_{u\in \LDD} J(u) \quad \mbox{s.t.}\quad  u=f,
+\tag{$\Pp_0(f)$}\label{eq:rof-noiseless}
+\end{equation}
+having $u=f$ as solution.
+The dual associated with this ``exact reconstruction problem'' is
+\begin{align}
+  \sup_{v\in \partial J(0)} \langle f,v\rangle, \tag{$\Dd_0(f)$}\label{eq-constr-dual}
+\end{align}
+having $\partial J(f)$ as solutions.
+Here again, strong duality holds, since it is possible to prove that~\eqref{eq-constr-dual} is stable. However, a solution to~\eqref{eq-constr-dual} does not always exist since it may be that $\partial J(f)=\emptyset$.
+
+The main point in studying the dual problems is that their solutions $v_\la$ are related to the primal solutions $u_\la$ by the extremality relations
+\begin{align*}
+  v_\la \in \partial J(u_\la) \qandq 
+  v_\la = \frac{1}{\la}(f-u_\la),
+\end{align*}
+which enables to study the support of $Du_\la$ (see Section~\ref{sec:prelim}).
+For the noiseless problem, the extremality relation is $v\in \partial J(f)$, for every $v$ solution to~\eqref{eq-constr-dual}.
+The term ``certificate'' stems from the fact that if $u\in\LDD$ and $v\in\LDD$ satisfy the extremality relations, then $u$ is a solution of the primal problem and $v$ is a solution of the dual problem. 
+
+
+\subsection{Low noise regimes and the minimal norm certificate}
+We shall often consider noisy observations $f+w$, where $w\in \LDD$, and from now on, we denote by $\ulaw$ (resp. $\vlaw$) the unique solution to~$\Pp_\la(f+w)$ (resp.~$\Dd_\la(f+w)$).
+
+Given $\la_0>0$, $\alpha_0>0$, we consider the low noise regime
+\begin{equation}\label{eq:intro-lnr}
+  \lnr{\la_0}{\alpha_0}\eqdef \enscond{(\la,w)\in \RR_+\times \LDD}{0\leq\la \leq \la_0\qandq\normLdeux{w}\leq \alpha_0 \la }.
+\end{equation}
+
+The dual solution $\vlaw$ being the projection of $(f+w)/\la$ onto a convex set, the non-expansiveness of the projection yields
+\begin{equation*}
+  \forall (\la,w)\in \RR^*_+\times\LDD, \quad \normLdeux{\vlao-\vlaw}\leq \frac{\normLdeux{w}}{\la}\leq \alpha_0. 
+\end{equation*}
+As a result, the properties of $\vlaw$ are governed by those of $\vlao$, and it turns out that the properties of $\vlao$ are governed, in the low noise regime, by those of a specific solution to~\eqref{eq-constr-dual}, as the next result hints. The proof is identical to the one in \cite{duvalpeyre13}.
+\begin{prop}
+  Let $f\in \LDD$, $J(f)<+\infty$, and assume that $\partial J(f)\neq \emptyset$. Let $\voo\in \LDD$ be the solution to \eqref{eq-constr-dual} with minimal $L^2$ norm. Then
+   \begin{align*}
+    \lim_{\la\to 0^+} \vlao = \voo \quad \mbox{ strongly in } \LDD.
+  \end{align*}
+\end{prop}
+We call $\voo$ the \textbf{minimal norm certificate} for $f$. It is also known as the \textit{minimal section} in maximal monotone operator theory. The goal of the present paper is to show that $\voo$ governs the support of the solutions in the low noise regime. In particular, $\voo$ determines whether the support of $D\ulaw$ is close to the support of $Df$ in that regime.
+
+In the next paragraphs, we illustrate the minimal norm certificate in simple cases.
+
+\subsection{The minimal norm certificate for calibrable sets}
+\begin{prop}[Minimal norm certificates for calibrable sets]\label{prop:mincertcalib}
+  Let $C\subseteq \RR^2$ be a bounded calibrable set and $f=\bun{C}$. Then the minimal norm certificate is $\voo=h_C\bun{C}$, where $h_C=\frac{P(C)}{\abs{C}}$.
+  \label{prop-mincertif-calib}
+\end{prop}
+We provide two different proofs of the above result, each highlighting different aspects of the minimal norm certificate.
+
+\begin{proof}[Proof ($\voo$ as a limit)]
+From \cite{beltvflow02}, we know that for a calibrable set $C\subseteq \RR^2$, the solution to \eqref{eq-rof-primal} with $f=\bun{C}$ is given by $\ulao = (1 -\la h_C)_+ \bun{C}$.
+From the optimality conditions,
+\begin{align*}
+    \vlao &= \frac{1}{\la}(f-\ulao),
+\end{align*}
+we obtain that $\vlao =h_C\bun{C}$ provided $0< \la \leq \frac{1}{h_C}$. Taking the limit as $\la \to 0^+$, we obtain $\voo=h_C\bun{C}$.
+\end{proof}
+\begin{proof}[Another Proof ($\voo$ as a minimal norm element)]
+  Observe that for all $f\in \LDD$ with $J(f)<+\infty$, and $v\in \LDD$, $v$ is a solution to~\eqref{eq-constr-dual} if and only if $v\in \partial J(f)$. For $C\subset \RR^2$ bounded calibrable, we obtain that $h_C \bun{C}$ is a solution to \eqref{eq-constr-dual}. It remains to prove that it is the one with minimal norm. 
+   
+Let $v\in \LDD$ be any solution to \eqref{eq-constr-dual}. By the Cauchy-Schwarz inequality
+\begin{align*}
+  \sup \Dd_0(\bun{C}) = \langle v,\bun{C}\rangle \leq \normLdeux{v}\normLdeux{\bun{C}}= \sqrt{|C|} \normLdeux{v}.
+\end{align*}
+However, $\normLdeux{h_C\bun{C}}=\frac{P(C)}{\sqrt{|C|}}= \frac{\sup \Dd_0(\bun{C})}{\sqrt{|C|}}$, so that $h_C\bun{C}$ has minimal norm.
+\end{proof}
+
+\subsection{The minimal norm certificate for smooth convex sets}\label{sec:MNC_convex}
+Let $C$ be a nonempty open bounded convex subset of $\RR^2$. Given $\rho>0$ we denote by $C_\rho$ the opening of $C$ by open balls with radius $\rho$, namely $C_\rho=\bigcup_{B(y,\rho)\subseteq C} B(y,\rho)$.
+ For $f=\bun{C}$, it is proved in~\cite{altercalib05,alterconvex05,Chambolle10anintroduction} that the solution $\ulao$ to \eqref{eq-rof} is 
+$$
+\ulao = \left(1+ \la v_C \right)^+ \bun{C},
+$$
+where, by letting $R$ be such that $C_R$ is the maximal calibrable set in $C$, the function $v_C:\RR^2\to \RR$ is defined by
+\begin{equation}\label{eq:convexvc}
+v_C(x) \eqdef \begin{cases}
+1/R & x\in C_{R}\\
+1/r & x\in \partial C_r, ~ r\in [0,R) \\
+0 & \text{otherwise.}
+\end{cases}
+\end{equation}
+Since $\vlao = \la^{-1}(f- u_{\la,0})$, it follows that
+\begin{equation}\label{eq:convexcertif}
+\vlao(x) = \begin{cases}
+v_C(x) & x\in C_\la \\
+1/\la & x\in C\setminus C_\la\\
+0& \text{otherwise.}
+\end{cases}
+\end{equation}
+
+Now we assume that $C\subset \RR^2$ has $\Cder{1,1}$ boundary, and we let $\rho_0>0$ such that
+\begin{align*}
+  \kappa_{\partial C}(x)\leq \frac{1}{\rho_0} \quad \mbox{ for } \Hh^1\mbox{-a.e. }x\in \partial C,
+\end{align*}
+where $\kappa_{\partial C}$ is the curvature of $\partial C$ (defined $\Hh^1$-almost everywhere on $\partial C$).
+We shall need the following lemma.
+\begin{lem}[\cite{beltvflow02}]
+  Let $C\subset \RR^2$ be a bounded open convex set. The following conditions are equivalent:
+\begin{itemize}
+  \item there exists $\rho >0$ such that $C=C_\rho$.
+  \item $\partial C$ is of class $\Cder{1,1}$ and $\ess \sup_{p\in \partial C}\kappa_{\partial C}(p) \leq \frac{1}{\rho}$.
+\end{itemize}
+\end{lem}
+Since for $0<r\leq \rho_0$, $C_{\rho_0}\subseteq C_r\subseteq C$, we see that  $C_r=C$ for $0<r\leq \rho_0$.
+
+As a result, $\la \mapsto \vlao$ is constant on $(0,\rho_0]$, and the minimal norm certificate is thus
+\begin{equation}\label{eq:convexmincertif}
+  \voo = v_C.
+\end{equation}
+It turns out that $\voo$ is precisely the subgradient constructed by Alter \textit{et al.}~\cite{alterconvex05} for the evolution of convex sets by the total variation flow. It is instructive to look at the associated vector field $z_0$ such that $\divx z_0=\voo$.
+
+For every $x\in \interop(C)\setminus\overline{C_R}$, there exists a unique $r(x)$ such that $x\in \partial C_{r(x)}$, and $x$ belongs to an arc of circle of radius $r(x)$. Defining $\nu(x)$ as the outer unit normal to this set, 
+ define 
+\begin{align*}
+  z_0(x)\eqdef\left\{ \begin{array}{l}\nu(x) \mbox{ if }x\in \interop(C)\setminus C_R\\ 
+      z_{C_R}(x) \mbox{ if } x\in C_R\\
+    \overline{z}(x) \mbox{ if } x\in \RR^2\setminus C, 
+  \end{array} \right.
+\end{align*}
+where $\overline{z}$ is a calibration of $\RR^2\setminus C$ (see Section~\ref{sec:calibout}). As for $z_{C_R}$, since $C_R$ is calibrable ($C_R$ is then the Cheeger set of $C$) there exists a vector field $z_{C_R}$ such that $|z_{C_R}|\leq 1$, $\theta(z_{C_R},-D\bun{C_R})=1$, and $\divx z_{C_R}=h_{C_R} \bun{C_R}$ with $h_{C_R}=P(C_R)/\abs{C_R}$. It is proved in~\cite{alterconvex05} that $\divx z_0=v_C$ (in the sense of distributions).
+
+It is notable that the construction is quite similar to the one proposed by Barrozzi et al. in \cite{Barozzi} and studied in \cite{massari1994variational}. In particular, the $L^2$-minimality (or even $L^p$ minimality) of the above constructions is already noted in  \cite{massari1994variational}.

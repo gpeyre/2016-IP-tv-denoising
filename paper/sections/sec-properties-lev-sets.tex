@@ -1,0 +1,205 @@
+
+\section{Properties of the level sets in the low noise regime}\label{sec:proplev}
+
+In this section, we rely on the properties of the minimal norm certificate $\voo$ to study the solutions of~\eqref{eq:prelim-suppdfinclude} for $v=\vlaw$ in a low noise regime. More precisely we study the elements of
+\begin{align}\label{eq:proplev-eq}
+  \FFlaw\eqdef\enscond{E\subset \RR^2}{\abs{E}<+\infty, \qandq  \pm\int_E \vlaw = P(E)},
+\end{align}
+for $(\la, w)\in\lnr{\la_0}{\alpha_0}$ with $\la_0>0$, $\alpha_0>0$ small enough.
+In the following, we denote by $\Elaws$ or $\Elaw$ any nonempty element of $\FFlaw$. Let us emphasize that we allow the case $(\la,w)=(0,0)$, in which case $\vlaw$ in~\eqref{eq:proplev-eq} is the minimal norm certificate $\voo$. Typically, from Section~\ref{sec:prelim}, one may think of $\Elaw$ as a level set of $\ulaw$ (or $f$, for $(\la,w)=(0,0)$), but additional  sets may solve~\eqref{eq:proplev-eq}.
+
+\subsection{Upper and lower bounds}
+In the following lemmas, we prove that there exist uniform upper and lower bounds on the perimeters and the measures of all sets in $\FFlaw$ with $(\la,w)\in D_{1,\sqrt{\cD}/4}$.
+
+\begin{lem}\label{lem:unif_bd_lev_sets}
+  Let $\alpha_0\leq \frac{\sqrt{\cD}}{4}$, where $\cD=4\pi$ is the isoperimetric constant. 
+Then,
+\begin{align}
+  \label{eq:proplev-persup}  \sup \enscond{P(\Elaws)}{\Elaws\in \FFlaw, \qandq (\la,w)\in \lnr{1}{\alpha_0} }&<+\infty,\\
+  \label{eq:proplev-areasup} \sup \enscond{\abs{\Elaws}}{\Elaws\in \FFlaw, \qandq (\la,w)\in \lnr{1}{\alpha_0} }&<+\infty.
+\end{align}
+\end{lem}
+
+\begin{proof}
+  First, we prove~\eqref{eq:proplev-persup}. 
+Since $\lim_{\la\to 0^+} \vlao=\voo$ in $\LDD$, the mapping $\la\mapsto \vlao$ is continuous on the compact set $[0,1]$, hence bounded. Moreover, the family $\{\vlao\}_{0\leq \la \leq 1}$ is $L^2$-equiintegrable so that given any $\varepsilon>0$, there exists $R>0$ such that $\int_{\RR^2\setminus B(0,R)}\vlao^2\leq \varepsilon^2$ for all $\la \in [0,1]$.
+Let us also assume that $\alpha_0\leq \varepsilon$ (so that $\normLdeux{\vlaw-\vlao}\leq\frac{\normLdeux{w}}{\la}\leq \varepsilon$).
+
+To simplify the notation, we denote by $\Elaws$ (rather than $\Elaw$) any nonempty set such that $P(\Elaws)=\pm\int_{\Elaws}\vlaw$.
+
+Now, the triangle and the Cauchy-Schwarz inequalities yield
+  \begin{align*}
+    P(\Elaws)&\leq \abs{\int_{\Elaws}(\vlaw-\vlao)} + \abs{\int_{\Elaws}\vlao}\\
+            &\leq\varepsilon\sqrt{\abs{\Elaws}}+ \abs{\int_{\Elaws\cap B(0,R)}\vlao} + \abs{\int_{\Elaws\setminus B(0,R)}\vlao}\\
+            &\leq \varepsilon\sqrt{\abs{\Elaws}}+ \sqrt{\abs{B(0,R)}}\normLdeux{\vlao} + \sqrt{\abs{\Elaws\setminus B(0,R)}}\sqrt{\int_{\RR^2\setminus B(0,R)}\vlaw^2}\\
+            &\leq \left(\varepsilon +\sup_{\la\in[0,1]}\normLdeux{\vlao}\right) \sqrt{\abs{B(0,R)}}+ 2\varepsilon\sqrt{\abs{\Elaws\setminus B(0,R)}}\\
+%            &\leq C(\varepsilon,R)+ 2\varepsilon\sqrt{\abs{\Elaws\setminus B(0,R)}}\\
+%            &\leq C(\varepsilon,R)+2\epsilon \sqrt{c_N}\left(\HNU{(\partial^*E)\setminus \overline{B(0,R)}}+ P(B(0,R))\right)^{N/(2N-2)},
+%    \normLdeux{v_\la} \sqrt{\abs{E_\la}} \leq \frac{\normLdeux{v_\la}}{\sqrt{c_N}} (P(E_\la))^{N/(2N-2)} .
+  \end{align*}
+%  Recalling that $P(\Elaws\setminus B(0,R))\leq P(\Elaws)+ P(B(0,R))$, and using the isoperimetric inequality, we obtain
+%\begin{align*}
+%  \sqrt{\abs{\Elaws\setminus B(0,R)}}\leq  \frac{1}{\sqrt{c_N}} \left(P(\Elaws) + P(B(0,R))\right)^{N/(2N-2)},
+%\end{align*}
+% where is $c_N$ the isoperimetric constant. We choose $\varepsilon=\frac{\sqrt{c_N}}{4}$ and we define $C=\left(\varepsilon +\sup_{\la\in[0,1]}\normLdeux{\vlao}\right) \sqrt{\abs{B(0,R)}}$ so as to get 
+%\begin{align*}
+%  \label{eq:}
+%  P(\Elaws)-\frac{1}{2}\left(P(\Elaws) + P(B(0,R))\right)^{N/(2N-2)}\leq C.
+%\end{align*}
+%Since the mapping $x\mapsto x-\frac{1}{2} \left( x+P(B(0,R))\right)^{N/(2N-2)}$ is coercive on $\RR_+$ for all $N\geq 2$, we obtain that $P(\Elaws)$ is uniformly bounded in $\Elaws\in \FFlaw$, $(\la,w)\in \lnr{1}{\alpha_0}$.
+%
+%As for~\eqref{eq:proplev-areasup}, the isoperimetric inequality yields
+%\begin{equation*}
+%  \abs{\Elaws}\leq \frac{1}{c_N} (P(\Elaws))^{N/(N-1)}
+%\end{equation*}
+%hence $\abs{\Elaws}$ is uniformly bounded in $\Elaws\in \FFlaw$, $(\la,w)\in \lnr{1}{\alpha_0}$.
+  Recalling that $P(\Elaws\setminus B(0,R))\leq P(\Elaws)+ P(B(0,R))$, and using the isoperimetric inequality, we obtain
+\begin{align*}
+  \sqrt{\abs{\Elaws\setminus B(0,R)}}\leq  \frac{1}{\sqrt{\cD}} \left(P(\Elaws) + P(B(0,R))\right),
+\end{align*}
+ where is $\cD$ the isoperimetric constant. We choose $\varepsilon=\frac{\sqrt{\cD}}{4}$ and we define $C=\left(\varepsilon +\sup_{\la\in[0,1]}\normLdeux{\vlao}\right) \sqrt{\abs{B(0,R)}}$ so as to get 
+\begin{align*}
+  \label{eq:}
+  P(\Elaws)-\frac{1}{2}\left(P(\Elaws) + P(B(0,R))\right)\leq C.
+\end{align*}
+We obtain that $P(\Elaws)$ is uniformly bounded in $\Elaws\in \FFlaw$, $(\la,w)\in \lnr{1}{\alpha_0}$.
+
+As for~\eqref{eq:proplev-areasup}, the isoperimetric inequality yields
+\begin{equation*}
+  \abs{\Elaws}\leq \frac{1}{\cD} (P(\Elaws))^{2}.
+\end{equation*}
+Hence, $\abs{\Elaws}$ is uniformly bounded in $\Elaws\in \FFlaw$, $(\la,w)\in \lnr{1}{\alpha_0}$.
+\end{proof}
+
+
+
+Conversely, the perimeters and areas of the solutions are also lower bounded, as the next result shows.
+  
+\begin{lem}\label{lem:lower_bound_lev_sets}% ONLY FOR N=2
+  Let $\alpha_0\leq \frac{\sqrt{\cD}}{4}=\sqrt{\pi}/2$. Then, 
+\begin{align}
+  \label{eq:proplev-perinf}  \inf \enscond{P(\Elaws)}{\Elaws\in \FFlaw, \Elaws\neq \emptyset \qandq (\la,w)\in \lnr{1}{\alpha_0} }&>0,\\
+  \label{eq:proplev-areainf} \inf \enscond{\abs{\Elaws}}{\Elaws\in \FFlaw, \Elaws\neq \emptyset  \qandq (\la,w)\in \lnr{1}{\alpha_0} }&>0.
+\end{align}
+Moreover, there exists a number $N_0\in\NN$ such that the number of $M$-connected components $\Elaws$ and the number of Jordan curves in the essential boundary $\partial^M\Elaws$ is uniformly bounded by $N_0$ for all $\Elaws\in \FFlaw$, $(\la,w)\in \lnr{1}{\alpha_0}$.
+\end{lem}
+\begin{proof}
+  By the $L^2$-equiintegrability of the family $\{\vlao\}_{0\leq \la \leq 1}$, for all $\varepsilon>0$, there exists $\delta$ such that for all $\Elaws\subset \RR^2$, with $\abs{\Elaws}\leq \delta$,
+\begin{equation*}
+  \int_{\Elaws} \vlao^2 \leq \varepsilon^2.
+\end{equation*}
+
+We choose $\varepsilon = \frac{\sqrt{\cD}}{4}$, $0<\alpha_0\leq \varepsilon$, and we consider by contradiction a set $\Elaws\in \FFlaw$ such that $0<\abs{\Elaws}\leq \delta$.
+Then,
+\begin{align*}
+  P(\Elaws)  &\leq \abs{\int_{\Elaws}(\vlaw-\vlao)} + \abs{\int_{\Elaws}\vlao}\\
+             &\leq \normLdeux{\vlaw-\vlao}\sqrt{\abs{\Elaws}} + \sqrt{\int_{\Elaws} \vlao^2}\sqrt{\abs{\Elaws}}\\
+             &\leq 2\varepsilon \sqrt{\abs{\Elaws}}\leq \frac{1}{2} P(\Elaws),
+\end{align*}
+by the isoperimetric inequality. Dividing by $P(\Elaws)>0$ yields a contradiction, hence $\abs{\Elaws}> \delta$ for all $\Elaws\neq \emptyset$, that is~\eqref{eq:proplev-areainf}.
+We deduce the uniform lower bound on the perimeter \eqref{eq:proplev-perinf} by the isoperimetric inequality.
+
+Now, let us decompose the essential boundary of $\Elaws\in \FFlaw$ into \emph{at most countably} many non trivial Jordan curves $\enscond{\gamma^+_i,\gamma^-_j}{i\in I,j\in J, I\subseteq\NN,J\subseteq \NN}$.
+By Remark~\ref{rem:decomp}, we know that for each $\sigma\in\{-1,1\}$ and $j\in\NN$, $\abs{\int_{\interop{\gamma^\sigma_j}}v_{\la,w}} = \Hh^1(\gamma^\sigma_j)$, that is $(\interop \gamma^\sigma_j)\in\FFlaw$. As a result $\Hh^1(\gamma^\sigma_j)\geq \mu$, where $\mu$ is the infimum defined in~\eqref{eq:proplev-perinf} (in $I$, $J$, we only consider the non-trivial Jordan curves).
+Expressing the perimeter of $\Elaws$ in terms of these Jordan curves, we get
+$$
+C\geq P(\Elaw) = \sum_{i\in I}\Hh^1(\gamma^+_i)+ \sum_{j\in J}\Hh^1(\gamma^-_j)\geq \mu(\card{I}+\card{J}),
+$$
+where $C$ is the supremum in~\eqref{eq:proplev-persup}. Hence the number of Jordan curves is at most $C/\mu$, and the same holds for the number of M-connected components.
+\end{proof}  
+
+Additionally, the next result shows that the level sets are uniformly contained in some large ball.
+\begin{lem}\label{lem:largeball}%ONLY FOR N=2
+  Let $\alpha_0\leq \frac{\sqrt{\cD}}{4}=\sqrt{\pi}$. Then, there exists $R>0$ such that
+\begin{equation*}
+  \forall (\la,w)\in\lnr{1}{\alpha_0},\  \forall \Elaws\in \FFlaw,\quad \Elaws\subset B(0,R).
+\end{equation*}
+\end{lem}
+
+
+\begin{proof} 
+We begin with the same equiintegrability argument as in Lemma~\ref{lem:unif_bd_lev_sets}, choosing again $\varepsilon=\frac{\sqrt{\cD}}{4}$.
+Now, let $\Elaws\in \FFlaw$. By the results of Section~\ref{sec:jordan_decomp}, we may further decompose, up to an $\Hh^1$-negligible set, its essential boundary  $\partial^M \Elaws$  into an at most countable union of Jordan curves $\gamma$ which satisfy
+\begin{equation*}
+  \pm\int_{\interop \gamma}\vlaw = P(\interop \gamma) = \HDU{\gamma}.
+\end{equation*}
+Assume by contradiction that $\gamma$ is such that $(\interop \gamma)\cap B(0,R)=\emptyset$. Then by the isoperimetric inequality,
+\begin{align*}
+  P(\interop \gamma)\leq \sqrt{\int_{\RR^2\setminus B(0,R)}\vlaw^2}\sqrt{\abs{\interop \gamma}}\leq  \frac{2\varepsilon}{\sqrt{\cD}} P(\interop \gamma). 
+\end{align*}
+Dividing by $P(\interop \gamma)$ yields a contradiction for $\varepsilon=\frac{\sqrt{\cD}}{4}$ if $\gamma$ is not trivial.
+Hence $(\interop \gamma)\cap B(0,R)\neq\emptyset$.
+But the uniform bound~\eqref{eq:proplev-persup} also holds for $\gamma$, hence there is some $C>0$ (independent from $(\la,w)\in \lnr{1}{\alpha_0}$) such that $\HDU{\gamma}\leq C$. As a result, $\mathrm{diam} (\interop \gamma)\leq C$ so that $(\interop \gamma)\subset B(0,R+C)$, and since this holds for any $\gamma$ which is involved in the decomposition of $\partial^M \Elaws$, it also holds for all $\Elaws\in \FFlaw$, uniformly in~$(\la,w)\in \lnr{1}{\alpha_0}$ . 
+\end{proof}
+
+\begin{rem}\label{rem:countunion}
+  Let us divide $\FFlaw$ into two classes corresponding respectively to the condition $\int_E \vlaw =P(E)$ and $-\int_E \vlaw =P(E)$ (the empty set being the only element which belongs to both). A consequence of~\eqref{eq:proplev-areasup} is that \textit{each class is stable by a countable union or intersection}.
+Indeed, if $E$ and $F$ are two elements of $\FFlaw$ such that $\int_E\vlaw=P(E)$ (and similarly for $F$), the submodularity of the perimeter yields
+\begin{equation*}
+  P(E\cap F)+P(E\cup F)\leq P(E)+P(F) = \int_E \vlaw +\int_F \vlaw = \int_{E\cap F} \vlaw + \int_{E\cup F}\vlaw.
+\end{equation*}
+Using the subdifferential inequality (on $\vlaw\in\partial J(0)$) we obtain that $P(E\cap F)= \int_{E\cap F}\vlaw$ and $P(E\cup F)= \int_{E\cup F}\vlaw$.
+Iterating, we get for finite union or intersection $P(\bigcup_{k=1}^{n}E_k)= \int_{\bigcup_{k=1}^{n}E_k}\vlaw$ and $P(\bigcap_{k=1}^{n}E_k)= \int_{\bigcap_{k=1}^{n}E_k}\vlaw$. The lower semi-continuity of the perimeter together with $\abs{E_1}<+\infty$ yields
+\begin{equation*}
+  P\left(\bigcap_{k=1}^{\infty}E_k\right)\leq \liminf_{n\to+\infty} P\left(\bigcap_{k=1}^{n}E_k\right)=\lim_{n\to+\infty} \int_{\bigcap_{k=1}^{n}E_k}\vlaw =\int_{\bigcap_{k=1}^{\infty}E_k}\vlaw,
+\end{equation*}
+and the converse inequality holds by the subdifferential inequality. As for the union, we know from~\eqref{eq:proplev-areasup} that $\abs{\bigcup_{k=1}^{\infty}E_k}=\sup_{n\in\NN} \abs{\bigcup_{k=1}^{n}E_k}<+\infty$, hence
+\begin{equation*}
+  P\left(\bigcup_{k=1}^{\infty}E_k\right)\leq \liminf_{n\to+\infty} P\left(\bigcup_{k=1}^{n}E_k\right)=\lim_{n\to+\infty} \int_{\bigcup_{k=1}^{n}E_k}\vlaw =\int_{\bigcup_{k=1}^{\infty}E_k}\vlaw,
+\end{equation*}
+and the opposite inequality also holds, for the same reason as above.
+\end{rem}
+
+\subsection{Weak regularity}\label{sec:props_weak_reg}
+
+
+In this section, we show that \eqref{eq:weak_regularity} holds uniformly on the boundaries of the  sets in $\FFlaw$ with $(\la,w)\in D_{1,\sqrt{\cD}/4}$. The proof of Proposition \ref{prop:weak_reg} is in fact almost identical to the proof of  \cite[Lem.~1.2]{gonzales1993boundaries}, however, it is included for the sake of completeness, and so as to emphasize the uniformity of this estimate with respect to $(\la,w)$.
+
+
+
+\begin{prop}\label{prop:weak_reg} 
+There exists $r_0>0$ such that for all $r\in (0, r_0]$ and $\Elaw\in\FFlaw$ with $(\la,w)\in D_{1,\sqrt{\cD}/4}$, 
+\begin{equation}\label{eq:weak_reg_2D}
+\forall x\in  \partial \Elaw,\quad \frac{\abs{B(x,r)\cap \Elaw}}{\abs{B(x,r)}}\geq \frac{1}{16}\qandq \frac{\abs{B(x,r)\setminus \Elaw}}{\abs{B(x,r)}} \geq \frac{1}{16}.
+\end{equation}
+\end{prop}
+
+\begin{proof}
+  We give the proof for $P(\Elaw)=\int_{\Elaw}\vlaw$, the other case being similar.
+Since $\{v_{\la,0} \}_{\la\in [0,1]}$ is equiintegrable, there exists $r_0>0$ such that for all subsets $E\subset \RR^2$ with $\abs{E}\leq \pi r_0^2$,
+\begin{equation}\label{eq:equi_int}
+\left(\int_{E} \abs{v_{\la,0}}^2\right)^{1/2} \leq \frac{\sqrt{\cD}}{4}.
+\end{equation}
+First observe that by optimality of $\Elaw$,
+\begin{equation}\label{eq:compare}
+P(\Elaw) - \int_{\Elaw}\vlaw \leq P(\Elaw \setminus B(x,r)) - \int_{\Elaw\setminus B(x,r)} \vlaw.
+\end{equation}
+For a.e.\ $r\in (0,r_0]$, $\Hh^1(\partial^* \Elaw \cap \partial B(x,r))=0$, so ~\eqref{eq:compare} yields
+$$
+\Hh^1(\partial^* \Elaw \cap B(x,r)) - \int_{\Elaw\cap B(x,r)} \vlaw \leq \Hh^1(\partial B(x,r) \cap \Elaw).
+$$
+By adding $\Hh^1(\partial B(x,r)\cap \Elaw)$ to both sides, it follows that
+$$
+P(\Elaw \cap B(x,r)) - \int_{\Elaw\cap B(x,r)} \vlaw \leq 2\Hh^1(\partial B(x,r)\cap \Elaw).
+$$
+By the Cauchy-Schwarz inequality, \eqref{eq:equi_int} and since $\norm{\vlaw- v_{\la,0}}_{L^2}\leq \sqrt{c_2}/4$
+$$
+P(\Elaw \cap B(x,r)) - \frac{\sqrt{\cD}\abs{\Elaw \cap B(x,r)}^{1/2}}{2} \leq 2\Hh^1(\partial B(x,r)\cap \Elaw).
+$$
+The isoperimetric inequality then implies that
+$$
+\sqrt{\cD}\abs{\Elaw\cap B(x,r)}^{1/2}\leq 4\Hh^1(\partial B(x,r)\cap \Elaw).
+$$
+Let $g(r) = \abs{\Elaw\cap B(x,r)}$. Then $g(r)>0$ since $x\in \partial \Elaw$, and for a.e. $r$,
+$g'(r) = \Hh^1(\partial B(x,r)\cap \Elaw)$. Therefore, for a.e.\ $r\in (0,r_0]$,
+$$
+\sqrt{\cD}\leq 8 \frac{\mathrm{d}}{\mathrm{d}r}\sqrt{g(r)}.
+$$
+By integrating on both sides,
+$$
+r\sqrt{\cD} \leq 8 \sqrt{g(r)}.
+$$
+and the first inequality in \eqref{eq:weak_reg_2D} follows by recalling that $c_2=4\pi$.
+The proof of $\abs{B(x,r)\setminus \Elaw} \geq \abs{B(x,r)}/16$ is similar: instead of comparing $\Elaw$ with $\Elaw\setminus B(x,r)$ in \eqref{eq:compare}, simply compare $\Elaw$ with $\Elaw\cup B(x,r)$ and proceed as before.
+
+\end{proof}
